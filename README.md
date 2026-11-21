@@ -28,7 +28,7 @@ with plain POSIX file I/O: `echo hello > /dev/nats/qnx/demo` publishes,
 `cat /dev/nats/qnx/demo` subscribes. See [/dev/nats](#devnats-the-devnats-resource-manager).
 
 * **Codelab:** [Native NATS & `/dev/nats` Resource Manager on QNX 8.0](docs/codelab.md) (50–60 min step-by-step guide with code walkthrough, screenshots, and troubleshooting)
-* **Demo video:** *YouTube link to be added* (recording kit in [`video-kit/`](video-kit/))
+* **Demo video:** [Watch on YouTube](https://youtu.be/ZEJZx5pgjNs) (recording kit in [`video-kit/`](video-kit/))
 
 ## Status
 
