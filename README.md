@@ -27,6 +27,9 @@ On top of the library, **`devnats`** is a QNX resource manager that mounts
 with plain POSIX file I/O: `echo hello > /dev/nats/qnx/demo` publishes,
 `cat /dev/nats/qnx/demo` subscribes. See [/dev/nats](#devnats-the-devnats-resource-manager).
 
+* **Codelab:** [Native NATS & `/dev/nats` Resource Manager on QNX 8.0](docs/codelab.md) (50–60 min step-by-step guide with code walkthrough, screenshots, and troubleshooting)
+* **Demo video:** *YouTube link to be added* (recording kit in [`video-kit/`](video-kit/))
+
 ## Status
 
 * Library: builds warning-free for x86_64 and aarch64le (shared + static),
@@ -63,7 +66,8 @@ devnats/devnats.h           devctl API (stats, request, JetStream publish, ...)
 devnats/examples/           nats-notify (ionotify+pulse), nats-ctl, nats-lat
 devnats/tests/              test-devnats.sh (guest, TAP) + run-tests.sh (host)
 tools/host-echo.c           host helper: lat.ping->lat.pong, svc.echo, svc.time
-docs/codelab.md             codelab draft: nats.c on QNX -> resource manager
+docs/codelab.md             step-by-step codelab: nats.c on QNX -> /dev/nats resmgr
+docs/img/                   terminal screenshots referenced by the codelab
 results/                    last unit-test run: summary.tsv + per-test logs
 proof/                      captured guest proof output
 ```
@@ -72,8 +76,11 @@ proof/                      captured guest proof output
 
 ## Build
 
-Prerequisites: QNX SDP 8.0 installed (free non-commercial licence from
-myQNX), plus `cmake`, `ninja` and `git` on a Linux host.
+Prerequisites: **QNX SDP 8.0** (free non-commercial licence from myQNX;
+`qcc` / **GCC 12.2.0** toolchain), plus `cmake` (≥ 3.13), `ninja` and `git`
+on a Linux host. Targets: **`x86_64`** (tested on QNX 8.0 QEMU) and
+**`aarch64le`** (cross-compiles and links; not yet tested on hardware).
+See the full [Codelab](docs/codelab.md) for a guided walkthrough.
 
 ```bash
 export QNX_SDP=$HOME/qnx800          # where SDP 8.0 is installed
