@@ -59,8 +59,16 @@ for ARCH in $ARCHES; do
       "$ROOT/test-harness/nats-server-remote.c" -lsocket
   qcc -V$V -O2 -Wall -shared -fPIC -o "$OUT/test-harness/loopback-redirect.so" \
       "$ROOT/test-harness/loopback-redirect.c" -lsocket
+  echo ">> building devnats resource manager + clients ($ARCH)"
+  DN_FLAGS="-O2 -Wall -Wextra -Wno-unused-parameter"
+  qcc -V$V $DN_FLAGS -I"$OUT/include" -o "$OUT/bin/devnats" "$ROOT/devnats/devnats.c" \
+      -L"$OUT/lib" -lnats $SSL_LIBS -lsocket -lslog2
+  for ex in nats-notify nats-ctl nats-lat; do
+    qcc -V$V $DN_FLAGS -o "$OUT/bin/$ex" "$ROOT/devnats/examples/$ex.c"
+  done
+  cp "$ROOT/devnats/devnats.h" "$OUT/include/nats/devnats.h"
   echo ">> done: $OUT"
-  for f in "$OUT"/lib/libnats.so.*.*.* "$OUT/bin/qnx-smoke"; do
+  for f in "$OUT"/lib/libnats.so.*.*.* "$OUT/bin/qnx-smoke" "$OUT/bin/devnats"; do
     printf '   %-45s %s\n' "${f#$ROOT/}" "$(readelf -h "$f" | sed -n 's/.*Machine: *//p')"
   done
 done

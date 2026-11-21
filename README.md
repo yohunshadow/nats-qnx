@@ -22,9 +22,10 @@ through JetStream without a gateway or a custom protocol.
 | TLS | OpenSSL 3.0.22 from the SDP (`NATS_TLS=OFF` to build without) |
 | Server | `nats-server` v2.15.3 on the Linux dev host (Go has no QNX port) |
 
-A `/dev/nats` resource manager (NATS over plain POSIX file I/O) is planned
-as phase 2 and is not in this tree yet — design notes are in
-[NOTES.md](NOTES.md).
+On top of the library, **`devnats`** is a QNX resource manager that mounts
+**`/dev/nats`**, so any QNX program — even a shell script — can use NATS
+with plain POSIX file I/O: `echo hello > /dev/nats/qnx/demo` publishes,
+`cat /dev/nats/qnx/demo` subscribes. See [/dev/nats](#devnats-the-devnats-resource-manager).
 
 ## Status
 
@@ -37,6 +38,11 @@ as phase 2 and is not in this tree yet — design notes are in
 * Upstream unit tests on the QNX guest: **329 / 336 passed** (0 timeouts).
   The 7 failures are harness / QEMU-TCG limitations, not library build
   breaks — see [Test results](#test-results) and [NOTES.md](NOTES.md).
+* `/dev/nats` resource manager: **29 / 29** automated guest tests pass
+  (write/read, wildcards, `O_NONBLOCK`, signals, `select`/`poll`/`ionotify`
+  pulses, queue bound + drops, request/reply, JetStream ack, queue groups,
+  slog2, privilege drop, clean SIGTERM). Interop with host `nats sub`/`nats
+  pub` shown in [`proof/proof-devnats.txt`](proof/proof-devnats.txt).
 * Two of the five patches fix latent upstream bugs (NULL `"%s"` in library
   error paths, and `printf("%s", NULL)` in the test-suite) that crash on
   QNX's libc even though glibc hides them.
@@ -52,6 +58,12 @@ demo/qnx-smoke.c            end-to-end demo: pub/sub, req/reply, JetStream, KV
 demo/run-proof.sh           captures proof/proof-<arch>.txt from the guest
 scripts/host-nats-server.sh download + run nats-server (JetStream) on the host
 test-harness/               run the upstream test-suite on QNX (see NOTES.md)
+devnats/devnats.c           /dev/nats resource manager (daemon)
+devnats/devnats.h           devctl API (stats, request, JetStream publish, ...)
+devnats/examples/           nats-notify (ionotify+pulse), nats-ctl, nats-lat
+devnats/tests/              test-devnats.sh (guest, TAP) + run-tests.sh (host)
+tools/host-echo.c           host helper: lat.ping->lat.pong, svc.echo, svc.time
+docs/codelab.md             codelab draft: nats.c on QNX -> resource manager
 results/                    last unit-test run: summary.tsv + per-test logs
 proof/                      captured guest proof output
 ```
@@ -73,7 +85,8 @@ export QNX_SDP=$HOME/qnx800          # where SDP 8.0 is installed
 `v3.15.0` into `build/`, applies `patches/*.patch`, configures with
 `-DCMAKE_TOOLCHAIN_FILE=cmake/qnx-toolchain.cmake -DQNX_ARCH=<arch>` and
 installs to `out/<arch>/` (`lib/libnats.so.3.15.0`, `libnats_static.a`,
-`include/nats/`, `bin/` examples + `qnx-smoke` + `testsuite`).
+`include/nats/`, `bin/` examples + `qnx-smoke` + `testsuite`), then builds
+`devnats` and its example clients into `out/<arch>/bin/`.
 
 Using it from your own QNX project:
 
@@ -158,6 +171,120 @@ The same capture also shows QNX↔Linux host pub/sub, a durable pull
 consumer with ack floor 5, KV `board.os = QNX` readable from the host,
 and TLS (correct CA works; a wrong CA fails with
 `unable to get local issuer certificate`).
+
+## devnats: the `/dev/nats` resource manager
+
+```
+ QNX guest                                                       Linux host
+ ┌──────────────────────────────────────────────────────┐
+ │ shell: echo/cat   C app: open/read/write/devctl       │
+ │ RT client: ionotify + MsgReceivePulse (SCHED_FIFO)    │
+ │        │   POSIX I/O = QNX messages   ▲ reply / pulse │
+ │        ▼                              │               │
+ │  ┌──────────── devnats (resmgr) ───────────────────┐  │
+ │  │ thread pool ── io_open/read/write/notify/devctl │  │
+ │  │ per-fd OCB: subject, bounded queue, waiters,    │  │   ┌──────────────┐
+ │  │             drops, notify list                  │  │   │ nats-server  │
+ │  │ libnats (one connection, auto-reconnect, TLS) ◄─┼──┼──►│ 0.0.0.0:4222 │
+ │  │ slog2 "devnats", procmgr_ability drop, SIGTERM  │  │   │ + JetStream  │
+ │  └─────────────────────────────────────────────────┘  │   └──────────────┘
+ └──────────────────────────────────────────────────────┘     ▲  nats sub/pub
+                                                              host-echo
+```
+
+Path → subject: `/dev/nats/a/b/c` = `a.b.c`; dots inside a component are
+kept (`/dev/nats/a/b.c` = `a.b.c`); `*` / `>` components subscribe with
+wildcards (read-only, `>` last).
+
+* `write()` publishes. Text mode (default) publishes one message per line,
+  newline stripped; raw mode (`-r`, or `DCMD_NATS_SET_RAW` per fd) = one
+  message per `write()`.
+* `read()` on an fd opened `O_RDONLY` returns **one message per call**
+  (text mode appends `\n`). It blocks until a message arrives; with
+  `O_NONBLOCK` it returns `EAGAIN`. Signals interrupt it (`EINTR`).
+* Each fd has a bounded queue (default 256, `-q n`, `DCMD_NATS_SET_QMAX`);
+  when full the oldest message is dropped and counted.
+* `select()`, `poll()` and `ionotify()` work (`iofunc_notify`), so a real-time
+  client can sleep in `MsgReceivePulse()` and be woken by a pulse.
+* `devctl()` (see `devnats/devnats.h`): `DCMD_NATS_GET_STATS`,
+  `_SET_QMAX`, `_SET_RAW`, `_SET_QGROUP` (queue group),
+  `_REQUEST` (request/reply with timeout), `_JS_PUBLISH` (JetStream publish,
+  returns stream + sequence + duplicate flag, optional Msg-Id),
+  `_LAST_MSGINFO` (subject/reply/timestamps of the last read), `_FLUSH`.
+
+```
+devnats [-s nats://host:4222[,url2]] [-m /dev/nats] [-q 256] [-r]
+        [-T] [-C ca.pem] [-c cert.pem] [-k key.pem] [-H tls-hostname]
+        [-N user.creds] [-n conn-name] [-t max-threads] [-U user] [-d] [-v]
+```
+(default server `nats://10.0.2.2:4222`, i.e. the QEMU host; `-d` runs in the
+background, `-v` mirrors the slog2 log to stderr.)
+
+### Shell demo (from `proof/proof-devnats.txt`)
+
+```
+# guest
+devnats -v &                      # attached /dev/nats, servers nats://10.0.2.2:4222
+cat /dev/nats/qnx/demo &          # subscribe
+echo hello > /dev/nats/qnx/demo   # publish   -> cat prints: hello
+
+# guest -> host: host runs  nats sub 'qnx.>'
+echo 'from qnx shell' > /dev/nats/qnx/demo
+echo 'via dots'       > /dev/nats/qnx/sensors.temp
+[#1] Received on "qnx.demo"
+from qnx shell
+[#2] Received on "qnx.sensors.temp"
+via dots
+
+# host -> guest: guest runs  head -n 2 /dev/nats/host/cmd
+nats pub host.cmd "start motor"; nats pub host.cmd "stop motor"
+guest read: start motor
+guest read: stop motor
+
+# request/reply and JetStream through devctl
+nats-ctl req /dev/nats/svc/echo "hi from qnx" 3000  -> reply: echo: hi from qnx
+nats-ctl jspub /dev/nats/devnats/js/test "persist me" <msg-id>
+                                    -> jspub ack: stream=DEVNATS seq=4 duplicate=0
+```
+
+ionotify + pulse client (`devnats/examples/nats-notify.c`):
+
+```
+nats-notify: waiting on /dev/nats/qnx/pulse (pulse, SCHED_FIFO prio 30)
+[pulse] #1 qnx.pulse: p1
+[pulse] #2 qnx.pulse: p2
+[pulse] #3 qnx.pulse: p3
+nats-notify: received 3 message(s)
+```
+
+### Tests
+
+```bash
+./devnats/tests/run-tests.sh | tee proof/proof-devnats.txt
+```
+starts/checks the host server, the `DEVNATS` stream and `host-echo`, copies
+the binaries, runs `devnats/tests/test-devnats.sh` on the guest (TAP, 29
+checks), then the shell/interop demo and the latency runs. Last run
+(21 Nov 2026, 12:27 WIB): **29/29 passed**.
+
+### Latency
+
+`devnats/examples/nats-lat`, 500 messages at 5 ms intervals, reader
+SCHED_FIFO 20, all times in µs. `wake` = devnats queued the message → client
+has it (resmgr → client wake-up only); `e2e` = client `write()` → devnats →
+host nats-server → devnats → client `read()`.
+
+| Reader | wake p50 | wake p99 | e2e p50 | e2e p99 |
+|---|---:|---:|---:|---:|
+| blocking `read()` | 90 | 144 | 1277 | 2110 |
+| **ionotify + pulse** | 205 | 340 | 1390 | 3548 |
+| polling loop (non-blocking read + 1-tick sleep) | 1907 | 2371 | 3076 | 3428 |
+| pulse, guest → host echo → guest (`lat.ping`→`lat.pong`) | 202 | 346 | 1652 (RTT) | 2474 (RTT) |
+
+ionotify pulses wake the client ~9× sooner than polling at p50 and with far
+less jitter, without burning CPU. **Caveat:** the guest is QEMU **TCG**
+(software emulation, no KVM), so absolute numbers are inflated — compare
+modes against each other, and re-measure on hardware.
 
 ## Test results
 

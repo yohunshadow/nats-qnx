@@ -13,6 +13,7 @@ mkdir -p "$STAGE/lib" "$STAGE/bin" "$STAGE/t"
 cp -P out/$ARCH/lib/libnats.so* "$STAGE/lib/"
 cp out/$ARCH/bin/* "$STAGE/bin/"
 cp out/$ARCH/test-harness/* "$STAGE/bin/"
+cp devnats/tests/*.sh "$STAGE/bin/" 2>/dev/null || true
 mkdir -p "$STAGE/t/test" && cp -r "$SRC"/test/certs "$SRC"/test/*.conf "$SRC"/test/*.txt "$STAGE/t/test/"
 $SSH "mkdir -p $GUEST_DIR"
 tar cz -C "$STAGE" . | $SSH "cd $GUEST_DIR && gzip -dc | tar xf -"

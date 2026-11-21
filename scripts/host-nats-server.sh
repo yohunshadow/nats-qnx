@@ -2,7 +2,7 @@
 # host-nats-server.sh - download nats-server (+ nats CLI) for the Linux dev
 # host and run it on 0.0.0.0:4222 with JetStream, reachable from the QEMU
 # guest as 10.0.2.2:4222.
-# Usage: scripts/host-nats-server.sh [start|stop]
+# Usage: scripts/host-nats-server.sh [start|stop|status]
 set -euo pipefail
 cd "$(dirname "$0")/.."
 NATS_SERVER_VERSION=${NATS_SERVER_VERSION:-v2.15.3}
@@ -25,6 +25,12 @@ case ${1:-start} in
     nohup hostbin/nats-server -a 0.0.0.0 -p "$PORT" -js -sd "$STORE" > /tmp/nats-qnx-server.log 2>&1 &
     echo $! > /tmp/nats-qnx-server.pid
     sleep 1; tail -2 /tmp/nats-qnx-server.log ;;
+  status)
+    if pid=$(cat /tmp/nats-qnx-server.pid 2>/dev/null) && kill -0 "$pid" 2>/dev/null; then
+      echo "nats-server running (pid $pid) on 0.0.0.0:$PORT, JetStream $STORE"
+    else
+      echo "nats-server not running"; exit 1
+    fi ;;
   stop)
     kill "$(cat /tmp/nats-qnx-server.pid)" 2>/dev/null || true ;;
 esac

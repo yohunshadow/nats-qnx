@@ -181,31 +181,114 @@ passed, 0 timeouts). These are not library build failures:
 
 See README for the table and `results/summary.tsv` for the raw counts.
 
-## Phase 2 design thoughts: `/dev/nats` resource manager
+## Phase 2: `/dev/nats` resource manager (`devnats/`)
 
 Goal: any QNX program (shell scripts, legacy C, other languages) can use NATS
-via plain POSIX file I/O, without linking nats.c.
+through plain POSIX file I/O, without linking nats.c. Implemented in
+`devnats/devnats.c` (~1000 lines, C, qcc, links libnats); public devctl API in
+`devnats/devnats.h`. Proof: `proof/proof-devnats.txt` (29/29 guest tests).
 
-* A `resmgr` (`resmgr_attach` on `/dev/nats`, `iofunc_*` defaults) linked
-  with libnats. One NATS connection per resmgr (shared), configured via
-  command-line/`-c` file (url, creds, TLS).
-* **Path = subject**: `open("/dev/nats/sensors/temp", O_WRONLY)` →
-  `write()` publishes one message per write on `sensors.temp`.
-  `open(..., O_RDONLY)` creates a subscription; `read()` returns one message
-  per call (blocking; `O_NONBLOCK` → `EAGAIN`), `select/poll` via
-  `iofunc_notify` so it integrates with QNX event loops / `ionotify()`.
-  Wildcards via `*` / `>` path components (`/dev/nats/sensors/*`).
-* **JetStream**: `/dev/nats/js/<stream>/<subject>` — `write()` = `js_Publish`
-  with the PubAck sequence returned via `devctl()`; reads come from a durable
-  pull consumer named after the opener (ack on read, or explicit `devctl`
-  ack for at-least-once).
-* **KV**: `/dev/nats/kv/<bucket>/<key>` — `read()` = get, `write()` = put;
-  `ls /dev/nats/kv/<bucket>` lists keys (`io_read` on a directory).
-* `devctl()` for headers, request/reply (`DCMD_NATS_REQUEST` with timeout),
-  stats, flush.
-* Message framing: default one message per `read()`/`write()`; optional
-  newline-delimited mode via open flag / mount option for shell use
-  (`echo hi > /dev/nats/foo`, `cat /dev/nats/foo`).
-* QNX-specific: use pulses for subscription callbacks → resmgr thread pool,
-  honor client priority inheritance, `secpol` type for the resmgr, and
-  `procmgr_ability` to drop privileges after attaching the path.
+### What was built (vs. the original design)
+
+| Design item | Status |
+|---|---|
+| resmgr on `/dev/nats` linked with libnats, one shared connection, `-s url[,url]`, TLS (`-T -C -c -k -H`), creds (`-N`) | done |
+| path = subject, write publishes, read = one message, blocking, `O_NONBLOCK` → `EAGAIN` | done |
+| `select`/`poll`/`ionotify` via `iofunc_notify` | done (pulse example in `examples/nats-notify.c`) |
+| `*` / `>` wildcard paths | done (read-only; write → `EINVAL`) |
+| devctl: request/reply, stats, flush | done |
+| devctl: JetStream publish with PubAck | done (`DCMD_NATS_JS_PUBLISH`, Msg-Id dedup) |
+| queue groups | done (`DCMD_NATS_SET_QGROUP`) |
+| newline framing for the shell | done — text mode is the **default**; `-r` / `DCMD_NATS_SET_RAW` for raw |
+| `procmgr_ability` privilege drop after attach, optional `-U user` | done |
+| `/dev/nats/js/<stream>/...` durable pull consumers, `/dev/nats/kv/...` | **not done** (future) |
+| headers via devctl, secpol type | **not done** (future) |
+
+### Path → subject mapping
+
+* `/dev/nats/a/b/c` → subject `a.b.c` (components joined with `.`).
+* Dots inside a component are kept: `/dev/nats/a/b.c` is also `a.b.c`, handy
+  when a subject has many tokens.
+* `*` and `>` components are NATS wildcards and only valid for `O_RDONLY`;
+  `>` must be the last component. Opening a wildcard for writing, an empty
+  component, or `>` in the middle fails with `EINVAL`.
+* Opening `/dev/nats` itself (the directory) is allowed — it is the handle
+  `nats-ctl stats` uses for global counters.
+
+### Internals
+
+* **Attributes / OCBs.** `IOFUNC_ATTR_T`/`IOFUNC_OCB_T` (and `RESMGR_*`,
+  `THREAD_POOL_PARAM_T`) are overridden *before* the system headers so the
+  iofunc helpers take `&o->hdr` without casts. The mount is a
+  `_RESMGR_FLAG_DIR` attach; each `open()` gets its own attr (subject) and an
+  OCB allocated through `iofunc_mount_t.funcs` (`ocb_calloc`/`ocb_free`).
+* **Delivery path.** `open(O_RDONLY)` starts an async nats.c subscription
+  (`natsOptions_UseGlobalMessageDelivery`, so subscriptions don't each get a
+  thread). The callback copies the message into the OCB's bounded ring
+  (default 256, `-q`, per fd via `DCMD_NATS_SET_QMAX`); when full the
+  **oldest** message is dropped and counted (stats `drops`). If a reader is
+  blocked, the callback replies to it directly with `MsgReplyv()` (up to 16
+  queued rcvids per OCB), otherwise `iofunc_notify_trigger()` fires the
+  armed `ionotify`/`select` events.
+* **Blocking reads.** `io_read` with an empty queue returns `_RESMGR_NOREPLY`
+  and stores the rcvid. `io_unblock` replies `EINTR`, but only when
+  `MsgInfo()` shows `_NTO_MI_UNBLOCK_REQ` — otherwise the message is already
+  on its way. `O_NONBLOCK` → `EAGAIN`.
+* **Locking.** Each OCB has its own mutex for the queue/waiters; `io_notify`
+  takes it too, because the nats callback thread calls
+  `iofunc_notify_trigger()` outside the resmgr thread pool.
+  `sub_stop()` (unsubscribe + wait for the subscription's on-complete
+  callback with a cond-var) must be called **without** the OCB mutex, or the
+  final callback deadlocks.
+* **devctl.** `__DIOF/__DIOT/__DIOTF/__DION`, class `_DCMD_MISC`, command
+  numbers 0x41-0x48 (the command field is 8 bits — larger numbers spill into
+  the class field). Structures are ≤ 4 KiB + header; the thread pool's
+  `msg_max_size` is 16 KiB so they arrive in one message. Failures are
+  returned as the devctl error (`ETIMEDOUT`, `ENOENT` = no responders / no
+  stream, `EIO`); a first version put the error in `ret_val` (= `dev_info`),
+  so `devctl()` returned `EOK` with an empty reply — caught by the test suite.
+* **Reconnect.** `SetRetryOnFailedConnect` + `MaxReconnect(-1)`: devnats
+  attaches even if the server is down and keeps subscriptions across
+  reconnects; disconnect/reconnect are logged and counted.
+* **Logging.** slog2 buffer `devnats` (`slog2info -b devnats`), mirrored to
+  stderr with `-v`.
+* **Privileges.** After `resmgr_attach` (and the optional `-U user`
+  uid/gid switch), `procmgr_ability()` denies and locks 26 abilities:
+  path-space, setuid/setgid, I/O + interrupts, physical/global/special
+  memory, reboot, clock set, mount, spawn/fork, cross-process debug/memory
+  read, chroot, trace, rlimit, confset, power, session, run-state. The test
+  suite shows the daemon running as uid 1000 and still serving.
+* **Shutdown.** A dedicated thread `sigwait()`s for SIGTERM/SIGINT/SIGHUP:
+  detaches the path, replies EOF (0 bytes) to every blocked reader (so `cat`
+  exits 0), closes the NATS connection (flush) and exits.
+
+### QNX gotchas hit in phase 2
+
+* `PROCMGR_AID_KEYDATA` / `PROCMGR_AID_CLOCKPERIOD` aren't in the 8.0 headers.
+* `ionotify()` clients must `MsgRegisterEvent(&ev, fd)` first in QNX 8 —
+  unregistered events are rejected.
+* `_NOTIFY_ACTION_POLLARM` / `_NOTIFY_COND_INPUT` need `<sys/iomsg.h>`.
+* A background reader started in one `ssh` session dies with SIGHUP when that
+  session ends — use `nohup` or keep reader and writer in one session (looked
+  like "messages lost" at first).
+* The QEMU guest's clock drifts a lot under TCG; the test runner resyncs it
+  over ssh before running.
+
+### Latency (QEMU TCG — see README for the numbers)
+
+`examples/nats-lat` timestamps with `CLOCK_MONOTONIC` on the guest: `wake` =
+reader got the data − devnats enqueued it (pure resmgr→client wake-up),
+`e2e` = reader got it − writer wrote it (includes the trip through the host
+nats-server). Blocking `read()` is fastest (devnats replies straight from the
+callback thread); ionotify+pulse adds one pulse + re-arm + non-blocking read
+(~0.1 ms more under TCG); a polling loop is bound by the sleep granularity
+(1 tick) and is ~10× worse at p50. Absolute numbers are emulation-bound;
+re-measure on hardware/KVM.
+
+### Future work
+
+* JetStream pull consumers and KV as paths (`/dev/nats/js/...`,
+  `/dev/nats/kv/<bucket>/<key>`), headers via devctl.
+* A secpol type for devnats and a config file (`-c`).
+* Run on aarch64 hardware (binaries build), video demo, upstream PR for the
+  phase 1 patches.

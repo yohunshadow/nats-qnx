@@ -1,0 +1,125 @@
+
+=================== environment ===================
+host date: 2026-11-21 12:27:13 WIB
+git: 3923391 Initial nats-qnx port of nats.c v3.15.0 to QNX SDP 8.0
+nats-server: nats-server: v2.15.3
+nats-server running (pid 797082) on 0.0.0.0:4222, JetStream /tmp/nats-qnx-js
+stream DEVNATS: ['devnats.js.>'] msgs 3
+host-echo ready on nats://127.0.0.1:4222 (lat.ping->lat.pong, svc.echo, svc.time)
+QNX noname 8.0.0 2026/10/30-09:10:05EDT x86pc x86_64
+
+=================== guest functional tests (devnats/tests/test-devnats.sh) ===================
+# devnats functional tests on QNX noname 8.0.0 2026/10/30-09:10:05EDT x86pc x86_64
+# server nats://10.0.2.2:4222, Sat Nov 21 05:27:15 GMT 2026
+ok 1 - devnats attaches /dev/nats
+ok 2 - connects to server
+ok 3 - drops privileges after attach
+#   hello
+#   line2
+ok 4 - echo > / head < round trip, one message per line
+ok 5 - /qnx/sensors/temp and /qnx/sensors.temp map to subject qnx.sensors.temp
+#   w1
+#   w2
+ok 6 - read on qnx.wild.> receives both subjects
+ok 7 - write to wildcard rejected
+ok 8 - '>' not last is rejected
+#   read -> -1 errno=EAGAIN
+ok 9 - O_NONBLOCK read on empty queue -> EAGAIN
+#   ready
+#   read: Interrupted function call
+ok 10 - blocked read unblocked by SIGALRM -> EINTR
+ok 11 - select() times out with no data
+#   ready
+#   select: readable, got sel-msg
+ok 12 - select() wakes on publish
+#   ready
+#   poll: readable, got poll-msg
+ok 13 - poll() wakes on publish
+#   nats-notify: waiting on /dev/nats/qnx/pulse (pulse, SCHED_FIFO prio 30)
+#   [pulse] #1 qnx.pulse: p1
+#   [pulse] #2 qnx.pulse: p2
+#   [pulse] #3 qnx.pulse: p3
+#   nats-notify: received 3 message(s)
+ok 14 - ionotify pulse client receives 3 messages (SCHED_FIFO 30)
+#   ready
+#   server=nats://10.0.2.2:4222 connected=1 reconnects=0 opens=1
+#   global: msgs_in=21 msgs_out=21 bytes_in=65 bytes_out=65 drops=6
+#   fd: subject=qnx.flood queue_group=- in=10 out=0 drops=6 queued=4 qmax=4
+ok 15 - qmax=4 with 10 messages -> 4 queued, 6 dropped
+#   server=nats://10.0.2.2:4222 connected=1 reconnects=0 opens=1
+#   global: msgs_in=21 msgs_out=21 bytes_in=65 bytes_out=65 drops=6
+#   fd: subject= queue_group=- in=0 out=0 drops=0 queued=0 qmax=256
+ok 16 - DCMD_NATS_GET_STATS reports connection
+#   reply: echo: hi from qnx
+ok 17 - DCMD_NATS_REQUEST svc.echo
+#   reply: 2026-11-21T05:27:32Z (linux host)
+ok 18 - DCMD_NATS_REQUEST svc.time
+#   request failed: no responders
+ok 19 - request with no responder fails cleanly
+#   jspub ack: stream=DEVNATS seq=4 duplicate=0
+#   jspub ack: stream=DEVNATS seq=4 duplicate=1
+#   jspub failed: no stream for subject
+ok 20 - DCMD_NATS_JS_PUBLISH acked by stream DEVNATS
+ok 21 - same Msg-Id is reported as duplicate
+ok 22 - JS publish to a subject with no stream fails (ENOENT)
+#   member1=5 member2=3
+ok 23 - queue group splits 8 jobs across 2 members (each once)
+#   Nov 21 05:27:16.209               devnats.58441750              devnats      0  privileges dropped (uid=0 gid=0, pathspace/setuid/io/... denied+locked)
+#   Nov 21 05:27:32.473               devnats.58441750              devnats      0  work.q: queue group 'workers'
+#   Nov 21 05:27:32.473               devnats.58441750              devnats      0  work.q: queue group 'workers'
+ok 24 - slog2 buffer 'devnats' has log lines
+ok 25 - SIGTERM: blocked cat gets EOF (rc 0)
+ok 26 - path removed on shutdown
+ok 27 - clean shutdown logged
+#   59138070 data/nats/bin/devnats                                                                  1000 
+ok 28 - -U qnxuser: daemon runs as uid 1000
+ok 29 - raw mode: one write = one message, no newline framing
+1..29
+# 29/29 passed
+
+=================== shell demo + interop with host nats CLI ===================
+devnats: connected to nats://10.0.2.2:4222
+devnats: attached /dev/nats, servers nats://10.0.2.2:4222, qmax 256, text mode
+devnats: privileges dropped (uid=0 gid=0, pathspace/setuid/io/... denied+locked)
+--- guest: cat /dev/nats/qnx/demo  |  guest: echo hello > /dev/nats/qnx/demo
+cat got: hello
+--- guest -> host: host runs  nats sub "qnx.>" ; guest writes
+[#1] Received on "qnx.demo"
+from qnx shell
+[#2] Received on "qnx.sensors.temp"
+via dots
+--- host -> guest: guest reads /dev/nats/host/cmd ; host runs  nats pub host.cmd
+12:27:54 Published 11 bytes to "host.cmd"
+12:27:54 Published 10 bytes to "host.cmd"
+guest read: start motor
+guest read: stop motor
+--- guest devctl request -> host service
+reply: 2026-11-21T05:27:55Z (linux host)
+--- stats
+server=nats://10.0.2.2:4222 connected=1 reconnects=0 opens=1
+global: msgs_in=4 msgs_out=4 bytes_in=26 bytes_out=27 drops=0
+fd: subject= queue_group=- in=0 out=0 drops=0 queued=0 qmax=256
+
+=================== latency (QEMU TCG, no KVM: numbers are emulation-bound, not QNX-on-silicon) ===================
+--- guest-local, reader mode pulse (write and read /dev/nats/lat/local, via host server)
+mode=pulse  read=/dev/nats/lat/local  write=/dev/nats/lat/local  msgs=500/500  interval=5000us  reader SCHED_FIFO 20
+wake  n=500  min=  158.2  p50=  205.2  avg=  210.6  p90=  247.0  p99=  339.5  max=   481.4 us
+e2e   n=500  min= 1082.3  p50= 1390.0  avg= 1471.2  p90= 1713.9  p99= 3547.9  max=  4987.7 us
+--- guest-local, reader mode poll (write and read /dev/nats/lat/local, via host server)
+mode=poll  read=/dev/nats/lat/local  write=/dev/nats/lat/local  msgs=500/500  interval=5000us  reader SCHED_FIFO 20  (poll sleep 1 tick)
+wake  n=500  min=   80.1  p50= 1907.3  avg= 1631.5  p90= 2192.6  p99= 2371.4  max=  2489.4 us
+e2e   n=500  min= 1035.2  p50= 3076.1  avg= 2774.8  p90= 3295.8  p99= 3427.5  max=  9103.7 us
+--- guest-local, reader mode block (write and read /dev/nats/lat/local, via host server)
+mode=block  read=/dev/nats/lat/local  write=/dev/nats/lat/local  msgs=500/500  interval=5000us  reader SCHED_FIFO 20
+wake  n=500  min=   60.0  p50=   89.7  avg=   95.4  p90=  113.9  p99=  144.0  max=  1477.7 us
+e2e   n=500  min=  961.1  p50= 1277.4  avg= 1321.0  p90= 1553.6  p99= 2110.2  max=  5855.6 us
+--- guest -> host echo -> guest round trip (lat.ping -> host-echo -> lat.pong), pulse reader
+mode=pulse  read=/dev/nats/lat/pong  write=/dev/nats/lat/ping  msgs=500/500  interval=5000us  reader SCHED_FIFO 20
+wake  n=500  min=  154.7  p50=  202.3  avg=  210.9  p90=  250.3  p99=  346.3  max=   411.2 us
+e2e   n=500  min= 1147.4  p50= 1651.6  avg= 1723.4  p90= 2137.4  p99= 2473.9  max=  7335.9 us
+--- devctl request/reply round trip (svc.echo, 20 sequential)
+20 requests incl. process spawn: 1 s
+devnats: stopped: in=2024 out=2024 drops=0
+
+=================== result ===================
+functional tests: PASS
