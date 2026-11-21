@@ -5,3 +5,7 @@ results-run*/
 *.o
 *.so
 /tmp/
+*.mp4
+*.gif
+video-kit/clips/*.mp4
+video-kit/clips/*.gif
