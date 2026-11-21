@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLHandshakeTimeout ==
+[0;0m#01 Start proxy: [0;32mPASSED[0;0m
+#02 Set options: [0;32mPASSED[0;0m
+#03 SSL handshake should timeout: [0;32mPASSED[0;0m
+#04 Release proxy: [0;32mPASSED[0;0m
+#05 SSL handshake should work: [0;32mPASSED[0;0m
+#06 Stop proxy: [0;32mPASSED[0;0m
+ALL PASSED

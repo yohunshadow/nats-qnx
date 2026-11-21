@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ServersOption ==
+[0;0m#01 Connect should fail with NATS_NO_SERVER: [0;32mPASSED[0;0m
+#02 Connect with list of servers should fail with NATS_NO_SERVER: [0;32mPASSED[0;0m
+#03 Can connect to first: [0;32mPASSED[0;0m
+#04 Can connect to second: [0;32mPASSED[0;0m
+ALL PASSED

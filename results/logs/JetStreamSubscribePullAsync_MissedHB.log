@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribePullAsync_MissedHB ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Check invalid heartbeat : [0;32mPASSED[0;0m
+#06 Check the error to be 'heartbeat value too large': [0;32mPASSED[0;0m
+#07 Subscribe with 50ms idle hearbeat: [0;32mPASSED[0;0m
+#08 Subscription is active after 2 heartbeats: [0;32mPASSED[0;0m
+#09 Drop heartbeats and see the sub terminate: [0;32mPASSED[0;0m
+ALL PASSED

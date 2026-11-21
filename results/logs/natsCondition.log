@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsCondition ==
+[0;0m#01 Create mutex: [0;32mPASSED[0;0m
+#02 Create condition variables: [0;32mPASSED[0;0m
+#03 Create thread: [0;32mPASSED[0;0m
+#04 Wait for signal: [0;32mPASSED[0;0m
+#05 Wait timeout: [0;32mPASSED[0;0m
+#06 Wait timeout with 0: [0;32mPASSED[0;0m
+#07 Wait timeout with negative: [0;32mPASSED[0;0m
+#08 Wait absolute time: [0;32mPASSED[0;0m
+#09 Wait absolute time in the past: [0;32mPASSED[0;0m
+#10 Wait absolute time with very large value: [0;32mPASSED[0;0m
+#11 Signal before wait: #12 Create thread: [0;32mPASSED[0;0m
+[0;32mPASSED[0;0m
+#13 Broadcast: [0;32mPASSED[0;0m
+#14 Destroy condition: [0;32mPASSED[0;0m
+ALL PASSED

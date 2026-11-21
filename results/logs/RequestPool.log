@@ -1,0 +1,7 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== RequestPool ==
+[0;0m#01 Pool not growing: [0;32mPASSED[0;0m
+#02 Pool max size: [0;32mPASSED[0;0m
+ALL PASSED

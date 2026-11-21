@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SlowAsyncSubscriber ==
+[0;0m#01 Check Publish does not fail due to SlowConsumer: [0;32mPASSED[0;0m
+#02 Check flush returns before timeout: Error 20 - Slow Consumer, messages dropped on connection [6] on "foo.*"
+[0;32mPASSED[0;0m
+#03 Flush should not report an error: [0;32mPASSED[0;0m
+#04 Last Error should be SlowConsumer: [0;32mPASSED[0;0m
+#05 Unblock and wait for the callback to finish: [0;32mPASSED[0;0m
+ALL PASSED

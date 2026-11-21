@@ -1,0 +1,37 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AsyncINFO ==
+[0;0m#01 Test line 8320: [0;32mPASSED[0;0m
+#02 Test line 8326: [0;32mPASSED[0;0m
+#03 Test line 8336: [0;32mPASSED[0;0m
+#04 Test line 8340: [0;32mPASSED[0;0m
+#05 Test line 8344: [0;32mPASSED[0;0m
+#06 Test line 8348: [0;32mPASSED[0;0m
+#07 Test line 8352: [0;32mPASSED[0;0m
+#08 Test line 8356: [0;32mPASSED[0;0m
+#09 Test line 8361: [0;32mPASSED[0;0m
+#10 Test line 8372: [0;32mPASSED[0;0m
+#11 Test line 8375: [0;32mPASSED[0;0m
+#12 Test line 8381: [0;32mPASSED[0;0m
+#13 Test line 8387: [0;32mPASSED[0;0m
+#14 Check INFO is correct: [0;32mPASSED[0;0m
+#15 Test with good INFO proto number 1: [0;32mPASSED[0;0m
+#16 Test with good INFO proto number 2: [0;32mPASSED[0;0m
+#17 Test with good INFO proto number 3: [0;32mPASSED[0;0m
+#18 Test with good INFO proto number 4: [0;32mPASSED[0;0m
+#19 Test with good INFO proto number 5: [0;32mPASSED[0;0m
+#20 Test with wrong INFO proto number 1: [0;32mPASSED[0;0m
+#21 Test with wrong INFO proto number 2: [0;32mPASSED[0;0m
+#22 Test with wrong INFO proto number 3: [0;32mPASSED[0;0m
+#23 Test with wrong INFO proto number 4: [0;32mPASSED[0;0m
+#24 Test with wrong INFO proto number 5: [0;32mPASSED[0;0m
+#25 Test with wrong INFO proto number 6: [0;32mPASSED[0;0m
+#26 Test line 8446: [0;32mPASSED[0;0m
+#27 Test line 8458: [0;32mPASSED[0;0m
+#28 Test line 8471: [0;32mPASSED[0;0m
+#29 Entries without a port do not crash: [0;32mPASSED[0;0m
+#30 User info in an entry is dropped: [0;32mPASSED[0;0m
+#31 New URLs are added randomly: [0;32mPASSED[0;0m
+#32 First URL should not have been changed: [0;32mPASSED[0;0m
+ALL PASSED

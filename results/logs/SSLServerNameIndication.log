@@ -1,0 +1,8 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLServerNameIndication ==
+[0;0m#01 Start server and connect client: [0;32mPASSED[0;0m
+#02 Read ClientHello from client: [0;32mPASSED[0;0m
+#03 Check hostname is found in ClientHello: [0;32mPASSED[0;0m
+ALL PASSED

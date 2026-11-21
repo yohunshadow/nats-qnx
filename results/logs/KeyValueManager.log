@@ -1,0 +1,24 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== KeyValueManager ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 kvConfig Init (bad args): [0;32mPASSED[0;0m
+#05 Create KV - bad args: [0;32mPASSED[0;0m
+#06 Create KV - bad bucket name: [0;32mPASSED[0;0m
+#07 Create KV - history too big: [0;32mPASSED[0;0m
+#08 Create KV: [0;32mPASSED[0;0m
+#09 Check discard policy: [0;32mPASSED[0;0m
+#10 Destroy kv store: [0;32mPASSED[0;0m
+#11 Bind (bad args): [0;32mPASSED[0;0m
+#12 Bind (not found): [0;32mPASSED[0;0m
+#13 Bind to existing: [0;32mPASSED[0;0m
+#14 Destroy kv store: [0;32mPASSED[0;0m
+#15 Create non-kv stream: [0;32mPASSED[0;0m
+#16 Bind to non-kv stream: [0;32mPASSED[0;0m
+#17 Delete kv store (bad args): [0;32mPASSED[0;0m
+#18 Delete kv store: [0;32mPASSED[0;0m
+#19 Check it is gone (bind should fail): [0;32mPASSED[0;0m
+ALL PASSED

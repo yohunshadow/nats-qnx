@@ -1,0 +1,23 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsBase64Encode ==
+[0;0m#01 EncodeRawURL nil: [0;32mPASSED[0;0m
+#02 EncodeRawURL empty: [0;32mPASSED[0;0m
+#03 EncodeRawURL strings: [0;32mPASSED[0;0m
+#04 EncodeRawURL bytes: [0;32mPASSED[0;0m
+#05 EncodeURL nil: [0;32mPASSED[0;0m
+#06 EncodeURL empty: [0;32mPASSED[0;0m
+#07 EncodeURL strings: [0;32mPASSED[0;0m
+#08 EncodeURL bytes: [0;32mPASSED[0;0m
+#09 Encode nil: [0;32mPASSED[0;0m
+#10 Encode empty: [0;32mPASSED[0;0m
+#11 Encode strings: [0;32mPASSED[0;0m
+#12 Encode bytes: [0;32mPASSED[0;0m
+#13 DecodeLen src needed: [0;32mPASSED[0;0m
+#14 DecodeLen bad src len: [0;32mPASSED[0;0m
+#15 DecodeLen bad content: [0;32mPASSED[0;0m
+#16 DecodeLen: [0;32mPASSED[0;0m
+#17 Decode strings: [0;32mPASSED[0;0m
+#18 Decode bytes: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,27 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== KeyValueKeysWithFilters ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create KV: [0;32mPASSED[0;0m
+#05 Populate: [0;32mPASSED[0;0m
+#06 Get keys with filters (bad args): List is NULL[0;32mPASSED[0;0m
+#07 Get keys with filters (bad args): filters is NULL[0;32mPASSED[0;0m
+#08 Get keys with filters (bad args): numFilters is 0[0;32mPASSED[0;0m
+#09 Get keys with filters (bad args): numFilters is <0[0;32mPASSED[0;0m
+#10 Get keys with filters (bad args): empty string[0;32mPASSED[0;0m
+#11 Get keys with filters (bad args): kv is NULL[0;32mPASSED[0;0m
+#12 filter: a.*[0;32mPASSED[0;0m
+#13 filter: *.a.*[0;32mPASSED[0;0m
+#14 filter: *.a[0;32mPASSED[0;0m
+#15 filter: e.a.f[0;32mPASSED[0;0m
+#16 filter: >[0;32mPASSED[0;0m
+#17 filter: multiple overlapping filters[0;32mPASSED[0;0m
+#18 filter: multiple non overlapping filters[0;32mPASSED[0;0m
+#19 Delete a.b:[0;32mPASSED[0;0m
+#20 a.b should not be returned post deletion[0;32mPASSED[0;0m
+#21 Purge a.b:[0;32mPASSED[0;0m
+#22 a.d should not be returned post purge[0;32mPASSED[0;0m
+ALL PASSED

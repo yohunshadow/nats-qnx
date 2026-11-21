@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsWaitReady ==
+[0;0m#01 Connect: [0;32mPASSED[0;0m
+#02 Set non blocking: [0;32mPASSED[0;0m
+#03 WaitReady no deadline: [0;32mPASSED[0;0m
+#04 WaitReady deadline timeout: [0;32mPASSED[0;0m
+#05 WaitReady kicked out by shutdown: [0;32mPASSED[0;0m
+ALL PASSED

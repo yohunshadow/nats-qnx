@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamBackOffRedeliveries ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Create inbox: [0;32mPASSED[0;0m
+#06 Wrong MaxDeliver: [0;32mPASSED[0;0m
+#07 Create ok: [0;32mPASSED[0;0m
+#08 Send: [0;32mPASSED[0;0m
+#09 Consume msg: [0;32mPASSED[0;0m
+#10 Redelivered at 50ms: [0;32mPASSED[0;0m
+#11 Redelivered at 250ms: [0;32mPASSED[0;0m
+#12 Redelivered at 250ms: [0;32mPASSED[0;0m
+#13 No more: [0;32mPASSED[0;0m
+#14 Check consumer info: [0;32mPASSED[0;0m
+ALL PASSED

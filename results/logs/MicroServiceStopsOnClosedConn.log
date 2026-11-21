@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== MicroServiceStopsOnClosedConn ==
+[0;0m#01 Connect for microservice: [0;32mPASSED[0;0m
+#02 Test microservice is running: [0;32mPASSED[0;0m
+#03 Test microservice is responding to PING: [0;32mPASSED[0;0m
+#04 Close the connection: [0;32mPASSED[0;0m
+#05 Wait for it: [0;32mPASSED[0;0m
+#06 Ensure the connection has closed: [0;32mPASSED[0;0m
+#07 Wait for the service to stop: [0;32mPASSED[0;0m
+#08 Test microservice is stopped: [0;32mPASSED[0;0m
+#09 Destroy microservice test: [0;32mPASSED[0;0m
+#10 Wait for 0 microservices to stop: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,28 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ParserShouldFail ==
+[0;0m#01 Test line 7627: [0;32mPASSED[0;0m
+#02 Test line 7632: [0;32mPASSED[0;0m
+#03 Test line 7638: [0;32mPASSED[0;0m
+#04 Test line 7644: [0;32mPASSED[0;0m
+#05 Test line 7650: [0;32mPASSED[0;0m
+#06 Test line 7657: [0;32mPASSED[0;0m
+#07 Test line 7663: [0;32mPASSED[0;0m
+#08 Test line 7670: [0;32mPASSED[0;0m
+#09 Test line 7676: [0;32mPASSED[0;0m
+#10 Test line 7682: [0;32mPASSED[0;0m
+#11 Test line 7688: [0;32mPASSED[0;0m
+#12 Test line 7694: [0;32mPASSED[0;0m
+#13 Test line 7700: [0;32mPASSED[0;0m
+#14 Test line 7706: [0;32mPASSED[0;0m
+#15 Test line 7712: [0;32mPASSED[0;0m
+#16 Test line 7718: [0;32mPASSED[0;0m
+#17 Test line 7724: [0;32mPASSED[0;0m
+#18 Test line 7730: [0;32mPASSED[0;0m
+#19 Test line 7736: [0;32mPASSED[0;0m
+#20 Test line 7742: [0;32mPASSED[0;0m
+#21 Test line 7748: [0;32mPASSED[0;0m
+#22 Test line 7754: [0;32mPASSED[0;0m
+#23 Test line 7760: [0;32mPASSED[0;0m
+ALL PASSED

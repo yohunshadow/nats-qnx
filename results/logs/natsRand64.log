@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsRand64 ==
+[0;0m#01 nats_Rand64 returns positive values: [0;32mPASSED[0;0m
+#02 nats_Rand64 has variation: [0;32mPASSED[0;0m
+#03 nats_Rand64 modulo produces values in range: [0;32mPASSED[0;0m
+#04 nats_Rand64 modulo distributes across range: [0;32mPASSED[0;0m
+#05 Thread safe: [0;32mPASSED[0;0m
+ALL PASSED

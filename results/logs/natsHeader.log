@@ -1,0 +1,48 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsHeader ==
+[0;0m#01 New (bad args): [0;32mPASSED[0;0m
+#02 New: [0;32mPASSED[0;0m
+#03 Key cannot be NULL: [0;32mPASSED[0;0m
+#04 Key cannot be empty: [0;32mPASSED[0;0m
+#05 Set msg cannot be NULL: [0;32mPASSED[0;0m
+#06 Set value: [0;32mPASSED[0;0m
+#07 Get header cannot be NULL: [0;32mPASSED[0;0m
+#08 Get must provide mem location: [0;32mPASSED[0;0m
+#09 Get: [0;32mPASSED[0;0m
+#10 Get value with different case: [0;32mPASSED[0;0m
+#11 Key not found: [0;32mPASSED[0;0m
+#12 Set value replace old: [0;32mPASSED[0;0m
+#13 Get value: [0;32mPASSED[0;0m
+#14 Set value cannot be NULL: [0;32mPASSED[0;0m
+#15 Get value: [0;32mPASSED[0;0m
+#16 Set empty value: [0;32mPASSED[0;0m
+#17 Get value: [0;32mPASSED[0;0m
+#18 Add header cannot be NULL: [0;32mPASSED[0;0m
+#19 Add first: [0;32mPASSED[0;0m
+#20 Add second: [0;32mPASSED[0;0m
+#21 Get should return first: [0;32mPASSED[0;0m
+#22 Values: [0;32mPASSED[0;0m
+#23 Add after a Set: [0;32mPASSED[0;0m
+#24 Keys header cannot be NULL: [0;32mPASSED[0;0m
+#25 Keys keys cannot be NULL: [0;32mPASSED[0;0m
+#26 Keys count cannot be NULL: [0;32mPASSED[0;0m
+#27 KeysCount (NULL): [0;32mPASSED[0;0m
+#28 KeysCount: [0;32mPASSED[0;0m
+#29 Keys: [0;32mPASSED[0;0m
+#30 Set with long key: [0;32mPASSED[0;0m
+#31 Add with long key: [0;32mPASSED[0;0m
+#32 Get with long key: [0;32mPASSED[0;0m
+#33 Values with long key: [0;32mPASSED[0;0m
+#34 Add value cannot be NULL: [0;32mPASSED[0;0m
+#35 Get ok: [0;32mPASSED[0;0m
+#36 Add empty value: [0;32mPASSED[0;0m
+#37 Get ok: [0;32mPASSED[0;0m
+#38 Delete header cannot be NULL: [0;32mPASSED[0;0m
+#39 Delete key cannot be NULL: [0;32mPASSED[0;0m
+#40 Delete key cannot be empty: [0;32mPASSED[0;0m
+#41 Delete: [0;32mPASSED[0;0m
+#42 Should be gone: [0;32mPASSED[0;0m
+#43 Destroy: [0;32mPASSED[0;0m
+ALL PASSED

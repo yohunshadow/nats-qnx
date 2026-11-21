@@ -1,0 +1,53 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ObjectStore_StoreMgtWatchAndList ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create store: [0;32mPASSED[0;0m
+#05 Create watcher (bad args): [0;32mPASSED[0;0m
+#06 Watch: [0;32mPASSED[0;0m
+#07 Get marker: [0;32mPASSED[0;0m
+#08 Add some data: [0;32mPASSED[0;0m
+#09 WatchNext (bad args): [0;32mPASSED[0;0m
+#10 WatchNext (A): [0;32mPASSED[0;0m
+#11 WatchNext (B): [0;32mPASSED[0;0m
+#12 WatchNext (no more): [0;32mPASSED[0;0m
+#13 Delete A: [0;32mPASSED[0;0m
+#14 WatchNext (A): [0;32mPASSED[0;0m
+#15 WatcherStop (bad args): [0;32mPASSED[0;0m
+#16 WatcherStop: [0;32mPASSED[0;0m
+#17 WatchNext fails: [0;32mPASSED[0;0m
+#18 WatchDestroy: [0;32mPASSED[0;0m
+#19 Create store: [0;32mPASSED[0;0m
+#20 Add some data: [0;32mPASSED[0;0m
+#21 Init options (bad args): [0;32mPASSED[0;0m
+#22 Create watcher with updates only: [0;32mPASSED[0;0m
+#23 WatchNext (timeout): [0;32mPASSED[0;0m
+#24 Delete A: [0;32mPASSED[0;0m
+#25 WatchNext (A): [0;32mPASSED[0;0m
+#26 WatchNext (timeout): [0;32mPASSED[0;0m
+#27 Add more data: [0;32mPASSED[0;0m
+#28 WatchNext (C): [0;32mPASSED[0;0m
+#29 WatcherStop: [0;32mPASSED[0;0m
+#30 Add more data: [0;32mPASSED[0;0m
+#31 WatchNext fails: [0;32mPASSED[0;0m
+#32 Create store: [0;32mPASSED[0;0m
+#33 Add A: [0;32mPASSED[0;0m
+#34 Delete A: [0;32mPASSED[0;0m
+#35 Create watcher with ignore deletes: [0;32mPASSED[0;0m
+#36 Get marker: [0;32mPASSED[0;0m
+#37 WatchNext (timeout): [0;32mPASSED[0;0m
+#38 Create store: [0;32mPASSED[0;0m
+#39 List (bad args): [0;32mPASSED[0;0m
+#40 List (empty): [0;32mPASSED[0;0m
+#41 Add data: [0;32mPASSED[0;0m
+#42 Add link: [0;32mPASSED[0;0m
+#43 Add and delete data: [0;32mPASSED[0;0m
+#44 List without deletes: [0;32mPASSED[0;0m
+#45 Check list: [0;32mPASSED[0;0m
+#46 Destroy list: [0;32mPASSED[0;0m
+#47 List with deletes: [0;32mPASSED[0;0m
+#48 Check list: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ReconnectBufSize ==
+[0;0m#01 Option invalid settings. NULL options: [0;32mPASSED[0;0m
+#02 Option invalid settings. Negative value: [0;32mPASSED[0;0m
+#03 Option valid settings. Zero: [0;32mPASSED[0;0m
+#04 Check we are disconnected: [0;32mPASSED[0;0m
+#05 Can publish while server is down: [0;32mPASSED[0;0m
+#06 Exhausted buffer should return an error: [0;32mPASSED[0;0m
+ALL PASSED

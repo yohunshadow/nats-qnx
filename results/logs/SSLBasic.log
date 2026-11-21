@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLBasic ==
+[0;0m#01 Check that connect switches to TLS automatically: [0;32mPASSED[0;0m
+#02 Check that options can't be modified while used by connection: [0;32mPASSED[0;0m
+#03 Check ok after last connection destroyed: [0;32mPASSED[0;0m
+#04 Check connects OK with SSL options: [0;32mPASSED[0;0m
+#05 Check reconnects OK: [0;32mPASSED[0;0m
+ALL PASSED

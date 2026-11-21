@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamOrderedConsumerWithAutoUnsub ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Subscribe: [0;32mPASSED[0;0m
+#06 Auto-unsub: [0;32mPASSED[0;0m
+#07 Produce: [0;32mPASSED[0;0m
+#08 Wait for all pubs done: [0;32mPASSED[0;0m
+#09 Wait for subscription to be invalid: [0;32mPASSED[0;0m
+#10 Check count: [0;32mPASSED[0;0m
+#11 Get stats: [0;32mPASSED[0;0m
+#12 Send one msg: [0;32mPASSED[0;0m
+#13 Get stats 2: [0;32mPASSED[0;0m
+#14 Msg not received: [0;32mPASSED[0;0m
+ALL PASSED

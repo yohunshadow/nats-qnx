@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== TimeoutOnNoServer ==
+[0;0m#01 Connect: [0;32mPASSED[0;0m
+#02 Wait for disconnected: [0;32mPASSED[0;0m
+#03 Wait for closed: [0;32mPASSED[0;0m
+#04 Check wait time for closed cb: [0;32mPASSED[0;0m
+ALL PASSED

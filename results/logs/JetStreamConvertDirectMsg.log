@@ -1,0 +1,16 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamConvertDirectMsg ==
+[0;0m#01 Bad request: [0;32mPASSED[0;0m
+#02 Not found: [0;32mPASSED[0;0m
+#03 Msg has no header: [0;32mPASSED[0;0m
+#04 Missing stream: [0;32mPASSED[0;0m
+#05 Missing sequence: [0;32mPASSED[0;0m
+#06 Invalid sequence: [0;32mPASSED[0;0m
+#07 Missing timestamp: [0;32mPASSED[0;0m
+#08 Invalid timestamp: [0;32mPASSED[0;0m
+#09 Missing subject: [0;32mPASSED[0;0m
+#10 Invalid subject: [0;32mPASSED[0;0m
+#11 Valid msg: [0;32mPASSED[0;0m
+ALL PASSED

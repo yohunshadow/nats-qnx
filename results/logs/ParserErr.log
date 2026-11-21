@@ -1,0 +1,17 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ParserErr ==
+[0;0m#01 Test line 7482: [0;32mPASSED[0;0m
+#02 Test line 7489: [0;32mPASSED[0;0m
+#03 Test line 7493: [0;32mPASSED[0;0m
+#04 Test line 7497: [0;32mPASSED[0;0m
+#05 Test line 7501: [0;32mPASSED[0;0m
+#06 Test line 7505: [0;32mPASSED[0;0m
+#07 Test line 7509: [0;32mPASSED[0;0m
+#08 Test line 7514: [0;32mPASSED[0;0m
+#09 Test line 7518: [0;32mPASSED[0;0m
+#10 Test line 7523: [0;32mPASSED[0;0m
+#11 Test line 7531: [0;32mPASSED[0;0m
+#12 Test line 7537: [0;32mPASSED[0;0m
+ALL PASSED

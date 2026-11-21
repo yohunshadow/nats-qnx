@@ -1,0 +1,23 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== KeyValueKeys ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create KV: [0;32mPASSED[0;0m
+#05 Populate: [0;32mPASSED[0;0m
+#06 Get keys (bad args): [0;32mPASSED[0;0m
+#07 Get keys (timeout): [0;32mPASSED[0;0m
+#08 Get keys: [0;32mPASSED[0;0m
+#09 Check keys: [0;32mPASSED[0;0m
+#10 Destroy list: [0;32mPASSED[0;0m
+#11 Delete name: [0;32mPASSED[0;0m
+#12 Purge country: [0;32mPASSED[0;0m
+#13 Get keys: [0;32mPASSED[0;0m
+#14 Check key: [0;32mPASSED[0;0m
+#15 Create bucket: [0;32mPASSED[0;0m
+#16 Fill with values: [0;32mPASSED[0;0m
+#17 List keys ok: [0;32mPASSED[0;0m
+#18 List keys should timeout: [0;32mPASSED[0;0m
+ALL PASSED

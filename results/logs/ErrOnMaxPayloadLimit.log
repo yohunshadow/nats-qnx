@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ErrOnMaxPayloadLimit ==
+[0;0m#01 Check expected max payload: [0;32mPASSED[0;0m
+#02 Expect getting an error when publish more than max payload: [0;32mPASSED[0;0m
+#03 Expect success if publishing less than max payload: [0;32mPASSED[0;0m
+#04 Test completed ok: [0;32mPASSED[0;0m
+ALL PASSED

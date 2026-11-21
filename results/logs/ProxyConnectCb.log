@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ProxyConnectCb ==
+[0;0m#01 Set connectCb that returns failure: [0;32mPASSED[0;0m
+#02 Connect with connectCb returning failure: [0;32mPASSED[0;0m
+#03 Check invoked properly: [0;32mPASSED[0;0m
+#04 Set connectCb that returns success: [0;32mPASSED[0;0m
+#05 Connect with connectCb returning success: [0;32mPASSED[0;0m
+#06 Check invoked properly: [0;32mPASSED[0;0m
+#07 Set connectCb that returns a plain socket: [0;32mPASSED[0;0m
+#08 Connect with connectCb returning a plain socket: [0;32mPASSED[0;0m
+#09 Socket setup applied by the library: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsEncodeRespID ==
+[0;0m#01 Encode (short) 0: [0;32mPASSED[0;0m
+#02 Encode (short) 10: [0;32mPASSED[0;0m
+#03 Encode (short) 61: [0;32mPASSED[0;0m
+#04 Encode (short) 62: [0;32mPASSED[0;0m
+#05 Encode (short) 124: [0;32mPASSED[0;0m
+#06 Encode (short) 237: [0;32mPASSED[0;0m
+#07 Encode (short) 18446744073709551615: [0;32mPASSED[0;0m
+#08 Encode (long) 0: [0;32mPASSED[0;0m
+#09 Encode (long) 10: [0;32mPASSED[0;0m
+#10 Encode (long) 61: [0;32mPASSED[0;0m
+#11 Encode (long) 62: [0;32mPASSED[0;0m
+#12 Encode (long) 124: [0;32mPASSED[0;0m
+#13 Encode (long) 237: [0;32mPASSED[0;0m
+#14 Encode (long) 18446744073709551615: [0;32mPASSED[0;0m
+ALL PASSED

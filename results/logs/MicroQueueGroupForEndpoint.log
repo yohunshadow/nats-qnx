@@ -1,0 +1,33 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== MicroQueueGroupForEndpoint ==
+[0;0m#01 Connect to server: [0;32mPASSED[0;0m
+#02 default: [0;32mPASSED[0;0m
+#03 Destroy microservice testService: [0;32mPASSED[0;0m
+#04 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#05 service value override: [0;32mPASSED[0;0m
+#06 Destroy microservice testService: [0;32mPASSED[0;0m
+#07 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#08 G1 value override: [0;32mPASSED[0;0m
+#09 Destroy microservice testService: [0;32mPASSED[0;0m
+#10 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#11 service and G1 value overrides: [0;32mPASSED[0;0m
+#12 Destroy microservice testService: [0;32mPASSED[0;0m
+#13 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#14 service and G2 value overrides: [0;32mPASSED[0;0m
+#15 Destroy microservice testService: [0;32mPASSED[0;0m
+#16 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#17 disabled: [0;32mPASSED[0;0m
+#18 Destroy microservice testService: [0;32mPASSED[0;0m
+#19 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#20 disabled for S, set for G1: [0;32mPASSED[0;0m
+#21 Destroy microservice testService: [0;32mPASSED[0;0m
+#22 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#23 disabled for G1: [0;32mPASSED[0;0m
+#24 Destroy microservice testService: [0;32mPASSED[0;0m
+#25 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#26 disabled for G1, set for G2: [0;32mPASSED[0;0m
+#27 Destroy microservice testService: [0;32mPASSED[0;0m
+#28 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+ALL PASSED

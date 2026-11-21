@@ -1,0 +1,13 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== GetClientIP ==
+[0;0m#01 Check server version: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get client IP - no conn: [0;32mPASSED[0;0m
+#04 Get client IP - no ip loc: [0;32mPASSED[0;0m
+#05 Get client IP: [0;32mPASSED[0;0m
+#06 Get client IP after conn closed: [0;32mPASSED[0;0m
+#07 Connect: [0;32mPASSED[0;0m
+#08 Get client IP with old server: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,23 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamOrderedConsResume ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Send 5 messages: [0;32mPASSED[0;0m
+#06 DeliverNew, first message lost: [0;32mPASSED[0;0m
+#07 DeliverLast, first message lost: [0;32mPASSED[0;0m
+#08 DeliverNew, consumer lost before any message: Error 36 - Missed Server Heartbeat on connection [6] on "["foo"]"
+[0;32mPASSED[0;0m
+#09 DeliverByStartTime, consumer lost before any message: Error 36 - Missed Server Heartbeat on connection [6] on "["foo"]"
+[0;32mPASSED[0;0m
+#10 DeliverByStartTime, consumer lost after messages: Error 36 - Missed Server Heartbeat on connection [6] on "["foo"]"
+[0;32mPASSED[0;0m
+#11 User provided name, first message lost: [0;32mPASSED[0;0m
+#12 Create stream: [0;32mPASSED[0;0m
+#13 DeliverLastPerSubject, first message lost: [0;32mPASSED[0;0m
+#14 Leave a named consumer behind: [0;32mPASSED[0;0m
+#15 User provided name, existing consumer: [0;32mPASSED[0;0m
+ALL PASSED

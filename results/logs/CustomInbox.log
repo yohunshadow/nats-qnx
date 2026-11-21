@@ -1,0 +1,41 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== CustomInbox ==
+[0;0m#01 Create options: [0;32mPASSED[0;0m
+#02 Bad prefix 'bad prefix': [0;32mPASSED[0;0m
+#03 Bad prefix 'bad	prefix': [0;32mPASSED[0;0m
+#04 Bad prefix 'bad..prefix': [0;32mPASSED[0;0m
+#05 Bad prefix 'bad.*.prefix': [0;32mPASSED[0;0m
+#06 Bad prefix 'bad.>.prefix': [0;32mPASSED[0;0m
+#07 Bad prefix 'bad.prefix.*': [0;32mPASSED[0;0m
+#08 Bad prefix 'bad.prefix.>': [0;32mPASSED[0;0m
+#09 Bad prefix 'bad.prefix.': [0;32mPASSED[0;0m
+#10 Bad prefix 'bad.prefix..': [0;32mPASSED[0;0m
+#11 Set small prefix: [0;32mPASSED[0;0m
+#12 Set old request style: [0;32mPASSED[0;0m
+#13 Connect and setup sub: [0;32mPASSED[0;0m
+#14 Send request: [0;32mPASSED[0;0m
+#15 Check custom inbox: [0;32mPASSED[0;0m
+#16 Set small prefix: [0;32mPASSED[0;0m
+#17 Use new request style: [0;32mPASSED[0;0m
+#18 Connect and setup sub: [0;32mPASSED[0;0m
+#19 Send request: [0;32mPASSED[0;0m
+#20 Check custom inbox: [0;32mPASSED[0;0m
+#21 Set big prefix: [0;32mPASSED[0;0m
+#22 Set old request style: [0;32mPASSED[0;0m
+#23 Connect and setup sub: [0;32mPASSED[0;0m
+#24 Send request: [0;32mPASSED[0;0m
+#25 Check custom inbox: [0;32mPASSED[0;0m
+#26 Set big prefix: [0;32mPASSED[0;0m
+#27 Use new request style: [0;32mPASSED[0;0m
+#28 Connect and setup sub: [0;32mPASSED[0;0m
+#29 Send request: [0;32mPASSED[0;0m
+#30 Check custom inbox: [0;32mPASSED[0;0m
+#31 Set option: [0;32mPASSED[0;0m
+#32 Connect: [0;32mPASSED[0;0m
+#33 Inbox init: [0;32mPASSED[0;0m
+#34 Set option: [0;32mPASSED[0;0m
+#35 Connect: [0;32mPASSED[0;0m
+#36 Inbox init: [0;32mPASSED[0;0m
+ALL PASSED

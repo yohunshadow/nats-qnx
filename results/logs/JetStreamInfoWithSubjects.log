@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamInfoWithSubjects ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Send to different subjects: [0;32mPASSED[0;0m
+#06 Check number subjects: [0;32mPASSED[0;0m
+#07 Get subjects list (no match): [0;32mPASSED[0;0m
+#08 Get subjects list (1 match): [0;32mPASSED[0;0m
+#09 Get subjects list (all matches): [0;32mPASSED[0;0m
+#10 Create sub for pagination check: [0;32mPASSED[0;0m
+#11 Get all subjects with pagination: [0;32mPASSED[0;0m
+#12 Check 1st request: [0;32mPASSED[0;0m
+#13 Check 2nd request: [0;32mPASSED[0;0m
+#14 Check 3rd request: [0;32mPASSED[0;0m
+ALL PASSED

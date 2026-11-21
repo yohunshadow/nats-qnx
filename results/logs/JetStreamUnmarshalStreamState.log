@@ -1,0 +1,20 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamUnmarshalStreamState ==
+[0;0m#01 Bad fields: [0;32mPASSED[0;0m
+#02 Bad fields: [0;32mPASSED[0;0m
+#03 Bad fields: [0;32mPASSED[0;0m
+#04 Bad fields: [0;32mPASSED[0;0m
+#05 Bad fields: [0;32mPASSED[0;0m
+#06 Bad fields: [0;32mPASSED[0;0m
+#07 Bad fields: [0;32mPASSED[0;0m
+#08 Bad fields: [0;32mPASSED[0;0m
+#09 Bad fields: [0;32mPASSED[0;0m
+#10 Bad fields: [0;32mPASSED[0;0m
+#11 Bad fields: [0;32mPASSED[0;0m
+#12 Bad fields: [0;32mPASSED[0;0m
+#13 Bad fields: [0;32mPASSED[0;0m
+#14 Unmarshal: [0;32mPASSED[0;0m
+#15 Cleanup: [0;32mPASSED[0;0m
+ALL PASSED

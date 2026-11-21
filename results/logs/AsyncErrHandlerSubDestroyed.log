@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AsyncErrHandlerSubDestroyed ==
+[0;0m#01 Connect: [0;32mPASSED[0;0m
+#02 Create sync sub: [0;32mPASSED[0;0m
+#03 Cause error: [0;32mPASSED[0;0m
+#04 Next should be error: [0;32mPASSED[0;0m
+#05 Consume 1: [0;32mPASSED[0;0m
+#06 Cause error again: [0;32mPASSED[0;0m
+#07 Wait a bit for async error to be posted: [0;32mPASSED[0;0m
+#08 Destroy subscription: [0;32mPASSED[0;0m
+#09 Wait for async error callback to return: [0;32mPASSED[0;0m
+ALL PASSED

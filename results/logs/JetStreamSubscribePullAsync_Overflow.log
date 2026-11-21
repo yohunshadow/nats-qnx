@@ -1,0 +1,20 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribePullAsync_Overflow ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create the test stream: [0;32mPASSED[0;0m
+#05 Create the test consumer configured with 'overflow': [0;32mPASSED[0;0m
+#06 Publish 100 messages: [0;32mPASSED[0;0m
+#07 Initialize shared options: [0;32mPASSED[0;0m
+#08 Create pull async subscription with MinPending=110, greater than 100 published: [0;32mPASSED[0;0m
+#09 Not getting messages yet, not enough pending: [0;32mPASSED[0;0m
+#10 Publish 100 more messages: [0;32mPASSED[0;0m
+#11 Get 91 messages, until we drop below min pending of 110: [0;32mPASSED[0;0m
+#12 Subscribe again, this time with MinAckPending of 5: [0;32mPASSED[0;0m
+#13 Not getting messages yet since there no unacknowledged yet: [0;32mPASSED[0;0m
+#14 Receive but not ACK 10 messages with a separate subscription: [0;32mPASSED[0;0m
+#15 Get the remaining 99 messages (200 - 91 - 10): [0;32mPASSED[0;0m
+ALL PASSED

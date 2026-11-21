@@ -1,0 +1,115 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamMgtConsumers ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Consumer config init, bad args: [0;32mPASSED[0;0m
+#05 Consumer config init: [0;32mPASSED[0;0m
+#06 Add consumer, ctx missing: [0;32mPASSED[0;0m
+#07 Add consumer, config missing: [0;32mPASSED[0;0m
+#08 Add consumer, stream name required: [0;32mPASSED[0;0m
+#09 Add consumer, stream name invalid: [0;32mPASSED[0;0m
+#10 Add consumer, invalid durable name: [0;32mPASSED[0;0m
+#11 Add consumer, invalid name: [0;32mPASSED[0;0m
+#12 Create check sub: [0;32mPASSED[0;0m
+#13 Deliver policy: [0;32mPASSED[0;0m
+#14 Verify config: [0;32mPASSED[0;0m
+#15 Deliver policy: [0;32mPASSED[0;0m
+#16 Verify config: [0;32mPASSED[0;0m
+#17 Deliver policy: [0;32mPASSED[0;0m
+#18 Verify config: [0;32mPASSED[0;0m
+#19 Deliver policy: [0;32mPASSED[0;0m
+#20 Verify config: [0;32mPASSED[0;0m
+#21 Deliver policy: [0;32mPASSED[0;0m
+#22 Verify config: [0;32mPASSED[0;0m
+#23 Deliver policy: [0;32mPASSED[0;0m
+#24 Verify config: [0;32mPASSED[0;0m
+#25 Deliver policy bad: [0;32mPASSED[0;0m
+#26 Ack policy: [0;32mPASSED[0;0m
+#27 Verify config: [0;32mPASSED[0;0m
+#28 Ack policy: [0;32mPASSED[0;0m
+#29 Verify config: [0;32mPASSED[0;0m
+#30 Ack policy: [0;32mPASSED[0;0m
+#31 Verify config: [0;32mPASSED[0;0m
+#32 Ack policy bad: [0;32mPASSED[0;0m
+#33 Replay policy: [0;32mPASSED[0;0m
+#34 Verify config: [0;32mPASSED[0;0m
+#35 Replay policy: [0;32mPASSED[0;0m
+#36 Verify config: [0;32mPASSED[0;0m
+#37 Replay policy bad: [0;32mPASSED[0;0m
+#38 Add consumer (non durable): [0;32mPASSED[0;0m
+#39 Verify config: [0;32mPASSED[0;0m
+#40 Add consumer (non durable, filter subjects): [0;32mPASSED[0;0m
+#41 Verify config: [0;32mPASSED[0;0m
+#42 Create check sub: [0;32mPASSED[0;0m
+#43 Add consumer (durable): [0;32mPASSED[0;0m
+#44 Verify config: [0;32mPASSED[0;0m
+#45 Create check sub: [0;32mPASSED[0;0m
+#46 Add consumer (name): [0;32mPASSED[0;0m
+#47 Verify config: [0;32mPASSED[0;0m
+#48 Create stream: [0;32mPASSED[0;0m
+#49 Add consumer (name): [0;32mPASSED[0;0m
+#50 Pause consumer: [0;32mPASSED[0;0m
+#51 Verify consumer paused with GetInfo: [0;32mPASSED[0;0m
+#52 Unpause consumer: [0;32mPASSED[0;0m
+#53 Add consumer (durable): [0;32mPASSED[0;0m
+#54 Publish: [0;32mPASSED[0;0m
+#55 Get consumer info (bad args): [0;32mPASSED[0;0m
+#56 Get consumer info, stream name missing: [0;32mPASSED[0;0m
+#57 Get consumer info, stream name invalid: [0;32mPASSED[0;0m
+#58 Get consumer info, consumer name missing: [0;32mPASSED[0;0m
+#59 Get consumer info, consumer name invalid: [0;32mPASSED[0;0m
+#60 Get consumer info: [0;32mPASSED[0;0m
+#61 Get consumer info (not found): [0;32mPASSED[0;0m
+#62 Delete consumer (bad args): [0;32mPASSED[0;0m
+#63 Delete consumer, stream name missing: [0;32mPASSED[0;0m
+#64 Delete consumer, stream name invalid: [0;32mPASSED[0;0m
+#65 Delete consumer, consumer name missing: [0;32mPASSED[0;0m
+#66 Get consumer info, consumer name invalid: [0;32mPASSED[0;0m
+#67 Delete consumer: [0;32mPASSED[0;0m
+#68 Delete consumer (not found): [0;32mPASSED[0;0m
+#69 Create consumer with description: [0;32mPASSED[0;0m
+#70 Create consumer with description too long: [0;32mPASSED[0;0m
+#71 Create consumer: [0;32mPASSED[0;0m
+#72 Update consumer, config missing: [0;32mPASSED[0;0m
+#73 Update consumer, stream name missing: [0;32mPASSED[0;0m
+#74 Update consumer, stream name invalid: [0;32mPASSED[0;0m
+#75 Update needs durable name: [0;32mPASSED[0;0m
+#76 Update works ok: [0;32mPASSED[0;0m
+#77 Update (filter subjects) works ok: [0;32mPASSED[0;0m
+#78 Add pull consumer: [0;32mPASSED[0;0m
+#79 Update works ok: [0;32mPASSED[0;0m
+#80 Create stream: [0;32mPASSED[0;0m
+#81 Create sub: [0;32mPASSED[0;0m
+#82 Ephemeral with name: [0;32mPASSED[0;0m
+#83 Check: [0;32mPASSED[0;0m
+#84 Durable: [0;32mPASSED[0;0m
+#85 Check: [0;32mPASSED[0;0m
+#86 Durable and Name same: [0;32mPASSED[0;0m
+#87 Check subject: [0;32mPASSED[0;0m
+#88 Durable and Name different: [0;32mPASSED[0;0m
+#89 Check subject: [0;32mPASSED[0;0m
+#90 Ephemeral with filter: [0;32mPASSED[0;0m
+#91 Check subject: [0;32mPASSED[0;0m
+#92 Legacy ephemeral: [0;32mPASSED[0;0m
+#93 Check subject: [0;32mPASSED[0;0m
+#94 List consumer infos (bad args): [0;32mPASSED[0;0m
+#95 List consumer infos (unknown stream): [0;32mPASSED[0;0m
+#96 Create sub for pagination check: [0;32mPASSED[0;0m
+#97 List consumers infos: [0;32mPASSED[0;0m
+#98 Check 1st request: [0;32mPASSED[0;0m
+#99 Check 2nd request: [0;32mPASSED[0;0m
+#100 Check 3rd request: [0;32mPASSED[0;0m
+#101 Destroy list: [0;32mPASSED[0;0m
+#102 List consumer names (bad args): [0;32mPASSED[0;0m
+#103 List consumer names (unknown stream): [0;32mPASSED[0;0m
+#104 Create sub for pagination check: [0;32mPASSED[0;0m
+#105 List consumer names: [0;32mPASSED[0;0m
+#106 Check 1st request: [0;32mPASSED[0;0m
+#107 Check 2nd request: [0;32mPASSED[0;0m
+#108 Check 3rd request: [0;32mPASSED[0;0m
+#109 Destroy list: [0;32mPASSED[0;0m
+#110 Check clone: [0;32mPASSED[0;0m
+ALL PASSED

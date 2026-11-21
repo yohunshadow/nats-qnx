@@ -1,0 +1,35 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== KeyValueWatchAsync ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create KV: [0;32mPASSED[0;0m
+#05 Create watcher: [0;32mPASSED[0;0m
+#06 Check init done: [0;32mPASSED[0;0m
+#07 Create: [0;32mPASSED[0;0m
+#08 Check update: [0;32mPASSED[0;0m
+#09 Put: [0;32mPASSED[0;0m
+#10 Check update: [0;32mPASSED[0;0m
+#11 Put: [0;32mPASSED[0;0m
+#12 Check update: [0;32mPASSED[0;0m
+#13 Put: [0;32mPASSED[0;0m
+#14 Check update: [0;32mPASSED[0;0m
+#15 Put: [0;32mPASSED[0;0m
+#16 Check update: [0;32mPASSED[0;0m
+#17 Delete: [0;32mPASSED[0;0m
+#18 Check delete: [0;32mPASSED[0;0m
+#19 Create watcher with UpdatesOnly: [0;32mPASSED[0;0m
+#20 Check update: [0;32mPASSED[0;0m
+#21 Create watcher with IgnoreDeletes: [0;32mPASSED[0;0m
+#22 Check init done: [0;32mPASSED[0;0m
+#23 Add: [0;32mPASSED[0;0m
+#24 Check update: [0;32mPASSED[0;0m
+#25 Delete: [0;32mPASSED[0;0m
+#26 Expect nothing: [0;32mPASSED[0;0m
+#27 Next is not allowed: [0;32mPASSED[0;0m
+#28 Stop from callback: [0;32mPASSED[0;0m
+#29 Check update: [0;32mPASSED[0;0m
+#30 Expect nothing: [0;32mPASSED[0;0m
+ALL PASSED

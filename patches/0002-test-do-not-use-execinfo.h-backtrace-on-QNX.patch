@@ -1,0 +1,198 @@
+From 4d22eeea61105f74038c3f532e8ea7cabddb91d8 Mon Sep 17 00:00:00 2001
+From: nats-qnx <nats-qnx@localhost>
+Date: Sat, 21 Nov 2026 03:02:27 +0700
+Subject: [PATCH 2/2] test: do not use <execinfo.h>/backtrace() on QNX
+
+QNX does not provide glibc's <execinfo.h> (it has its own libbacktrace
+with the bt_* API). Guard the include and the SIGSEGV backtrace dump the
+same way Android is already guarded, so the upstream test-suite compiles.
+---
+ test/server.log | 137 ++++++++++++++++++++++++++++++++++++++++++++++++
+ test/test.c     |   5 +-
+ test/test.h     |   2 +
+ 3 files changed, 142 insertions(+), 2 deletions(-)
+ create mode 100644 test/server.log
+
+diff --git a/test/server.log b/test/server.log
+new file mode 100644
+index 0000000..40b1eaa
+--- /dev/null
++++ b/test/server.log
+@@ -0,0 +1,137 @@
++[748302] 2026/11/21 03:02:02.791281 [INF] Starting nats-server
++[748302] 2026/11/21 03:02:02.791371 [INF]   Version:  2.15.3
++[748302] 2026/11/21 03:02:02.791373 [INF]   Git:      [2a9066e]
++[748302] 2026/11/21 03:02:02.791374 [INF]   Name:     NDNLIPKEMRG7KZQ7GEG36IXAX4ECZEZ6Z2JUSMGJA3NE4R3FEQC4A4IA
++[748302] 2026/11/21 03:02:02.791378 [INF]   ID:       NDNLIPKEMRG7KZQ7GEG36IXAX4ECZEZ6Z2JUSMGJA3NE4R3FEQC4A4IA
++[748302] 2026/11/21 03:02:02.798750 [INF] Listening for client connections on 127.0.0.1:22222
++[748302] 2026/11/21 03:02:02.798776 [INF] Server is ready
++[748302] 2026/11/21 03:02:03.025680 [INF] Trapped "terminated" signal
++[748302] 2026/11/21 03:02:03.025828 [INF] Initiating Shutdown...
++[748302] 2026/11/21 03:02:03.025875 [INF] Server Exiting..
++[748313] 2026/11/21 03:02:03.093562 [INF] Starting nats-server
++[748313] 2026/11/21 03:02:03.093789 [INF]   Version:  2.15.3
++[748313] 2026/11/21 03:02:03.093792 [INF]   Git:      [2a9066e]
++[748313] 2026/11/21 03:02:03.093794 [INF]   Name:     NC72L7YFRQUU6PEZPGYZL2MOTESF2VH7LR3EXXB4KF3ZHJRCBSY6AIRM
++[748313] 2026/11/21 03:02:03.093819 [INF]   ID:       NC72L7YFRQUU6PEZPGYZL2MOTESF2VH7LR3EXXB4KF3ZHJRCBSY6AIRM
++[748313] 2026/11/21 03:02:03.100280 [INF] Listening for client connections on 127.0.0.1:22222
++[748313] 2026/11/21 03:02:03.100322 [INF] Server is ready
++[748313] 2026/11/21 03:02:03.296564 [INF] Trapped "terminated" signal
++[748313] 2026/11/21 03:02:03.296687 [INF] Initiating Shutdown...
++[748313] 2026/11/21 03:02:03.296738 [INF] Server Exiting..
++[748325] 2026/11/21 03:02:03.447633 [INF] Starting nats-server
++[748325] 2026/11/21 03:02:03.447727 [INF]   Version:  2.15.3
++[748325] 2026/11/21 03:02:03.447729 [INF]   Git:      [2a9066e]
++[748325] 2026/11/21 03:02:03.447731 [INF]   Name:     NCZ3JFVC7WXOUVW23N34H3SMDNBLM5JEZB4OS5QFLRWE656LCL7E2ZYT
++[748325] 2026/11/21 03:02:03.447733 [INF]   ID:       NCZ3JFVC7WXOUVW23N34H3SMDNBLM5JEZB4OS5QFLRWE656LCL7E2ZYT
++[748325] 2026/11/21 03:02:03.453404 [INF] Listening for client connections on 127.0.0.1:4222
++[748325] 2026/11/21 03:02:03.453429 [INF] Server is ready
++[748325] 2026/11/21 03:02:03.666962 [INF] Trapped "terminated" signal
++[748325] 2026/11/21 03:02:03.667079 [INF] Initiating Shutdown...
++[748325] 2026/11/21 03:02:03.667130 [INF] Server Exiting..
++[748470] 2026/11/21 03:02:18.393864 [INF] Starting nats-server
++[748470] 2026/11/21 03:02:18.393939 [INF]   Version:  2.15.3
++[748470] 2026/11/21 03:02:18.393942 [INF]   Git:      [2a9066e]
++[748470] 2026/11/21 03:02:18.393944 [INF]   Name:     NA4KGW4F45TDFYU7DZFGNOUN6SDJ67ETNCGIELUXQ7B7VCQK3SBAX72E
++[748470] 2026/11/21 03:02:18.393950 [INF]   ID:       NA4KGW4F45TDFYU7DZFGNOUN6SDJ67ETNCGIELUXQ7B7VCQK3SBAX72E
++[748470] 2026/11/21 03:02:18.398814 [INF] Listening for client connections on 127.0.0.1:4222
++[748470] 2026/11/21 03:02:18.398829 [INF] Server is ready
++[748470] 2026/11/21 03:02:19.499303 [INF] Trapped "terminated" signal
++[748470] 2026/11/21 03:02:19.499521 [INF] Initiating Shutdown...
++[748470] 2026/11/21 03:02:19.499591 [INF] Server Exiting..
++[748502] 2026/11/21 03:02:19.887836 [INF] Starting nats-server
++[748502] 2026/11/21 03:02:19.887919 [INF]   Version:  2.15.3
++[748502] 2026/11/21 03:02:19.887921 [INF]   Git:      [2a9066e]
++[748502] 2026/11/21 03:02:19.887923 [INF]   Name:     NBYYXWIDPKHZ73G5ER5GAS3OAS3CBNJYUNJLD6R5JDPLBVGJQFTPWO4F
++[748502] 2026/11/21 03:02:19.887925 [INF]   ID:       NBYYXWIDPKHZ73G5ER5GAS3OAS3CBNJYUNJLD6R5JDPLBVGJQFTPWO4F
++[748502] 2026/11/21 03:02:19.892715 [INF] Listening for client connections on 127.0.0.1:4222
++[748502] 2026/11/21 03:02:19.892738 [INF] Server is ready
++[748502] 2026/11/21 03:02:20.148906 [INF] Trapped "terminated" signal
++[748502] 2026/11/21 03:02:20.149022 [INF] Initiating Shutdown...
++[748502] 2026/11/21 03:02:20.149081 [INF] Server Exiting..
++[748532] 2026/11/21 03:02:20.526771 [INF] Starting nats-server
++[748532] 2026/11/21 03:02:20.526833 [INF]   Version:  2.15.3
++[748532] 2026/11/21 03:02:20.526836 [INF]   Git:      [2a9066e]
++[748532] 2026/11/21 03:02:20.526837 [INF]   Name:     NB2GQWBQ4Z3XGW7HEGLVL4HN6THCBHAEC7F5E3MWRU6CZQXOP2FFI5H6
++[748532] 2026/11/21 03:02:20.526839 [INF]   ID:       NB2GQWBQ4Z3XGW7HEGLVL4HN6THCBHAEC7F5E3MWRU6CZQXOP2FFI5H6
++[748532] 2026/11/21 03:02:20.531162 [INF] Listening for client connections on 127.0.0.1:4222
++[748532] 2026/11/21 03:02:20.531195 [INF] Server is ready
++[748532] 2026/11/21 03:02:20.822280 [INF] Trapped "terminated" signal
++[748532] 2026/11/21 03:02:20.822423 [INF] Initiating Shutdown...
++[748532] 2026/11/21 03:02:20.822485 [INF] Server Exiting..
++[748580] 2026/11/21 03:02:21.215747 [INF] Starting nats-server
++[748580] 2026/11/21 03:02:21.215821 [INF]   Version:  2.15.3
++[748580] 2026/11/21 03:02:21.215824 [INF]   Git:      [2a9066e]
++[748580] 2026/11/21 03:02:21.215826 [INF]   Name:     NAQAEYYWGM5UPYWJ4MJCJZNVMTWJCWJ72ORQA6ILZFOR5AWPO6YIU3FW
++[748580] 2026/11/21 03:02:21.215832 [INF]   ID:       NAQAEYYWGM5UPYWJ4MJCJZNVMTWJCWJ72ORQA6ILZFOR5AWPO6YIU3FW
++[748580] 2026/11/21 03:02:21.219912 [INF] Listening for client connections on 127.0.0.1:4222
++[748580] 2026/11/21 03:02:21.219938 [INF] Server is ready
++[748580] 2026/11/21 03:02:21.906034 [INF] Trapped "terminated" signal
++[748580] 2026/11/21 03:02:21.906226 [INF] Initiating Shutdown...
++[748580] 2026/11/21 03:02:21.906339 [INF] Server Exiting..
++[748609] 2026/11/21 03:02:22.689290 [INF] Starting nats-server
++[748609] 2026/11/21 03:02:22.689370 [INF]   Version:  2.15.3
++[748609] 2026/11/21 03:02:22.689374 [INF]   Git:      [2a9066e]
++[748609] 2026/11/21 03:02:22.689375 [INF]   Name:     NAO3HJOXGFEZ4RFT67ATEJWD6S5XOLPCZL7HABKKILM5UCETM5JIK34Q
++[748609] 2026/11/21 03:02:22.689382 [INF]   ID:       NAO3HJOXGFEZ4RFT67ATEJWD6S5XOLPCZL7HABKKILM5UCETM5JIK34Q
++[748609] 2026/11/21 03:02:22.693675 [INF] Listening for client connections on 127.0.0.1:4222
++[748609] 2026/11/21 03:02:22.693696 [INF] Server is ready
++[748609] 2026/11/21 03:02:22.925059 [INF] Trapped "terminated" signal
++[748609] 2026/11/21 03:02:22.925175 [INF] Initiating Shutdown...
++[748609] 2026/11/21 03:02:22.925251 [INF] Server Exiting..
++[748633] 2026/11/21 03:02:23.350767 [INF] Starting nats-server
++[748633] 2026/11/21 03:02:23.350837 [INF]   Version:  2.15.3
++[748633] 2026/11/21 03:02:23.350843 [INF]   Git:      [2a9066e]
++[748633] 2026/11/21 03:02:23.350845 [INF]   Name:     NAWK2IXUI2VWSKAVJF2VRGVJNRPPJBAWWWWDZYCDRDF444PD3CJJJRCI
++[748633] 2026/11/21 03:02:23.350846 [INF]   ID:       NAWK2IXUI2VWSKAVJF2VRGVJNRPPJBAWWWWDZYCDRDF444PD3CJJJRCI
++[748633] 2026/11/21 03:02:23.355129 [INF] Listening for client connections on 127.0.0.1:4222
++[748633] 2026/11/21 03:02:23.355168 [INF] Server is ready
++[748633] 2026/11/21 03:02:23.670299 [INF] Trapped "terminated" signal
++[748633] 2026/11/21 03:02:23.670501 [INF] Initiating Shutdown...
++[748633] 2026/11/21 03:02:23.670575 [INF] Server Exiting..
++[748651] 2026/11/21 03:02:24.078493 [INF] Starting nats-server
++[748651] 2026/11/21 03:02:24.078570 [INF]   Version:  2.15.3
++[748651] 2026/11/21 03:02:24.078572 [INF]   Git:      [2a9066e]
++[748651] 2026/11/21 03:02:24.078574 [INF]   Name:     NCBT5KFTXRWCPR3I2YYPBP2ZV65OIP77XJ62HWNGNJ27EUQZ5WVH3GKU
++[748651] 2026/11/21 03:02:24.078581 [INF]   ID:       NCBT5KFTXRWCPR3I2YYPBP2ZV65OIP77XJ62HWNGNJ27EUQZ5WVH3GKU
++[748651] 2026/11/21 03:02:24.084144 [INF] Listening for client connections on 127.0.0.1:4222
++[748651] 2026/11/21 03:02:24.084168 [INF] Server is ready
++[748651] 2026/11/21 03:02:24.319087 [INF] Trapped "terminated" signal
++[748651] 2026/11/21 03:02:24.319235 [INF] Initiating Shutdown...
++[748651] 2026/11/21 03:02:24.319303 [INF] Server Exiting..
++[748680] 2026/11/21 03:02:24.668461 [INF] Starting nats-server
++[748680] 2026/11/21 03:02:24.668526 [INF]   Version:  2.15.3
++[748680] 2026/11/21 03:02:24.668533 [INF]   Git:      [2a9066e]
++[748680] 2026/11/21 03:02:24.668535 [INF]   Name:     NCVRCJ5Z4BMVO6ZWLUFK4DVPEV6VDKF5YDH6SBY7U3P2VZVDDOOIGIH7
++[748680] 2026/11/21 03:02:24.668538 [INF]   ID:       NCVRCJ5Z4BMVO6ZWLUFK4DVPEV6VDKF5YDH6SBY7U3P2VZVDDOOIGIH7
++[748680] 2026/11/21 03:02:24.673907 [INF] Listening for client connections on 127.0.0.1:4222
++[748680] 2026/11/21 03:02:24.673928 [INF] Server is ready
++[748680] 2026/11/21 03:02:25.448200 [INF] Trapped "terminated" signal
++[748680] 2026/11/21 03:02:25.448355 [INF] Initiating Shutdown...
++[748680] 2026/11/21 03:02:25.448431 [INF] Server Exiting..
++[748696] 2026/11/21 03:02:25.510712 [INF] Starting nats-server
++[748696] 2026/11/21 03:02:25.510782 [INF]   Version:  2.15.3
++[748696] 2026/11/21 03:02:25.510785 [INF]   Git:      [2a9066e]
++[748696] 2026/11/21 03:02:25.510786 [INF]   Name:     NDXB2Y2SOSGD7XEDPL6JZFIP2Z242IKHX5DLV2M63ZMDBPHK6YA2FM72
++[748696] 2026/11/21 03:02:25.510788 [INF]   ID:       NDXB2Y2SOSGD7XEDPL6JZFIP2Z242IKHX5DLV2M63ZMDBPHK6YA2FM72
++[748696] 2026/11/21 03:02:25.516486 [INF] Listening for client connections on 127.0.0.1:4222
++[748696] 2026/11/21 03:02:25.516507 [INF] Server is ready
++[748696] 2026/11/21 03:02:26.292458 [INF] Trapped "terminated" signal
++[748696] 2026/11/21 03:02:26.292767 [INF] Initiating Shutdown...
++[748696] 2026/11/21 03:02:26.292851 [INF] Server Exiting..
++[748708] 2026/11/21 03:02:26.321054 [INF] Starting nats-server
++[748708] 2026/11/21 03:02:26.321146 [INF]   Version:  2.15.3
++[748708] 2026/11/21 03:02:26.321148 [INF]   Git:      [2a9066e]
++[748708] 2026/11/21 03:02:26.321150 [INF]   Name:     ND5RVMH3UUOIDI6U2PLH7BCKBFDY6SGWCAJGYDHVZERKSH3FOO4ORBWP
++[748708] 2026/11/21 03:02:26.321156 [INF]   ID:       ND5RVMH3UUOIDI6U2PLH7BCKBFDY6SGWCAJGYDHVZERKSH3FOO4ORBWP
++[748708] 2026/11/21 03:02:26.326105 [INF] Listening for client connections on 127.0.0.1:4222
++[748708] 2026/11/21 03:02:26.326145 [INF] Server is ready
++[748708] 2026/11/21 03:02:27.099892 [INF] Trapped "terminated" signal
++[748708] 2026/11/21 03:02:27.100060 [INF] Initiating Shutdown...
++[748708] 2026/11/21 03:02:27.100157 [INF] Server Exiting..
++[748727] 2026/11/21 03:02:27.131288 [INF] Starting nats-server
++[748727] 2026/11/21 03:02:27.131378 [INF]   Version:  2.15.3
++[748727] 2026/11/21 03:02:27.131380 [INF]   Git:      [2a9066e]
++[748727] 2026/11/21 03:02:27.131381 [INF]   Name:     NCEFH6B2OGORFH424WQP5PEGSLK7W6NGBVBOZ3J3B2R3FZMXFBUV6BQL
++[748727] 2026/11/21 03:02:27.131392 [INF]   ID:       NCEFH6B2OGORFH424WQP5PEGSLK7W6NGBVBOZ3J3B2R3FZMXFBUV6BQL
++[748727] 2026/11/21 03:02:27.137219 [INF] Listening for client connections on 127.0.0.1:4222
++[748727] 2026/11/21 03:02:27.137245 [INF] Server is ready
+diff --git a/test/test.c b/test/test.c
+index edc5528..fc1ea45 100644
+--- a/test/test.c
++++ b/test/test.c
+@@ -45884,9 +45884,10 @@ void test_StanSubTimeout(void)
+ static void _sigsegv_handler(int sig) {
+ 
+ // Android doesn't support backtrace before API Level 33.
++// QNX has no <execinfo.h> (it uses its own libbacktrace bt_* API).
+ // Because this is for tests it's good enough to check
+ // for Android only, until there is need for a better solution.
+-#ifndef ANDROID
++#if !defined(ANDROID) && !defined(__QNX__)
+   void *array[20];
+   int size = backtrace(array, 20);
+ #endif // ANDROID
+@@ -45894,7 +45895,7 @@ static void _sigsegv_handler(int sig) {
+   // print out all the frames to stderr
+   fprintf(stderr, "Error: signal %d:\n", sig);
+ 
+-#ifndef ANDROID
++#if !defined(ANDROID) && !defined(__QNX__)
+   backtrace_symbols_fd(array, size, STDERR_FILENO);
+ #endif // ANDROID
+ 
+diff --git a/test/test.h b/test/test.h
+index 0bc1c83..e6b6c5d 100644
+--- a/test/test.h
++++ b/test/test.h
+@@ -13,8 +13,10 @@
+ 
+ #ifndef _WIN32
+ #include <dirent.h>
++#if !defined(__QNX__)
+ #include <execinfo.h>
+ #endif
++#endif
+ 
+ #include "../src/natsp.h"
+ #include "../src/comsock.h"

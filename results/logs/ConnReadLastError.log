@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ConnReadLastError ==
+[0;0m#01 Create a test connection: [0;32mPASSED[0;0m
+#02 Set last error, code only: #03 Verify the default error text: [0;32mPASSED[0;0m
+#04 Verify that error text gets truncated: [0;32mPASSED[0;0m
+#05 Set last error, code and test: #06 Verify the custom error text: [0;32mPASSED[0;0m
+ALL PASSED

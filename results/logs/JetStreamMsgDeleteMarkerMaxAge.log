@@ -1,0 +1,12 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamMsgDeleteMarkerMaxAge ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Stream config init: [0;32mPASSED[0;0m
+#05 Add stream: [0;32mPASSED[0;0m
+#06 Publish message with a TTL: [0;32mPASSED[0;0m
+#07 Sleep and check last message: [0;32mPASSED[0;0m
+ALL PASSED

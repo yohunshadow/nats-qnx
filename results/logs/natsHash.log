@@ -1,0 +1,31 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsHash ==
+[0;0m#01 Create hash with invalid 0 size: [0;32mPASSED[0;0m
+#02 Create hash with invalid negative size: [0;32mPASSED[0;0m
+#03 Create hash ok: [0;32mPASSED[0;0m
+#04 Set: [0;32mPASSED[0;0m
+#05 Set, get old value: [0;32mPASSED[0;0m
+#06 Get, not found: [0;32mPASSED[0;0m
+#07 Get, found: [0;32mPASSED[0;0m
+#08 Remove, not found: [0;32mPASSED[0;0m
+#09 Remove, found: [0;32mPASSED[0;0m
+#10 Test collision: [0;32mPASSED[0;0m
+#11 Remove from collisions (front to back): [0;32mPASSED[0;0m
+#12 Remove from collisions (back to front): [0;32mPASSED[0;0m
+#13 Grow: [0;32mPASSED[0;0m
+#14 Shrink: [0;32mPASSED[0;0m
+#15 Iterator: [0;32mPASSED[0;0m
+#16 Iterator, remove current: [0;32mPASSED[0;0m
+#17 Grow again: [0;32mPASSED[0;0m
+#18 Iterator, remove current, hash does not shrink: [0;32mPASSED[0;0m
+#19 After iterator done, shrink works: [0;32mPASSED[0;0m
+#20 Destroy: [0;32mPASSED[0;0m
+#21 Create new: [0;32mPASSED[0;0m
+#22 Populate: [0;32mPASSED[0;0m
+#23 Remove one: [0;32mPASSED[0;0m
+#24 RemoveSingle fails if more than one: [0;32mPASSED[0;0m
+#25 Remove second: [0;32mPASSED[0;0m
+#26 Remove single: [0;32mPASSED[0;0m
+ALL PASSED

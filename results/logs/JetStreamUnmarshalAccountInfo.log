@@ -1,0 +1,29 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamUnmarshalAccountInfo ==
+[0;0m#01 Bad fields: [0;32mPASSED[0;0m
+#02 Bad fields: [0;32mPASSED[0;0m
+#03 Bad fields: [0;32mPASSED[0;0m
+#04 Bad fields: [0;32mPASSED[0;0m
+#05 Bad fields: [0;32mPASSED[0;0m
+#06 Bad fields: [0;32mPASSED[0;0m
+#07 Bad fields: [0;32mPASSED[0;0m
+#08 Bad fields: [0;32mPASSED[0;0m
+#09 Bad fields: [0;32mPASSED[0;0m
+#10 Bad fields: [0;32mPASSED[0;0m
+#11 Bad fields: [0;32mPASSED[0;0m
+#12 Bad fields: [0;32mPASSED[0;0m
+#13 Bad fields: [0;32mPASSED[0;0m
+#14 Bad fields: [0;32mPASSED[0;0m
+#15 Bad fields: [0;32mPASSED[0;0m
+#16 Bad fields: [0;32mPASSED[0;0m
+#17 Bad fields: [0;32mPASSED[0;0m
+#18 Bad fields: [0;32mPASSED[0;0m
+#19 Bad fields: [0;32mPASSED[0;0m
+#20 Bad fields: [0;32mPASSED[0;0m
+#21 Bad fields: [0;32mPASSED[0;0m
+#22 Account info complete: [0;32mPASSED[0;0m
+#23 Check tier R1: [0;32mPASSED[0;0m
+#24 Check tier R2: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,28 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ServerPoolUpdatedOnClusterUpdate ==
+[0;0m#01 Connect ok: [0;32mPASSED[0;0m
+#02 DiscoveredServersCb triggered: [0;32mPASSED[0;0m
+#03 Check pool: [0;32mPASSED[0;0m
+#04 DiscoveredServersCb triggered: [0;32mPASSED[0;0m
+#05 Check pool: [0;32mPASSED[0;0m
+#06 Wait for reconnect: [0;32mPASSED[0;0m
+#07 Check pool: [0;32mPASSED[0;0m
+#08 Wait for reconnect: [0;32mPASSED[0;0m
+#09 Check pool: [0;32mPASSED[0;0m
+#10 Check pool: [0;32mPASSED[0;0m
+#11 Connect ok: [0;32mPASSED[0;0m
+#12 Server pool size should be 3: [0;32mPASSED[0;0m
+#13 Wait for reconnect: [0;32mPASSED[0;0m
+#14 Wait for reconnect: [0;32mPASSED[0;0m
+#15 Wait for reconnect: [0;32mPASSED[0;0m
+#16 Wait for reconnect: [0;32mPASSED[0;0m
+#17 Wait for reconnect: [0;32mPASSED[0;0m
+#18 Wait for reconnect: [0;32mPASSED[0;0m
+#19 Wait for reconnect: [0;32mPASSED[0;0m
+#20 Wait for reconnect: [0;32mPASSED[0;0m
+#21 Wait for reconnect: [0;32mPASSED[0;0m
+#22 Server pool size should be 3: [0;32mPASSED[0;0m
+#23 Servers in pool have not been replaced: [0;32mPASSED[0;0m
+ALL PASSED

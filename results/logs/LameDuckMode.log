@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== LameDuckMode ==
+[0;0m#01 Connect: [0;32mPASSED[0;0m
+#02 Lame duck callback invoked: [0;32mPASSED[0;0m
+#03 Discovered not invoked: [0;32mPASSED[0;0m
+#04 Connect: [0;32mPASSED[0;0m
+#05 Lame duck callback invoked: [0;32mPASSED[0;0m
+#06 Discovered servers ok: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,23 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== HeadersLift ==
+[0;0m#01 Valid simple header: [0;32mPASSED[0;0m
+#02 Key with spaces ok: [0;32mPASSED[0;0m
+#03 Key with spaces (including traling) ok: [0;32mPASSED[0;0m
+#04 Trim spaces for value: [0;32mPASSED[0;0m
+#05 Multiline values: [0;32mPASSED[0;0m
+#06 No value: [0;32mPASSED[0;0m
+#07 No value (extra spaces): [0;32mPASSED[0;0m
+#08 NATS header missing: [0;32mPASSED[0;0m
+#09 NATS header missing CRLF: [0;32mPASSED[0;0m
+#10 Invalid key start: [0;32mPASSED[0;0m
+#11 Space in key name: [0;32mPASSED[0;0m
+#12 Column missing: [0;32mPASSED[0;0m
+#13 Status no description: [0;32mPASSED[0;0m
+#14 Status no description (extra space): [0;32mPASSED[0;0m
+#15 Status no description (extra spaces): [0;32mPASSED[0;0m
+#16 Status with description: [0;32mPASSED[0;0m
+#17 Status with description (extra space): [0;32mPASSED[0;0m
+#18 Status with description (extra spaces): [0;32mPASSED[0;0m
+ALL PASSED

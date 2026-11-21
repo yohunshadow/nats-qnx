@@ -1,0 +1,41 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== PendingLimitsDeliveredAndDropped ==
+[0;0m#01 Settings, invalid args, NULL sub: [0;32mPASSED[0;0m
+#02 Settings, invalid args, zero msgs: [0;32mPASSED[0;0m
+#03 Settings, invalid args, zero bytes: [0;32mPASSED[0;0m
+#04 Check pending limits, NULL sub: [0;32mPASSED[0;0m
+#05 Check pending limits, other params NULL are OK: [0;32mPASSED[0;0m
+#06 Check pending limits, msgsLimit NULL is OK: [0;32mPASSED[0;0m
+#07 Check pending limits, msgsLibytesLimitmit NULL is OK: [0;32mPASSED[0;0m
+#08 Set negative value for msgs OK: [0;32mPASSED[0;0m
+#09 Set negative value for bytes OK: [0;32mPASSED[0;0m
+#10 Set negative values OK: [0;32mPASSED[0;0m
+#11 Get pending with negative values returned OK: [0;32mPASSED[0;0m
+#12 Set valid values: [0;32mPASSED[0;0m
+#13 Check pending limits: [0;32mPASSED[0;0m
+Error 20 - Slow Consumer, messages dropped on connection [6] on "foo"
+#14 Last Error should be SlowConsumer: [0;32mPASSED[0;0m
+#15 Check pending values, NULL sub: [0;32mPASSED[0;0m
+#16 Check pending values, NULL msgs: [0;32mPASSED[0;0m
+#17 Check pending values, NULL bytes: [0;32mPASSED[0;0m
+#18 Check pending values: [0;32mPASSED[0;0m
+#19 Check dropped: NULL sub: [0;32mPASSED[0;0m
+#20 Check dropped, NULL msgs: [0;32mPASSED[0;0m
+#21 Check dropped: [0;32mPASSED[0;0m
+#22 Check delivered: NULL sub: [0;32mPASSED[0;0m
+#23 Check delivered: NULL msgs: [0;32mPASSED[0;0m
+#24 Check delivered: [0;32mPASSED[0;0m
+#25 Check get stats pending: [0;32mPASSED[0;0m
+#26 Check get stats max pending: [0;32mPASSED[0;0m
+#27 Check get stats delivered: [0;32mPASSED[0;0m
+#28 Check get stats dropped: [0;32mPASSED[0;0m
+#29 Check get stats all NULL: [0;32mPASSED[0;0m
+#30 SetPendingLimit on closed sub: [0;32mPASSED[0;0m
+#31 GetPendingLimit on closed sub: [0;32mPASSED[0;0m
+#32 GetPending on closed sub: [0;32mPASSED[0;0m
+#33 GetDelivered on closed sub: [0;32mPASSED[0;0m
+#34 GetDropped on closed sub: [0;32mPASSED[0;0m
+#35 Check get stats on closed sub: [0;32mPASSED[0;0m
+ALL PASSED

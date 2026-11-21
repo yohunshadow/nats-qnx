@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SelectNextServer ==
+[0;0m#01 Test default server pool selection: [0;32mPASSED[0;0m
+#02 Get next server: [0;32mPASSED[0;0m
+#03 Check list size: [0;32mPASSED[0;0m
+#04 Check selection: [0;32mPASSED[0;0m
+#05 Check old was pushed to last position: [0;32mPASSED[0;0m
+#06 Got correct server: [0;32mPASSED[0;0m
+#07 Get next server: [0;32mPASSED[0;0m
+#08 Check list size: [0;32mPASSED[0;0m
+#09 Check selection: [0;32mPASSED[0;0m
+#10 Check last server was discarded: [0;32mPASSED[0;0m
+ALL PASSED

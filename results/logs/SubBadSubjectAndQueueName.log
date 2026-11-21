@@ -1,0 +1,56 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SubBadSubjectAndQueueName ==
+[0;0m#01 Connect ok: [0;32mPASSED[0;0m
+#02 test subject '(null)': [0;32mPASSED[0;0m
+#03 test subject '': [0;32mPASSED[0;0m
+#04 test subject 'foo bar': [0;32mPASSED[0;0m
+#05 test subject 'foo..bar': [0;32mPASSED[0;0m
+#06 test subject '.foo': [0;32mPASSED[0;0m
+#07 test subject 'bar.baz.': [0;32mPASSED[0;0m
+#08 test subject 'baz	.foo': [0;32mPASSED[0;0m
+#09 test subject 'foo.bar': [0;32mPASSED[0;0m
+#10 test subject 'a.bcd': [0;32mPASSED[0;0m
+#11 test subject 'abc.d': [0;32mPASSED[0;0m
+#12 test queue 'queue name': [0;32mPASSED[0;0m
+#13 test queue 'queue.name ': [0;32mPASSED[0;0m
+#14 test queue ' queue.name': [0;32mPASSED[0;0m
+#15 test queue 'queue	name': [0;32mPASSED[0;0m
+#16 test queue '	queue.name': [0;32mPASSED[0;0m
+#17 test queue '	.queue.name': [0;32mPASSED[0;0m
+#18 test queue 'queue.name	': [0;32mPASSED[0;0m
+#19 test queue 'queue.name.	': [0;32mPASSED[0;0m
+#20 test queue 'queuename': [0;32mPASSED[0;0m
+#21 test queue 'queue.name': [0;32mPASSED[0;0m
+#22 test queue '.queue.name': [0;32mPASSED[0;0m
+#23 test queue 'queue.name': [0;32mPASSED[0;0m
+#24 test queue 'queue.name.': [0;32mPASSED[0;0m
+#25 test queue 'queue
+name': [0;32mPASSED[0;0m
+#26 test queue '
+queue.name': [0;32mPASSED[0;0m
+#27 test queue '
+.queue.name': [0;32mPASSED[0;0m
+#28 test queue 'queue.name
+': [0;32mPASSED[0;0m
+#29 test queue 'queue.name.
+': [0;32mPASSED[0;0m
+#30 test wildcard ok '*': [0;32mPASSED[0;0m
+#31 test wildcard ok '*.*': [0;32mPASSED[0;0m
+#32 test wildcard ok '*.foo.bar': [0;32mPASSED[0;0m
+#33 test wildcard ok 'foo.*.bar': [0;32mPASSED[0;0m
+#34 test wildcard ok 'foo.bar.*': [0;32mPASSED[0;0m
+#35 test wildcard ok '>': [0;32mPASSED[0;0m
+#36 test wildcard ok 'foo.bar.>': [0;32mPASSED[0;0m
+#37 test no wildcard allowed '*': [0;32mPASSED[0;0m
+#38 test no wildcard allowed '*.*': [0;32mPASSED[0;0m
+#39 test no wildcard allowed '*.foo.bar': [0;32mPASSED[0;0m
+#40 test no wildcard allowed 'foo.*.bar': [0;32mPASSED[0;0m
+#41 test no wildcard allowed 'foo.bar.*': [0;32mPASSED[0;0m
+#42 test no wildcard allowed '>': [0;32mPASSED[0;0m
+#43 test no wildcard allowed 'foo.bar.>': [0;32mPASSED[0;0m
+#44 bad wildcard '>.foo': [0;32mPASSED[0;0m
+#45 bad wildcard 'foo.>.bar': [0;32mPASSED[0;0m
+#46 bad wildcard '>.>': [0;32mPASSED[0;0m
+ALL PASSED

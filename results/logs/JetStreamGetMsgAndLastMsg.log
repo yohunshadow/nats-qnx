@@ -1,0 +1,20 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamGetMsgAndLastMsg ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Populate: [0;32mPASSED[0;0m
+#06 GetMsg bad args: [0;32mPASSED[0;0m
+#07 GetMsg stream name required: [0;32mPASSED[0;0m
+#08 GetMsg stream not found: [0;32mPASSED[0;0m
+#09 GetMsg message not found: [0;32mPASSED[0;0m
+#10 GetMsg message ok: [0;32mPASSED[0;0m
+#11 GetLastMsg bad args: [0;32mPASSED[0;0m
+#12 GetLastMsg stream name required: [0;32mPASSED[0;0m
+#13 GetLastMsg stream not found: [0;32mPASSED[0;0m
+#14 GetLastMsg message not found: [0;32mPASSED[0;0m
+#15 GetLastMsg message ok: [0;32mPASSED[0;0m
+ALL PASSED

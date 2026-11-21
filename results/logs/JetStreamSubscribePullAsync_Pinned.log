@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribePullAsync_Pinned ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create the test stream: [0;32mPASSED[0;0m
+#05 Create the test consumer configured with 'pinned_client': [0;32mPASSED[0;0m
+#06 Publish 1000 messages: [0;32mPASSED[0;0m
+#07 Initialize shared options: [0;32mPASSED[0;0m
+#08 A sub without group returns an error: [0;32mPASSED[0;0m
+#09 Create pull subscription that will get pinned: [0;32mPASSED[0;0m
+#10 Create a second pull subscription that will not get pinned: [0;32mPASSED[0;0m
+#11 Receive 1000 messages on the pinned sub (will auto-unsubscribe): [0;32mPASSED[0;0m
+#12 Make sure unpinned sub received nothing: [0;32mPASSED[0;0m
+#13 Publish 100 more messages: [0;32mPASSED[0;0m
+#14 Receive 100 messages on the unpinned sub: [0;32mPASSED[0;0m
+ALL PASSED

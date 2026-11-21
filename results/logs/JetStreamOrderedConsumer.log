@@ -1,0 +1,26 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamOrderedConsumer ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Send chunks: [0;32mPASSED[0;0m
+#06 Wait for complete: [0;32mPASSED[0;0m
+#07 Ordered consumer, no durable: [0;32mPASSED[0;0m
+#08 Ordered consumer, ack explicit: [0;32mPASSED[0;0m
+#09 Ordered consumer, max deliver: [0;32mPASSED[0;0m
+#10 Ordered consumer, no deliver subject: [0;32mPASSED[0;0m
+#11 Ordered consumer, no queue: [0;32mPASSED[0;0m
+#12 Ordered consumer, no consumer: [0;32mPASSED[0;0m
+#13 Ordered consumer, no pull mode: [0;32mPASSED[0;0m
+#14 Get stream info: [0;32mPASSED[0;0m
+#15 Test async consumer: [0;32mPASSED[0;0m
+#16 Test sync consumer: [0;32mPASSED[0;0m
+#17 Test with single loss (async): [0;32mPASSED[0;0m
+#18 Test with single loss (sync): [0;32mPASSED[0;0m
+#19 Test with multi loss (async): 
+Received 950 chunks out of 1024
+[0;31mFAILED[0;0m
+*** TEST FAILED ***

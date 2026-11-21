@@ -1,0 +1,20 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsMsg ==
+[0;0m#01 Check invalid subj (NULL): [0;32mPASSED[0;0m
+#02 Check invalid subj (empty): [0;32mPASSED[0;0m
+#03 Check invalid reply (empty): [0;32mPASSED[0;0m
+#04 GetSubject with NULL msg: [0;32mPASSED[0;0m
+#05 GetReply with NULL msg: [0;32mPASSED[0;0m
+#06 GetData with NULL msg: [0;32mPASSED[0;0m
+#07 GetDataLength with NULL msg: [0;32mPASSED[0;0m
+#08 Create ok: [0;32mPASSED[0;0m
+#09 Create with no data: [0;32mPASSED[0;0m
+#10 Set NULL data with non-zero len: [0;32mPASSED[0;0m
+#11 Set negative len: [0;32mPASSED[0;0m
+#12 Set data: [0;32mPASSED[0;0m
+#13 Set NULL/0 is ok: [0;32mPASSED[0;0m
+#14 Set data: [0;32mPASSED[0;0m
+#15 Set NULL/0 is ok: [0;32mPASSED[0;0m
+ALL PASSED

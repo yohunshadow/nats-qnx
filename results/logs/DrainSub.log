@@ -1,0 +1,42 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== DrainSub ==
+[0;0m#01 Connect and create subscriptions: [0;32mPASSED[0;0m
+#02 WaitForDrainCompletion returns invalid arg: [0;32mPASSED[0;0m
+#03 WaitForDrainCompletion returns illegal state: [0;32mPASSED[0;0m
+#04 Send 2 messages: [0;32mPASSED[0;0m
+#05 Call Drain on subscription: [0;32mPASSED[0;0m
+#06 Call Drain a second time is ok: [0;32mPASSED[0;0m
+#07 Drain sync subs: [0;32mPASSED[0;0m
+#08 Wait for Drain times out: [0;32mPASSED[0;0m
+#09 Send 1 more message: [0;32mPASSED[0;0m
+#10 Wait for Drain to complete: [0;32mPASSED[0;0m
+#11 Third message not received: [0;32mPASSED[0;0m
+#12 Drain on closed sub fails: [0;32mPASSED[0;0m
+#13 Consume sync messages: [0;32mPASSED[0;0m
+#14 Wait for drain to complete: [0;32mPASSED[0;0m
+#15 Async sub with auto-unsub: [0;32mPASSED[0;0m
+#16 Send 2 messages: [0;32mPASSED[0;0m
+#17 Check drain status with invalid arg: [0;32mPASSED[0;0m
+#18 Check drain status fails: [0;32mPASSED[0;0m
+#19 Call Drain on subscription: [0;32mPASSED[0;0m
+#20 Send 1 more message: [0;32mPASSED[0;0m
+#21 Wait for Drain to complete: [0;32mPASSED[0;0m
+#22 Check drain status: [0;32mPASSED[0;0m
+#23 Third message not received: [0;32mPASSED[0;0m
+#24 Drain on closed conn fails: [0;32mPASSED[0;0m
+#25 Connect and create sub: [0;32mPASSED[0;0m
+#26 Send 2 messages: [0;32mPASSED[0;0m
+#27 Disconnect: [0;32mPASSED[0;0m
+#28 Wait for disconnect: [0;32mPASSED[0;0m
+#29 Call Drain on subscriptions: [0;32mPASSED[0;0m
+#30 Wait for Drain to complete: [0;32mPASSED[0;0m
+#31 Check drain status: [0;32mPASSED[0;0m
+#32 Create options for global msg delivery: [0;32mPASSED[0;0m
+#33 Connect and create sub: [0;32mPASSED[0;0m
+#34 Send 2 messages: [0;32mPASSED[0;0m
+#35 Call Drain on subscriptions: [0;32mPASSED[0;0m
+#36 Wait for Drain to complete: [0;32mPASSED[0;0m
+#37 Check drain status: [0;32mPASSED[0;0m
+ALL PASSED

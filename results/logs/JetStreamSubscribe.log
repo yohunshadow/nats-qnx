@@ -1,0 +1,77 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribe ==
+[0;0m#01 Start JS server: [0;32mPASSED[0;0m
+#02 Create options: [0;32mPASSED[0;0m
+#03 Connect: [0;32mPASSED[0;0m
+#04 Get context: [0;32mPASSED[0;0m
+#05 Sub options init (bad args): [0;32mPASSED[0;0m
+#06 Create async sub (invalid args): [0;32mPASSED[0;0m
+#07 Create, no stream exists: [0;32mPASSED[0;0m
+#08 Create stream: [0;32mPASSED[0;0m
+#09 Populate: [0;32mPASSED[0;0m
+#10 Create sub to check lib sends ACKs: [0;32mPASSED[0;0m
+#11 Subscribe, no options: [0;32mPASSED[0;0m
+#12 Check msgs received: [0;32mPASSED[0;0m
+#13 Check acks sent: [0;32mPASSED[0;0m
+#14 Create sub with manual ack: [0;32mPASSED[0;0m
+#15 Check msgs received: [0;32mPASSED[0;0m
+#16 Check acks sent: [0;32mPASSED[0;0m
+#17 Check no auto-ack behavior: [0;32mPASSED[0;0m
+#18 Create sub with auto-ack: [0;32mPASSED[0;0m
+#19 Check msgs received: [0;32mPASSED[0;0m
+#20 Check NAck sent: [0;32mPASSED[0;0m
+#21 Check no auto-ack: [0;32mPASSED[0;0m
+#22 Check auto-ack sent: [0;32mPASSED[0;0m
+#23 Create queue sub: [0;32mPASSED[0;0m
+#24 Check msgs received: [0;32mPASSED[0;0m
+#25 Check acks sent: [0;32mPASSED[0;0m
+#26 Add second member with binding: [0;32mPASSED[0;0m
+#27 No new message: [0;32mPASSED[0;0m
+#28 Attached consumer not destroyed on unsub: [0;32mPASSED[0;0m
+#29 No auto-ack for AckNone: [0;32mPASSED[0;0m
+#30 Check msgs received: [0;32mPASSED[0;0m
+#31 Check no ack was sent: [0;32mPASSED[0;0m
+#32 Check user setting onComplete is ok: [0;32mPASSED[0;0m
+#33 Wait for complete: [0;32mPASSED[0;0m
+#34 Create stream with long subject: [0;32mPASSED[0;0m
+#35 Create sub to check lib sends ACKs: [0;32mPASSED[0;0m
+#36 Create sub with auto-ack: [0;32mPASSED[0;0m
+#37 Send 1 msg: [0;32mPASSED[0;0m
+#38 Check msg received: [0;32mPASSED[0;0m
+#39 Check ack sent: [0;32mPASSED[0;0m
+#40 Create stream with several subjects: [0;32mPASSED[0;0m
+#41 Create consumer with filter: [0;32mPASSED[0;0m
+#42 Subscribe subj != filter: [0;32mPASSED[0;0m
+#43 Create consumer with multiple filters: [0;32mPASSED[0;0m
+#44 Subscribe subj != filters: [0;32mPASSED[0;0m
+#45 Subject not required when binding to stream/consumer: [0;32mPASSED[0;0m
+#46 Create consumer for pull: [0;32mPASSED[0;0m
+#47 Subscribe subj not a pull: [0;32mPASSED[0;0m
+#48 Create stream for concurrent test: [0;32mPASSED[0;0m
+#49 Start concurrent creation of subs: [0;32mPASSED[0;0m
+#50 Wait for threads to return: [0;32mPASSED[0;0m
+#51 Only 1 should be started, 9 should have failed: [0;32mPASSED[0;0m
+#52 Create consumer: [0;32mPASSED[0;0m
+#53 Unsub deletes consumer: [0;32mPASSED[0;0m
+#54 Create consumer: [0;32mPASSED[0;0m
+#55 Drain deletes consumer: [0;32mPASSED[0;0m
+#56 Create consumer: [0;32mPASSED[0;0m
+#57 Drain deletes consumer: [0;32mPASSED[0;0m
+#58 Create consumer (multiple subjects): [0;32mPASSED[0;0m
+#59 Drain deletes consumer: [0;32mPASSED[0;0m
+#60 Create consumer: [0;32mPASSED[0;0m
+#61 Delete consumer: [0;32mPASSED[0;0m
+#62 Unsub report error: [0;32mPASSED[0;0m
+#63 Create consumer: [0;32mPASSED[0;0m
+#64 Delete consumer: [0;32mPASSED[0;0m
+#65 Drain report error: [0;32mPASSED[0;0m
+#66 Destroy sub does not delete consumer: [0;32mPASSED[0;0m
+#67 Queue and HB is invalid: [0;32mPASSED[0;0m
+#68 Queue and FlowControl is invalid: [0;32mPASSED[0;0m
+#69 Queue name can't contain dots: [0;32mPASSED[0;0m
+#70 Queue group serves as durable: [0;32mPASSED[0;0m
+#71 Durable name invalid (push): [0;32mPASSED[0;0m
+#72 Durable name invalid (pull): [0;32mPASSED[0;0m
+ALL PASSED

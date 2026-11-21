@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsKeys ==
+[0;0m#01 Invalid key: [0;32mPASSED[0;0m
+#02 Invalid seed: [0;32mPASSED[0;0m
+#03 Invalid prefix: [0;32mPASSED[0;0m
+#04 Invalid checksum: [0;32mPASSED[0;0m
+#05 Sign ok: [0;32mPASSED[0;0m
+ALL PASSED

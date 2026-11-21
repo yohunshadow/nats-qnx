@@ -1,0 +1,20 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SendMsg ==
+[0;0m#01 Connect: [0;32mPASSED[0;0m
+#02 Subscribe: [0;32mPASSED[0;0m
+#03 Send invalid arg: [0;32mPASSED[0;0m
+#04 Send invalid subject: [0;32mPASSED[0;0m
+#05 Send: [0;32mPASSED[0;0m
+#06 Send empty payload: [0;32mPASSED[0;0m
+#07 SendRequest invalid arg: [0;32mPASSED[0;0m
+#08 SendRequest invalid subject: [0;32mPASSED[0;0m
+#09 SendRequest: [0;32mPASSED[0;0m
+#10 SendRequest empty payload: [0;32mPASSED[0;0m
+#11 Create msg with headers: [0;32mPASSED[0;0m
+#12 SendMsg invalid args: [0;32mPASSED[0;0m
+#13 SendMsg: [0;32mPASSED[0;0m
+#14 Create message with reply, no payload, no headers: [0;32mPASSED[0;0m
+#15 SendMsg: [0;32mPASSED[0;0m
+ALL PASSED

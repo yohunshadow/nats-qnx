@@ -1,0 +1,46 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsBuffer ==
+[0;0m== Buffer without data ==
+#01 Create buffer owning its data: [0;32mPASSED[0;0m
+#02 Append less than capacity does not expand buffer: [0;32mPASSED[0;0m
+#03 Appending one more (AppendByte) increases capacity: [0;32mPASSED[0;0m
+#04 Checking content: [0;32mPASSED[0;0m
+#05 Appending one more byte increases capacity: [0;32mPASSED[0;0m
+
+== Buffer with data ==
+#06 Create buffer with backend: [0;32mPASSED[0;0m
+#07 Check that changes are reflected in backend[0;32mPASSED[0;0m
+#08 Changing backend is reflected in buffer: [0;32mPASSED[0;0m
+#09 Append less than capacity does not expand buffer: [0;32mPASSED[0;0m
+#10 Check natsBuf_Expand returns error for invalid arguments: [0;32mPASSED[0;0m
+#11 Adding more causes expand: [0;32mPASSED[0;0m
+#12 Check that the backend did not change[0;32mPASSED[0;0m
+#13 Checking content: [0;32mPASSED[0;0m
+#14 Destroying buffer does not affect backend: [0;32mPASSED[0;0m
+
+== Buffer Init without data ==
+#15 Create buffer owning its data: [0;32mPASSED[0;0m
+#16 Append less than capacity does not expand buffer: [0;32mPASSED[0;0m
+#17 Appending one more increases capacity: [0;32mPASSED[0;0m
+#18 Checking content: [0;32mPASSED[0;0m
+#19 Destroying buffer: [0;32mPASSED[0;0m
+
+== Buffer Init with data ==
+#20 Create buffer with backend: [0;32mPASSED[0;0m
+#21 Check that changes are reflected in backend: [0;32mPASSED[0;0m
+#22 Changing backend is reflected in buffer: [0;32mPASSED[0;0m
+#23 Append less than capacity does not expand buffer: [0;32mPASSED[0;0m
+#24 Adding more causes expand: [0;32mPASSED[0;0m
+#25 Check that the backend did not change[0;32mPASSED[0;0m
+#26 Checking content: [0;32mPASSED[0;0m
+#27 Destroying buffer does not affect backend: [0;32mPASSED[0;0m
+#28 Destroyed buffer state is clean: [0;32mPASSED[0;0m
+#29 Check maximum size: [0;32mPASSED[0;0m
+#30 Check maximum size (append byte): [0;32mPASSED[0;0m
+#31 Consume half: [0;32mPASSED[0;0m
+#32 Consume rest: [0;32mPASSED[0;0m
+#33 MoveTo (forward): [0;32mPASSED[0;0m
+#34 MoveTo (backward): [0;32mPASSED[0;0m
+ALL PASSED

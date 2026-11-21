@@ -1,0 +1,32 @@
+From 296c9b908401195b4fea9710e257e261d75cd3e0 Mon Sep 17 00:00:00 2001
+From: nats-qnx <nats-qnx@localhost>
+Date: Sat, 21 Nov 2026 03:02:27 +0700
+Subject: [PATCH 1/2] cmake: link libsocket instead of librt on QNX
+
+QNX Neutrino has no separate librt: clock_gettime() and the other POSIX
+realtime functions live in libc. The BSD socket API (socket, connect,
+getaddrinfo, ...) lives in libsocket, which is not linked implicitly.
+
+Without this, linking libnats.so fails with "cannot find -lrt", and any
+consumer of the static library gets undefined socket symbols.
+---
+ CMakeLists.txt | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b006f93..4fe15a4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -201,7 +201,11 @@ if(UNIX)
+     set(NATS_OS "DARWIN")
+   else(APPLE)
+     set(NATS_OS "LINUX")
+-    if(NOT ANDROID)
++    if(CMAKE_SYSTEM_NAME STREQUAL "QNX")
++      # QNX: clock_gettime & friends live in libc (no librt);
++      # BSD socket API lives in libsocket.
++      set(NATS_EXTRA_LIB "socket")
++    elseif(NOT ANDROID)
+       set(NATS_EXTRA_LIB "rt")
+     endif()
+   endif(APPLE)

@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsValidateLimitedTerm ==
+[0;0m#01 Check with NULL: [0;32mPASSED[0;0m
+#02 Check with empty: [0;32mPASSED[0;0m
+#03 Check with too long: [0;32mPASSED[0;0m
+#04 Check with valid: [0;32mPASSED[0;0m
+#05 Check with invalid: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== GetLastError ==
+[0;0m#01 Check GetLastError returns proper status: [0;32mPASSED[0;0m
+#02 Check GetLastErrorStack with invalid args: [0;32mPASSED[0;0m
+#03 Check GetLastErrorStack returns proper insufficient buffer: [0;32mPASSED[0;0m
+#04 Check GetLastErrorStack: [0;32mPASSED[0;0m
+#05 Check PrintStack: [0;32mPASSED[0;0m
+#06 Check the error not cleared until next error occurs: [0;32mPASSED[0;0m
+#07 Check that new thread has get last err clear: [0;32mPASSED[0;0m
+#08 Check stack not updated when asked: [0;32mPASSED[0;0m
+#09 Check call reentrant: [0;32mPASSED[0;0m
+#10 Check stack updates again: [0;32mPASSED[0;0m
+ALL PASSED

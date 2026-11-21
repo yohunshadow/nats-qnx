@@ -1,0 +1,7 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AuthServers ==
+[0;0m#01 Connect fails due to auth error: [0;32mPASSED[0;0m
+#02 Connect succeeds with correct servers list: [0;32mPASSED[0;0m
+ALL PASSED

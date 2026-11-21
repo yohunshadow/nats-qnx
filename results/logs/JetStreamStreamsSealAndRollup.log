@@ -1,0 +1,29 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamStreamsSealAndRollup ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create sealed stream fails: [0;32mPASSED[0;0m
+#05 Create stream: [0;32mPASSED[0;0m
+#06 Seal stream: [0;32mPASSED[0;0m
+#07 Can't send: [0;32mPASSED[0;0m
+#08 Create stream with deny purge/delete: [0;32mPASSED[0;0m
+#09 Publish: [0;32mPASSED[0;0m
+#10 Can't delete: [0;32mPASSED[0;0m
+#11 Can't purge: [0;32mPASSED[0;0m
+#12 Try to remove deny clauses: [0;32mPASSED[0;0m
+#13 Create stream for rollup: [0;32mPASSED[0;0m
+#14 Populate: [0;32mPASSED[0;0m
+#15 Check stream: [0;32mPASSED[0;0m
+#16 Rollup per subject: [0;32mPASSED[0;0m
+#17 Create consumer: [0;32mPASSED[0;0m
+#18 Check content: [0;32mPASSED[0;0m
+#19 Make sure single msg: [0;32mPASSED[0;0m
+#20 Rollup for all: [0;32mPASSED[0;0m
+#21 Create consumer: [0;32mPASSED[0;0m
+#22 Check content: [0;32mPASSED[0;0m
+#23 Make sure single msg: [0;32mPASSED[0;0m
+#24 Check stream: [0;32mPASSED[0;0m
+ALL PASSED

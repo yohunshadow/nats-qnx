@@ -1,0 +1,120 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== MicroBasics ==
+[0;0m#01 Connect to server: [0;32mPASSED[0;0m
+#02 Start microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#03 Start microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#04 Start microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#05 Start microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#06 Start microservice ManyServicesSameName: [0;32mPASSED[0;0m
+[0;32mPASSED[0;0m
+#07 Get stats before any activity: [0;32mPASSED[0;0m
+#08 Send 50 requests (no matter response): [0;32mPASSED[0;0m
+#09 Check local info #0: [0;32mPASSED[0;0m
+#10 Check local info #1: [0;32mPASSED[0;0m
+#11 Check local info #2: [0;32mPASSED[0;0m
+#12 Check local info #3: [0;32mPASSED[0;0m
+#13 Check local info #4: [0;32mPASSED[0;0m
+#14 Create INFO inbox: [0;32mPASSED[0;0m
+#15 Subscribe to INFO inbox: [0;32mPASSED[0;0m
+#16 Publish INFO request: [0;32mPASSED[0;0m
+#17 Receive INFO response #0: [0;32mPASSED[0;0m
+#18 Parse INFO response#0: [0;32mPASSED[0;0m
+#19 Validate INFO response strings#0: [0;32mPASSED[0;0m
+#20 Validate INFO service metadata#0: [0;32mPASSED[0;0m
+#21 Validate INFO has 2 endpoints: [0;32mPASSED[0;0m
+#22 Validate INFO unused endpoint with metadata: [0;32mPASSED[0;0m
+#23 Validate INFO svc.do endpoint: [0;32mPASSED[0;0m
+#24 Receive INFO response #1: [0;32mPASSED[0;0m
+#25 Parse INFO response#1: [0;32mPASSED[0;0m
+#26 Validate INFO response strings#1: [0;32mPASSED[0;0m
+#27 Validate INFO service metadata#1: [0;32mPASSED[0;0m
+#28 Validate INFO has 2 endpoints: [0;32mPASSED[0;0m
+#29 Validate INFO unused endpoint with metadata: [0;32mPASSED[0;0m
+#30 Validate INFO svc.do endpoint: [0;32mPASSED[0;0m
+#31 Receive INFO response #2: [0;32mPASSED[0;0m
+#32 Parse INFO response#2: [0;32mPASSED[0;0m
+#33 Validate INFO response strings#2: [0;32mPASSED[0;0m
+#34 Validate INFO service metadata#2: [0;32mPASSED[0;0m
+#35 Validate INFO has 2 endpoints: [0;32mPASSED[0;0m
+#36 Validate INFO unused endpoint with metadata: [0;32mPASSED[0;0m
+#37 Validate INFO svc.do endpoint: [0;32mPASSED[0;0m
+#38 Receive INFO response #3: [0;32mPASSED[0;0m
+#39 Parse INFO response#3: [0;32mPASSED[0;0m
+#40 Validate INFO response strings#3: [0;32mPASSED[0;0m
+#41 Validate INFO service metadata#3: [0;32mPASSED[0;0m
+#42 Validate INFO has 2 endpoints: [0;32mPASSED[0;0m
+#43 Validate INFO unused endpoint with metadata: [0;32mPASSED[0;0m
+#44 Validate INFO svc.do endpoint: [0;32mPASSED[0;0m
+#45 Receive INFO response #4: [0;32mPASSED[0;0m
+#46 Parse INFO response#4: [0;32mPASSED[0;0m
+#47 Validate INFO response strings#4: [0;32mPASSED[0;0m
+#48 Validate INFO service metadata#4: [0;32mPASSED[0;0m
+#49 Validate INFO has 2 endpoints: [0;32mPASSED[0;0m
+#50 Validate INFO unused endpoint with metadata: [0;32mPASSED[0;0m
+#51 Validate INFO svc.do endpoint: [0;32mPASSED[0;0m
+#52 Receive INFO response #5: [0;32mPASSED[0;0m
+#53 Create PING inbox: [0;32mPASSED[0;0m
+#54 Subscribe to PING inbox: [0;32mPASSED[0;0m
+#55 Publish PING request: [0;32mPASSED[0;0m
+#56 Receive PING response #0: [0;32mPASSED[0;0m
+#57 Validate PING response #0: [0;32mPASSED[0;0m
+#58 Receive PING response #1: [0;32mPASSED[0;0m
+#59 Validate PING response #1: [0;32mPASSED[0;0m
+#60 Receive PING response #2: [0;32mPASSED[0;0m
+#61 Validate PING response #2: [0;32mPASSED[0;0m
+#62 Receive PING response #3: [0;32mPASSED[0;0m
+#63 Validate PING response #3: [0;32mPASSED[0;0m
+#64 Receive PING response #4: [0;32mPASSED[0;0m
+#65 Validate PING response #4: [0;32mPASSED[0;0m
+#66 Receive PING response #5: [0;32mPASSED[0;0m
+#67 Create STATS inbox: [0;32mPASSED[0;0m
+#68 Subscribe to STATS inbox: [0;32mPASSED[0;0m
+#69 Publish STATS request: [0;32mPASSED[0;0m
+#70 Receive STATS response #0: [0;32mPASSED[0;0m
+#71 Parse STATS response: [0;32mPASSED[0;0m
+#72 Ensure STATS has 2 endpoints: [0;32mPASSED[0;0m
+#73 Ensure second endpoint has num_requests: [0;32mPASSED[0;0m
+#74 Ensure second endpoint has num_errors: [0;32mPASSED[0;0m
+#75 Ensure second endpoint last_error is set if num_errors is positive: [0;32mPASSED[0;0m
+#76 Ensure second endpoint has average_processing_time as a positive number: [0;32mPASSED[0;0m
+#77 Receive STATS response #1: [0;32mPASSED[0;0m
+#78 Parse STATS response: [0;32mPASSED[0;0m
+#79 Ensure STATS has 2 endpoints: [0;32mPASSED[0;0m
+#80 Ensure second endpoint has num_requests: [0;32mPASSED[0;0m
+#81 Ensure second endpoint has num_errors: [0;32mPASSED[0;0m
+#82 Ensure second endpoint last_error is set if num_errors is positive: [0;32mPASSED[0;0m
+#83 Ensure second endpoint has average_processing_time as a positive number: [0;32mPASSED[0;0m
+#84 Receive STATS response #2: [0;32mPASSED[0;0m
+#85 Parse STATS response: [0;32mPASSED[0;0m
+#86 Ensure STATS has 2 endpoints: [0;32mPASSED[0;0m
+#87 Ensure second endpoint has num_requests: [0;32mPASSED[0;0m
+#88 Ensure second endpoint has num_errors: [0;32mPASSED[0;0m
+#89 Ensure second endpoint last_error is set if num_errors is positive: [0;32mPASSED[0;0m
+#90 Ensure second endpoint has average_processing_time as a positive number: [0;32mPASSED[0;0m
+#91 Receive STATS response #3: [0;32mPASSED[0;0m
+#92 Parse STATS response: [0;32mPASSED[0;0m
+#93 Ensure STATS has 2 endpoints: [0;32mPASSED[0;0m
+#94 Ensure second endpoint has num_requests: [0;32mPASSED[0;0m
+#95 Ensure second endpoint has num_errors: [0;32mPASSED[0;0m
+#96 Ensure second endpoint last_error is set if num_errors is positive: [0;32mPASSED[0;0m
+#97 Ensure second endpoint has average_processing_time as a positive number: [0;32mPASSED[0;0m
+#98 Receive STATS response #4: [0;32mPASSED[0;0m
+#99 Parse STATS response: [0;32mPASSED[0;0m
+#100 Ensure STATS has 2 endpoints: [0;32mPASSED[0;0m
+#101 Ensure second endpoint has num_requests: [0;32mPASSED[0;0m
+#102 Ensure second endpoint has num_errors: [0;32mPASSED[0;0m
+#103 Ensure second endpoint last_error is set if num_errors is positive: [0;32mPASSED[0;0m
+#104 Ensure second endpoint has average_processing_time as a positive number: [0;32mPASSED[0;0m
+#105 Receive STATS response #5: [0;32mPASSED[0;0m
+#106 Check that STATS total request counts add up (50): [0;32mPASSED[0;0m
+#107 Check that STATS total error count is positive, depends on how many instances: [0;32mPASSED[0;0m
+#108 Destroy microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#109 Destroy microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#110 Destroy microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#111 Destroy microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#112 Destroy microservice ManyServicesSameName: [0;32mPASSED[0;0m
+#113 Wait for 3 microservices to stop: [0;32mPASSED[0;0m
+#114 Destroy the test connection: [0;32mPASSED[0;0m
+ALL PASSED

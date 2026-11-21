@@ -1,0 +1,18 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== KeyValueHistory ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create KV: [0;32mPASSED[0;0m
+#05 Populate: [0;32mPASSED[0;0m
+#06 Get history (bad args): [0;32mPASSED[0;0m
+#07 Get history (timeout): [0;32mPASSED[0;0m
+#08 Get History: [0;32mPASSED[0;0m
+#09 Check values: [0;32mPASSED[0;0m
+#10 Destroy list: [0;32mPASSED[0;0m
+#11 Create KV: [0;32mPASSED[0;0m
+#12 Populate: [0;32mPASSED[0;0m
+#13 Get history: [0;32mPASSED[0;0m
+ALL PASSED

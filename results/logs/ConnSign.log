@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ConnSign ==
+[0;0m#01 Connect ok: [0;32mPASSED[0;0m
+#02 Can't sign without user creds: [0;32mPASSED[0;0m
+#03 Set proper option: [0;32mPASSED[0;0m
+#04 Connect ok: [0;32mPASSED[0;0m
+#05 Sign with NULL message: [0;32mPASSED[0;0m
+#06 Sign message: [0;32mPASSED[0;0m
+ALL PASSED

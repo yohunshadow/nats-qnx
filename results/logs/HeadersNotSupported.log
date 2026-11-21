@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== HeadersNotSupported ==
+[0;0m#01 Headers not supported with old server: [0;32mPASSED[0;0m
+#02 Create msg with heades: [0;32mPASSED[0;0m
+#03 Publish fails: [0;32mPASSED[0;0m
+#04 Request fails: [0;32mPASSED[0;0m
+ALL PASSED

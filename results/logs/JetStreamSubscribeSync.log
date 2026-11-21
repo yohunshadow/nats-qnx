@@ -1,0 +1,55 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribeSync ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create sync sub (invalid args): [0;32mPASSED[0;0m
+#05 Create, no stream exists: [0;32mPASSED[0;0m
+#06 Create stream: [0;32mPASSED[0;0m
+#07 Populate: [0;32mPASSED[0;0m
+#08 Create sub to check ACKs: [0;32mPASSED[0;0m
+#09 Subscribe, no options: [0;32mPASSED[0;0m
+#10 Check msgs received: [0;32mPASSED[0;0m
+#11 Check get meta data (bad args): [0;32mPASSED[0;0m
+#12 Check get meta: [0;32mPASSED[0;0m
+#13 Ack: [0;32mPASSED[0;0m
+#14 Second ack does nothing: [0;32mPASSED[0;0m
+#15 AckSync: [0;32mPASSED[0;0m
+#16 Nack: [0;32mPASSED[0;0m
+#17 Nack msg resent: [0;32mPASSED[0;0m
+#18 InProgress: [0;32mPASSED[0;0m
+#19 InProgress: [0;32mPASSED[0;0m
+#20 Term: [0;32mPASSED[0;0m
+#21 Ack failure (bad args): [0;32mPASSED[0;0m
+#22 Ack failure (not bound): [0;32mPASSED[0;0m
+#23 Get Meta failure (not bound): [0;32mPASSED[0;0m
+#24 Ack failure (no reply): [0;32mPASSED[0;0m
+#25 Get Meta failure (no reply): [0;32mPASSED[0;0m
+#26 Get Meta failure (not JS Ack): [0;32mPASSED[0;0m
+#27 Get Meta failure (terminal dot): [0;32mPASSED[0;0m
+#28 Get Meta failure (too small): [0;32mPASSED[0;0m
+#29 Get Meta failure (too small v2): [0;32mPASSED[0;0m
+#30 Get Meta failure (invalid content): [0;32mPASSED[0;0m
+#31 Get Meta failure (invalid content v2): [0;32mPASSED[0;0m
+#32 Get Meta v2: [0;32mPASSED[0;0m
+#33 Get Meta v2 (empty domain): [0;32mPASSED[0;0m
+#34 Get Meta v2 (no failure with appended tokens): [0;32mPASSED[0;0m
+#35 Get Meta v2 (no failure with appended tokens, malformed ok): [0;32mPASSED[0;0m
+#36 Send msg: [0;32mPASSED[0;0m
+#37 Drain does not delete consumer: [0;32mPASSED[0;0m
+#38 Wait for drain to complete: [0;32mPASSED[0;0m
+#39 Create sub with ack-none: [0;32mPASSED[0;0m
+#40 Check msg received: [0;32mPASSED[0;0m
+#41 Check ack: [0;32mPASSED[0;0m
+#42 Check no ack sent: [0;32mPASSED[0;0m
+#43 Test InactiveThreshold (bad value): [0;32mPASSED[0;0m
+#44 Create normal sub: [0;32mPASSED[0;0m
+#45 sub get info (invalid args): [0;32mPASSED[0;0m
+#46 sub get info (invalid sub): [0;32mPASSED[0;0m
+#47 Create sub: [0;32mPASSED[0;0m
+#48 Get consumer info: [0;32mPASSED[0;0m
+#49 Close conn: [0;32mPASSED[0;0m
+#50 Check consumer gone: [0;32mPASSED[0;0m
+ALL PASSED

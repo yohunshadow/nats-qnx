@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsParseControl ==
+[0;0m#01 Test with NULL line: [0;32mPASSED[0;0m
+#02 Test line with single op: [0;32mPASSED[0;0m
+#03 Test line with trailing spaces: [0;32mPASSED[0;0m
+#04 Test line with op and args: [0;32mPASSED[0;0m
+#05 Test line with op and args and trailing spaces: [0;32mPASSED[0;0m
+#06 Test line with op and args args: [0;32mPASSED[0;0m
+ALL PASSED

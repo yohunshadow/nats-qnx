@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ParserOK ==
+[0;0m#01 Test line 7557: [0;32mPASSED[0;0m
+#02 Test line 7562: [0;32mPASSED[0;0m
+#03 Test line 7566: [0;32mPASSED[0;0m
+#04 Test line 7570: [0;32mPASSED[0;0m
+#05 Test line 7574: [0;32mPASSED[0;0m
+ALL PASSED

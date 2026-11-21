@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsReadFile ==
+[0;0m#01 Invalid arg 1: [0;32mPASSED[0;0m
+#02 Invalid arg 2: [0;32mPASSED[0;0m
+#03 Invalid arg 3: [0;32mPASSED[0;0m
+#04 Invalid arg 4: [0;32mPASSED[0;0m
+#05 File not found: [0;32mPASSED[0;0m
+#06 Read with large buffer: [0;32mPASSED[0;0m
+#07 Read with small buffer: [0;32mPASSED[0;0m
+#08 Read with buffer of exact file content: [0;32mPASSED[0;0m
+[0;32mPASSED[0;0m
+ALL PASSED

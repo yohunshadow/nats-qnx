@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ConnectedServer ==
+[0;0m#01 Verify ConnectedUrl is correct: [0;32mPASSED[0;0m
+#02 Verify ConnectedServerId is not null: [0;32mPASSED[0;0m
+#03 Verify ConnectedServerName is not null: [0;32mPASSED[0;0m
+#04 Verify ConnectedUrl is empty after disconnect: [0;32mPASSED[0;0m
+#05 Verify ConnectedServerId is empty after disconnect: [0;32mPASSED[0;0m
+#06 Verify ConnectedServerName is empty after disconnect: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,184 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsJSON ==
+[0;0m#01 Negative test 1: [0;32mPASSED[0;0m
+#02 Negative test 2: [0;32mPASSED[0;0m
+#03 Negative test 3: [0;32mPASSED[0;0m
+#04 Negative test 4: [0;32mPASSED[0;0m
+#05 Negative test 5: [0;32mPASSED[0;0m
+#06 Negative test 6: [0;32mPASSED[0;0m
+#07 Negative test 7: [0;32mPASSED[0;0m
+#08 Negative test 8: [0;32mPASSED[0;0m
+#09 Negative test 9: [0;32mPASSED[0;0m
+#10 Negative test 10: [0;32mPASSED[0;0m
+#11 Negative test 11: [0;32mPASSED[0;0m
+#12 Negative test 12: [0;32mPASSED[0;0m
+#13 Negative test 13: [0;32mPASSED[0;0m
+#14 Negative test 14: [0;32mPASSED[0;0m
+#15 Negative test 15: [0;32mPASSED[0;0m
+#16 Negative test 16: [0;32mPASSED[0;0m
+#17 Negative test 17: [0;32mPASSED[0;0m
+#18 Negative test 18: [0;32mPASSED[0;0m
+#19 Negative test 19: [0;32mPASSED[0;0m
+#20 Positive test 1: [0;32mPASSED[0;0m
+#21 Positive test 2: [0;32mPASSED[0;0m
+#22 Positive test 3: [0;32mPASSED[0;0m
+#23 Positive test 4: [0;32mPASSED[0;0m
+#24 Positive test 5: [0;32mPASSED[0;0m
+#25 Positive test 6: [0;32mPASSED[0;0m
+#26 Positive test 7: [0;32mPASSED[0;0m
+#27 Positive test 8: [0;32mPASSED[0;0m
+#28 Positive test 9: [0;32mPASSED[0;0m
+#29 Positive test 10: [0;32mPASSED[0;0m
+#30 Positive test 11: [0;32mPASSED[0;0m
+#31 Positive test 12: [0;32mPASSED[0;0m
+#32 Positive test 13: [0;32mPASSED[0;0m
+#33 Positive test 14: [0;32mPASSED[0;0m
+#34 Positive test 15: [0;32mPASSED[0;0m
+#35 Positive test 16: [0;32mPASSED[0;0m
+#36 Positive test 17: [0;32mPASSED[0;0m
+#37 Positive test 18: [0;32mPASSED[0;0m
+#38 Positive test 19: [0;32mPASSED[0;0m
+#39 Positive test 20: [0;32mPASSED[0;0m
+#40 Positive test 21: [0;32mPASSED[0;0m
+#41 Positive test 22: [0;32mPASSED[0;0m
+#42 Positive test 23: [0;32mPASSED[0;0m
+#43 Positive test 24: [0;32mPASSED[0;0m
+#44 Positive test 25: [0;32mPASSED[0;0m
+#45 Positive test 26: [0;32mPASSED[0;0m
+#46 Positive test 27: [0;32mPASSED[0;0m
+#47 Positive test 28: [0;32mPASSED[0;0m
+#48 Positive test 29: [0;32mPASSED[0;0m
+#49 Positive test 30: [0;32mPASSED[0;0m
+#50 Positive test 31: [0;32mPASSED[0;0m
+#51 Positive test 32: [0;32mPASSED[0;0m
+#52 Positive test 33: [0;32mPASSED[0;0m
+#53 Positive test 34: [0;32mPASSED[0;0m
+#54 Positive test 35: [0;32mPASSED[0;0m
+#55 Positive test 36: [0;32mPASSED[0;0m
+#56 Positive test 37: [0;32mPASSED[0;0m
+#57 Positive test 38: [0;32mPASSED[0;0m
+#58 Positive test 39: [0;32mPASSED[0;0m
+#59 Positive test 40: [0;32mPASSED[0;0m
+#60 Positive test 41: [0;32mPASSED[0;0m
+#61 Positive test 42: [0;32mPASSED[0;0m
+#62 Positive test 43: [0;32mPASSED[0;0m
+#63 Positive test 44: [0;32mPASSED[0;0m
+#64 Positive test 45: [0;32mPASSED[0;0m
+#65 Positive test 46: [0;32mPASSED[0;0m
+#66 Positive test 47: [0;32mPASSED[0;0m
+#67 Positive test 48: [0;32mPASSED[0;0m
+#68 Empty string: [0;32mPASSED[0;0m
+#69 Single field, string: [0;32mPASSED[0;0m
+#70 Single field, string with escape chars: [0;32mPASSED[0;0m
+#71 Single field, string with unicode: [0;32mPASSED[0;0m
+#72 Single field, int: [0;32mPASSED[0;0m
+#73 Single field, int32: [0;32mPASSED[0;0m
+#74 Single field, uint16: [0;32mPASSED[0;0m
+#75 Single field, long: [0;32mPASSED[0;0m
+#76 Single field, neg long: [0;32mPASSED[0;0m
+#77 Single field, neg long as ulong: [0;32mPASSED[0;0m
+#78 Single field, ulong: [0;32mPASSED[0;0m
+#79 Single field, ulong: [0;32mPASSED[0;0m
+#80 Single field, double: [0;32mPASSED[0;0m
+#81 Single field, double negative: [0;32mPASSED[0;0m
+#82 Single field, double exp negative 1: [0;32mPASSED[0;0m
+#83 Single field, double exp negative 2: [0;32mPASSED[0;0m
+#84 Single field, double exp negative 3: [0;32mPASSED[0;0m
+#85 Single field, double exp negative 4: [0;32mPASSED[0;0m
+#86 Single field, double exp positive 1: [0;32mPASSED[0;0m
+#87 Single field, double exp positive 2: [0;32mPASSED[0;0m
+#88 Single field, double exp positive 3: [0;32mPASSED[0;0m
+#89 Single field, double exp positive 4: [0;32mPASSED[0;0m
+#90 Single field, double exp positive 5: [0;32mPASSED[0;0m
+#91 Single field, double exp positive 6: [0;32mPASSED[0;0m
+#92 Single field, double exp positive 6: [0;32mPASSED[0;0m
+#93 Single field, bool: [0;32mPASSED[0;0m
+#94 Single field, string array: [0;32mPASSED[0;0m
+#95 Single field, null string array: [0;32mPASSED[0;0m
+#96 Single field, bool array: [0;32mPASSED[0;0m
+#97 Single field, double array: [0;32mPASSED[0;0m
+#98 Single field, int array: [0;32mPASSED[0;0m
+#99 Single field, long array: [0;32mPASSED[0;0m
+#100 Single field, ulong array: [0;32mPASSED[0;0m
+#101 Single field, object array: [0;32mPASSED[0;0m
+#102 Single field, array null: [0;32mPASSED[0;0m
+#103 Single field, array array: [0;32mPASSED[0;0m
+#104 Object: [0;32mPASSED[0;0m
+#105 Object, null: [0;32mPASSED[0;0m
+#106 All field types: [0;32mPASSED[0;0m
+#107 Unknown field type: [0;32mPASSED[0;0m
+#108 Ask for wrong type: [0;32mPASSED[0;0m
+#109 Ask for wrong type (array): [0;32mPASSED[0;0m
+#110 Ask for unknown type: [0;32mPASSED[0;0m
+#111 Ask for unknown type (array): [0;32mPASSED[0;0m
+#112 Check no error and set to default for vars for unknown fields: [0;32mPASSED[0;0m
+#113 Wrong string type: [0;32mPASSED[0;0m
+#114 NULL string with -1 len: [0;32mPASSED[0;0m
+#115 Field reused: [0;32mPASSED[0;0m
+#116 Nested arrays ok: [0;32mPASSED[0;0m
+#117 Nested arrays not ok: [0;32mPASSED[0;0m
+#118 Nested objects ok: [0;32mPASSED[0;0m
+#119 Nested arrays not ok: [0;32mPASSED[0;0m
+#120 Bad time '{"time":"too small"}': [0;32mPASSED[0;0m
+#121 Bad time '{"time":"2021-06-23T18:22:00.123456789-08:00X"}': [0;32mPASSED[0;0m
+#122 Bad time '{"time":"2021-06-23T18:22:00X"}': [0;32mPASSED[0;0m
+#123 Bad time '{"time":"2021-06-23T18:22:00-0800"}': [0;32mPASSED[0;0m
+#124 Bad time '{"time":"2021-06-23T18:22:00-08.00"}': [0;32mPASSED[0;0m
+#125 Bad time '{"time":"2021-06-23T18:22:00.Z"}': [0;32mPASSED[0;0m
+#126 Bad time '{"time":"2021-06-23T18:22:00.abcZ"}': [0;32mPASSED[0;0m
+#127 Bad time '{"time":"2021-06-23T18:22:00.abc-08:00"}': [0;32mPASSED[0;0m
+#128 Bad time '{"time":"2021-06-23T18:22:00.1234567890-08:00"}': [0;32mPASSED[0;0m
+#129 Bad time '{"time":"2021-06-23T18:22:00.1234567890Z"}': [0;32mPASSED[0;0m
+#130 Bad time '{"time":"2021-06-23T18:22:00.123-0800"}': [0;32mPASSED[0;0m
+#131 Time '{"time":"0001-01-01T00:00:00Z"}' -> 0: [0;32mPASSED[0;0m
+#132 Time '{"time":"1970-01-01T01:00:00+01:00"}' -> 0: [0;32mPASSED[0;0m
+#133 Time '{"time":"2021-06-23T18:22:00Z"}' -> 1624472520000000000: [0;32mPASSED[0;0m
+#134 Time '{"time":"2021-06-23T18:22:00.1Z"}' -> 1624472520100000000: [0;32mPASSED[0;0m
+#135 Time '{"time":"2021-06-23T18:22:00.12Z"}' -> 1624472520120000000: [0;32mPASSED[0;0m
+#136 Time '{"time":"2021-06-23T18:22:00.123Z"}' -> 1624472520123000000: [0;32mPASSED[0;0m
+#137 Time '{"time":"2021-06-23T18:22:00.1234Z"}' -> 1624472520123400000: [0;32mPASSED[0;0m
+#138 Time '{"time":"2021-06-23T18:22:00.12345Z"}' -> 1624472520123450000: [0;32mPASSED[0;0m
+#139 Time '{"time":"2021-06-23T18:22:00.123456Z"}' -> 1624472520123456000: [0;32mPASSED[0;0m
+#140 Time '{"time":"2021-06-23T18:22:00.1234567Z"}' -> 1624472520123456700: [0;32mPASSED[0;0m
+#141 Time '{"time":"2021-06-23T18:22:00.12345678Z"}' -> 1624472520123456780: [0;32mPASSED[0;0m
+#142 Time '{"time":"2021-06-23T18:22:00.123456789Z"}' -> 1624472520123456789: [0;32mPASSED[0;0m
+#143 Time '{"time":"2021-06-23T18:22:00-07:00"}' -> 1624497720000000000: [0;32mPASSED[0;0m
+#144 Time '{"time":"2021-06-23T18:22:00.1-07:00"}' -> 1624497720100000000: [0;32mPASSED[0;0m
+#145 Time '{"time":"2021-06-23T18:22:00.12-07:00"}' -> 1624497720120000000: [0;32mPASSED[0;0m
+#146 Time '{"time":"2021-06-23T18:22:00.123-07:00"}' -> 1624497720123000000: [0;32mPASSED[0;0m
+#147 Time '{"time":"2021-06-23T18:22:00.1234-07:00"}' -> 1624497720123400000: [0;32mPASSED[0;0m
+#148 Time '{"time":"2021-06-23T18:22:00.12345-07:00"}' -> 1624497720123450000: [0;32mPASSED[0;0m
+#149 Time '{"time":"2021-06-23T18:22:00.123456-07:00"}' -> 1624497720123456000: [0;32mPASSED[0;0m
+#150 Time '{"time":"2021-06-23T18:22:00.1234567-07:00"}' -> 1624497720123456700: [0;32mPASSED[0;0m
+#151 Time '{"time":"2021-06-23T18:22:00.12345678-07:00"}' -> 1624497720123456780: [0;32mPASSED[0;0m
+#152 Time '{"time":"2021-06-23T18:22:00.123456789-07:00"}' -> 1624497720123456789: [0;32mPASSED[0;0m
+#153 Time '{"time":"2021-06-23T18:22:00+01:00"}' -> 1624468920000000000: [0;32mPASSED[0;0m
+#154 Time '{"time":"2021-06-23T18:22:00.1+01:00"}' -> 1624468920100000000: [0;32mPASSED[0;0m
+#155 Time '{"time":"2021-06-23T18:22:00.12+01:00"}' -> 1624468920120000000: [0;32mPASSED[0;0m
+#156 Time '{"time":"2021-06-23T18:22:00.123+01:00"}' -> 1624468920123000000: [0;32mPASSED[0;0m
+#157 Time '{"time":"2021-06-23T18:22:00.1234+01:00"}' -> 1624468920123400000: [0;32mPASSED[0;0m
+#158 Time '{"time":"2021-06-23T18:22:00.12345+01:00"}' -> 1624468920123450000: [0;32mPASSED[0;0m
+#159 Time '{"time":"2021-06-23T18:22:00.123456+01:00"}' -> 1624468920123456000: [0;32mPASSED[0;0m
+#160 Time '{"time":"2021-06-23T18:22:00.1234567+01:00"}' -> 1624468920123456700: [0;32mPASSED[0;0m
+#161 Time '{"time":"2021-06-23T18:22:00.12345678+01:00"}' -> 1624468920123456780: [0;32mPASSED[0;0m
+#162 Time '{"time":"2021-06-23T18:22:00.123456789+01:00"}' -> 1624468920123456789: [0;32mPASSED[0;0m
+#163 GetStr bad type: [0;32mPASSED[0;0m
+#164 GetStr: [0;32mPASSED[0;0m
+#165 GetBytes bad type: [0;32mPASSED[0;0m
+#166 GetBytes: [0;32mPASSED[0;0m
+#167 Range with wrong type: [0;32mPASSED[0;0m
+#168 Range with wrong num type: [0;32mPASSED[0;0m
+#169 Range ok: [0;32mPASSED[0;0m
+#170 Range cb returns error: [0;32mPASSED[0;0m
+#171 Parse empty array: [0;32mPASSED[0;0m
+#172 Get empty array array: [0;32mPASSED[0;0m
+#173 Get empty obj array: [0;32mPASSED[0;0m
+#174 Get empty ulong array: [0;32mPASSED[0;0m
+#175 Get empty long array: [0;32mPASSED[0;0m
+#176 Get empty int array: [0;32mPASSED[0;0m
+#177 Get empty double array: [0;32mPASSED[0;0m
+#178 Get empty bool array: [0;32mPASSED[0;0m
+#179 Get empty string array: [0;32mPASSED[0;0m
+ALL PASSED

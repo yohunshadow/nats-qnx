@@ -1,0 +1,34 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamContext ==
+[0;0m#01 Check response parsing:
+#02 Negative test 1: [0;32mPASSED[0;0m
+#03 Negative test 2: [0;32mPASSED[0;0m
+#04 Negative test 3: [0;32mPASSED[0;0m
+#05 Negative test 4: [0;32mPASSED[0;0m
+#06 Negative test 5: [0;32mPASSED[0;0m
+#07 Positive test 1: [0;32mPASSED[0;0m
+#08 Positive test 2: [0;32mPASSED[0;0m
+#09 Positive test 3: [0;32mPASSED[0;0m
+#10 Positive test 4: [0;32mPASSED[0;0m
+[0;32mPASSED[0;0m
+#11 Connect: [0;32mPASSED[0;0m
+#12 Check JS context invalid args: [0;32mPASSED[0;0m
+#13 Init options (bad args): [0;32mPASSED[0;0m
+#14 Check JS context with negative wait: [0;32mPASSED[0;0m
+#15 Get context: [0;32mPASSED[0;0m
+#16 Get account info (bad args): [0;32mPASSED[0;0m
+#17 Get account fail: [0;32mPASSED[0;0m
+#18 Start JS server: [0;32mPASSED[0;0m
+#19 Connect: [0;32mPASSED[0;0m
+#20 Get context set unknown prefix: [0;32mPASSED[0;0m
+#21 Get account info with unknown prefix: [0;32mPASSED[0;0m
+#22 Get account info override prefix: [0;32mPASSED[0;0m
+#23 Prefix with trailing '.' works: [0;32mPASSED[0;0m
+#24 Create context with prefix with traling '.': [0;32mPASSED[0;0m
+#25 Start JS server: [0;32mPASSED[0;0m
+#26 Connect: [0;32mPASSED[0;0m
+#27 Get context: [0;32mPASSED[0;0m
+#28 Get account info error: [0;32mPASSED[0;0m
+ALL PASSED

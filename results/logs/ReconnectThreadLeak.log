@@ -1,0 +1,26 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ReconnectThreadLeak ==
+[0;0m#01 Connect ok: [0;32mPASSED[0;0m
+#02 Waiting for disconnect: [0;32mPASSED[0;0m
+#03 Waiting for reconnect: [0;32mPASSED[0;0m
+#04 Waiting for disconnect: [0;32mPASSED[0;0m
+#05 Waiting for reconnect: [0;32mPASSED[0;0m
+#06 Waiting for disconnect: [0;32mPASSED[0;0m
+#07 Waiting for reconnect: [0;32mPASSED[0;0m
+#08 Waiting for disconnect: [0;32mPASSED[0;0m
+#09 Waiting for reconnect: [0;32mPASSED[0;0m
+#10 Waiting for disconnect: [0;32mPASSED[0;0m
+#11 Waiting for reconnect: [0;32mPASSED[0;0m
+#12 Waiting for disconnect: [0;32mPASSED[0;0m
+#13 Waiting for reconnect: [0;32mPASSED[0;0m
+#14 Waiting for disconnect: [0;32mPASSED[0;0m
+#15 Waiting for reconnect: [0;32mPASSED[0;0m
+#16 Waiting for disconnect: [0;32mPASSED[0;0m
+#17 Waiting for reconnect: [0;32mPASSED[0;0m
+#18 Waiting for disconnect: [0;32mPASSED[0;0m
+#19 Waiting for reconnect: [0;32mPASSED[0;0m
+#20 Waiting for disconnect: [0;32mPASSED[0;0m
+#21 Waiting for reconnect: [0;32mPASSED[0;0m
+ALL PASSED

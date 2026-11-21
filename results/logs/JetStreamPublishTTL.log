@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamPublishTTL ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Init: [0;32mPASSED[0;0m
+#05 Disabled per-msg TTL - error: [0;32mPASSED[0;0m
+#06 Add enabled stream: [0;32mPASSED[0;0m
+#07 Publish message with a negative TTL - error: [0;32mPASSED[0;0m
+#08 Publish message with a TTL too small - error: [0;32mPASSED[0;0m
+#09 Publish message with a 1s TTL: [0;32mPASSED[0;0m
+#10 Get the message back immediately: [0;32mPASSED[0;0m
+#11 Publish an Async message with a 1s TTL: [0;32mPASSED[0;0m
+#12 Get the async (last) message back immediately: [0;32mPASSED[0;0m
+#13 Sleep 1.5 seconds to exceed the TTL and try again: [0;32mPASSED[0;0m
+#14 Get the async (last) message back immediately: [0;32mPASSED[0;0m
+ALL PASSED

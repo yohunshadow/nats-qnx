@@ -1,0 +1,63 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== MicroServiceStopsWhenServerStops ==
+[0;0m#01 Connect for microservice: [0;32mPASSED[0;0m
+#02 Add endpoint 0: [0;32mPASSED[0;0m
+#03 Add endpoint 1: [0;32mPASSED[0;0m
+#04 Add endpoint 2: [0;32mPASSED[0;0m
+#05 Add endpoint 3: [0;32mPASSED[0;0m
+#06 Add endpoint 4: [0;32mPASSED[0;0m
+#07 Add endpoint 5: [0;32mPASSED[0;0m
+#08 Add endpoint 6: [0;32mPASSED[0;0m
+#09 Add endpoint 7: [0;32mPASSED[0;0m
+#10 Add endpoint 8: [0;32mPASSED[0;0m
+#11 Add endpoint 9: [0;32mPASSED[0;0m
+#12 Add endpoint 10: [0;32mPASSED[0;0m
+#13 Add endpoint 11: [0;32mPASSED[0;0m
+#14 Add endpoint 12: [0;32mPASSED[0;0m
+#15 Add endpoint 13: [0;32mPASSED[0;0m
+#16 Add endpoint 14: [0;32mPASSED[0;0m
+#17 Add endpoint 15: [0;32mPASSED[0;0m
+#18 Add endpoint 16: [0;32mPASSED[0;0m
+#19 Add endpoint 17: [0;32mPASSED[0;0m
+#20 Add endpoint 18: [0;32mPASSED[0;0m
+#21 Add endpoint 19: [0;32mPASSED[0;0m
+#22 Add endpoint 20: [0;32mPASSED[0;0m
+#23 Add endpoint 21: [0;32mPASSED[0;0m
+#24 Add endpoint 22: [0;32mPASSED[0;0m
+#25 Add endpoint 23: [0;32mPASSED[0;0m
+#26 Add endpoint 24: [0;32mPASSED[0;0m
+#27 Add endpoint 25: [0;32mPASSED[0;0m
+#28 Add endpoint 26: [0;32mPASSED[0;0m
+#29 Add endpoint 27: [0;32mPASSED[0;0m
+#30 Add endpoint 28: [0;32mPASSED[0;0m
+#31 Add endpoint 29: [0;32mPASSED[0;0m
+#32 Add endpoint 30: [0;32mPASSED[0;0m
+#33 Add endpoint 31: [0;32mPASSED[0;0m
+#34 Add endpoint 32: [0;32mPASSED[0;0m
+#35 Add endpoint 33: [0;32mPASSED[0;0m
+#36 Add endpoint 34: [0;32mPASSED[0;0m
+#37 Add endpoint 35: [0;32mPASSED[0;0m
+#38 Add endpoint 36: [0;32mPASSED[0;0m
+#39 Add endpoint 37: [0;32mPASSED[0;0m
+#40 Add endpoint 38: [0;32mPASSED[0;0m
+#41 Add endpoint 39: [0;32mPASSED[0;0m
+#42 Add endpoint 40: [0;32mPASSED[0;0m
+#43 Add endpoint 41: [0;32mPASSED[0;0m
+#44 Add endpoint 42: [0;32mPASSED[0;0m
+#45 Add endpoint 43: [0;32mPASSED[0;0m
+#46 Add endpoint 44: [0;32mPASSED[0;0m
+#47 Add endpoint 45: [0;32mPASSED[0;0m
+#48 Add endpoint 46: [0;32mPASSED[0;0m
+#49 Add endpoint 47: [0;32mPASSED[0;0m
+#50 Add endpoint 48: [0;32mPASSED[0;0m
+#51 Add endpoint 49: [0;32mPASSED[0;0m
+#52 Test microservice is running: [0;32mPASSED[0;0m
+#53 Check that the service has 50 endpoints: [0;32mPASSED[0;0m
+#54 Stop the server: [0;32mPASSED[0;0m
+#55 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#56 Test microservice is not running: [0;32mPASSED[0;0m
+#57 Destroy microservice test: [0;32mPASSED[0;0m
+#58 Destroy the test connection: [0;32mPASSED[0;0m
+ALL PASSED

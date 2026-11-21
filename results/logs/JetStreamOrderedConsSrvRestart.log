@@ -1,0 +1,30 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamOrderedConsSrvRestart ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Connect: [0;32mPASSED[0;0m
+#05 Create stream: [0;32mPASSED[0;0m
+#06 Subscribe: [0;32mPASSED[0;0m
+#07 Send 1 message: [0;32mPASSED[0;0m
+#08 Consume: [0;32mPASSED[0;0m
+#09 Subscribe with DeliverNew: [0;32mPASSED[0;0m
+#10 Stopping server: [0;32mPASSED[0;0m
+#11 Waiting before restarting: Error 36 - Missed Server Heartbeat on connection [7] on "["foo"]"
+Error 36 - Missed Server Heartbeat on connection [7] on "["foo"]"
+Error 36 - Missed Server Heartbeat on connection [7] on "["foo"]"
+Error 36 - Missed Server Heartbeat on connection [7] on "["foo"]"
+Error 36 - Missed Server Heartbeat on connection [7] on "["foo"]"
+[0;32mPASSED[0;0m
+#12 Restarting server: [0;32mPASSED[0;0m
+#13 Wait for reconnect: [0;32mPASSED[0;0m
+#14 Wait for DeliverNew sub to be recreated: Error 36 - Missed Server Heartbeat on connection [8] on "["foo"]"
+Error 36 - Missed Server Heartbeat on connection [8] on "["foo"]"
+[0;32mPASSED[0;0m
+#15 Send 1 message: [0;32mPASSED[0;0m
+#16 Consume: [0;32mPASSED[0;0m
+#17 DeliverNew sub gets only new message: [0;32mPASSED[0;0m
+#18 Check configuration is similar: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,12 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ExtendedReconnectFunctionality ==
+[0;0m#01 Setup: [0;32mPASSED[0;0m
+#02 Disconnected CB invoked: [0;32mPASSED[0;0m
+#03 Some protos while disconnected: [0;32mPASSED[0;0m
+#04 Check reconnected: [0;32mPASSED[0;0m
+#05 Publish more: [0;32mPASSED[0;0m
+#06 Done msg received: [0;32mPASSED[0;0m
+#07 All msgs were received: [0;32mPASSED[0;0m
+ALL PASSED

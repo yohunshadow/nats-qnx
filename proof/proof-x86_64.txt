@@ -1,0 +1,114 @@
+
+==================== environment ====================
+host: Linux 6.12.113+ x86_64, nats-server: v2.15.3
+QNX noname 8.0.0 2026/10/30-09:10:05EDT x86pc x86_64
+libnats: /data/nats/lib/libnats.so.3.15.0
+
+==================== 1. core pub/sub on QNX (upstream nats-subscriber + nats-publisher) ====================
+Sending 5 messages to subject 'qnx.demo'
+Out Msgs:         5 - Out Bytes:        90 - Reconnected:   0
+
+Sent 5 messages in 11 milliseconds (454 msgs/sec)
+--- subscriber (QNX) ---
+Listening asynchronously on 'qnx.demo'.
+Received msg: qnx.demo - hello-from-QNX-8.0
+Received msg: qnx.demo - hello-from-QNX-8.0
+Received msg: qnx.demo - hello-from-QNX-8.0
+Received msg: qnx.demo - hello-from-QNX-8.0
+Received msg: qnx.demo - hello-from-QNX-8.0
+
+Received 5 messages in 2 milliseconds (2500 msgs/sec)
+
+==================== 2. QNX -> Linux host (QNX publishes, host 'nats sub' receives) ====================
+Sent 3 messages in 9 milliseconds (333 msgs/sec)
+--- host subscriber ---
+[#1] Received on "qnx.to.host"
+telemetry from QNX
+[#2] Received on "qnx.to.host"
+telemetry from QNX
+[#3] Received on "qnx.to.host"
+telemetry from QNX
+
+==================== 3. Linux host -> QNX (host 'nats pub', QNX nats-subscriber receives) ====================
+03:59:09 Published 25 bytes to "host.to.qnx"
+03:59:09 Published 25 bytes to "host.to.qnx"
+03:59:09 Published 25 bytes to "host.to.qnx"
+--- subscriber (QNX) ---
+Received msg: host.to.qnx - command 1 from Linux host
+Received msg: host.to.qnx - command 2 from Linux host
+Received msg: host.to.qnx - command 3 from Linux host
+Received 3 messages in 37 milliseconds (81 msgs/sec)
+
+==================== 4. JetStream on QNX (upstream nats-js-sub + nats-js-pub) ====================
+Stream QNXDEMO has 0 messages (0 bytes)
+
+Sending 10 messages to subject 'QNXDEMO'
+Out Msgs:        11 - Out Bytes:       170 - Reconnected:   0
+
+Sent 10 messages in 12 milliseconds (833 msgs/sec)
+
+Stream QNXDEMO has 10 messages (390 bytes)
+--- host view of the stream ---
+stream QNXDEMO subjects ['qnx.js'] messages 10 last_seq 10
+--- js-sub (QNX) ---
+Creating an asynchronous subscription on 'qnx.js'
+Stream QNXDEMO has 0 messages (0 bytes)
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Received msg: qnx.js - 'js-hello-from-QNX'
+Subscription completed
+
+Received 10 messages in 10 milliseconds (1000 msgs/sec)
+
+Stream QNXDEMO has 10 messages (390 bytes)
+
+Deleting stream QNXDEMO: OK!
+
+==================== 5. qnx-smoke (pub/sub, request/reply, JetStream file stream + durable pull consumer, KV) ====================
+qnx-smoke: nats.c 3.15.0 on QNX 8.0.0 x86pc, server nats://10.0.2.2:4222
+[connect] OK server_id=NCJAKNANJZ3H...
+[pubsub] recv qnx.smoke.core: core message 1 from QNX
+[pubsub] recv qnx.smoke.core: core message 2 from QNX
+[pubsub] recv qnx.smoke.core: core message 3 from QNX
+[pubsub] recv qnx.smoke.core: core message 4 from QNX
+[pubsub] recv qnx.smoke.core: core message 5 from QNX
+[pubsub] OK 5/5
+[reqrep] OK reply: pong from QNX 8.0.0 x86pc (pid 54513685): ping
+[jetstream] stream QNX_SMOKE created (file storage)
+[jetstream] published seq=1 stream=QNX_SMOKE
+[jetstream] published seq=2 stream=QNX_SMOKE
+[jetstream] published seq=3 stream=QNX_SMOKE
+[jetstream] published seq=4 stream=QNX_SMOKE
+[jetstream] published seq=5 stream=QNX_SMOKE
+[jetstream] consumed stream_seq=1: {"seq":1,"src":"qnx","temp_c":21}
+[jetstream] consumed stream_seq=2: {"seq":2,"src":"qnx","temp_c":22}
+[jetstream] consumed stream_seq=3: {"seq":3,"src":"qnx","temp_c":23}
+[jetstream] consumed stream_seq=4: {"seq":4,"src":"qnx","temp_c":24}
+[jetstream] consumed stream_seq=5: {"seq":5,"src":"qnx","temp_c":25}
+[jetstream] OK published+consumed+acked 5/5
+[kv] OK board.os = QNX (revision 1)
+qnx-smoke: ALL OK
+exit=0
+--- host view ---
+consumer qnx-smoke-durable delivered 5 ack_floor 5 pending 0
+kv board.os from host: QNX
+
+==================== 6. TLS (OpenSSL 3 on QNX, CA + hostname verification) ====================
+Sent 3 messages in 10 milliseconds (300 msgs/sec)
+--- TLS subscriber (QNX) ---
+Received msg: qnx.tls - encrypted-hello-from-QNX
+Received msg: qnx.tls - encrypted-hello-from-QNX
+Received msg: qnx.tls - encrypted-hello-from-QNX
+Received 3 messages in 4 milliseconds (750 msgs/sec)
+--- wrong CA must fail ---
+Error: 29 - SSL Error - (conn.c:852): SSL handshake error: 20:unable to get local issuer certificate:depth=0:cert=/C=US/ST=California/O=Synadia/OU=nats.io/CN=localhost:issuer=/C=US/ST=California/O=Synadia/OU=nats.io/CN=Certificate Authority 2025-08-20 (ssl err=1 - errno=3 (No...
+Error: 29 - SSL Error
+
+proof written to proof/proof-x86_64.txt

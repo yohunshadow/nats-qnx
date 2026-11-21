@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AuthTokenHandler ==
+[0;0m#01 Connect using SetTokenHandler: [0;32mPASSED[0;0m
+#02 cannot set a tokenHandler when token set: [0;32mPASSED[0;0m
+#03 cannot set a token when tokenHandler set: [0;32mPASSED[0;0m
+#04 token in URL not valid with tokenHandler: [0;32mPASSED[0;0m
+ALL PASSED

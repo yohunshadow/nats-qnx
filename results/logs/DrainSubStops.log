@@ -1,0 +1,18 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== DrainSubStops ==
+[0;0m#01 Connect and create subscriptions: [0;32mPASSED[0;0m
+#02 Send 10 messages: [0;32mPASSED[0;0m
+#03 Wait for 1st message to be received: [0;32mPASSED[0;0m
+#04 Drain subscription: [0;32mPASSED[0;0m
+#05 Wait for drain completion: [0;32mPASSED[0;0m
+#06 Check drain status: [0;32mPASSED[0;0m
+#07 Check that drain stopped on unsubscribe: [0;32mPASSED[0;0m
+#08 Create subscription: [0;32mPASSED[0;0m
+#09 Send 10 messages: [0;32mPASSED[0;0m
+#10 Wait for 1st message to be received: [0;32mPASSED[0;0m
+#11 Drain connection: [0;32mPASSED[0;0m
+#12 Wait for Drain to complete: [0;32mPASSED[0;0m
+#13 Check that drain stopped on unsubscribe: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribePullAsync_Disconnect ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Subscribe, expect 2 messsages, fetch size 2: [0;32mPASSED[0;0m
+#06 Send 1 message: [0;32mPASSED[0;0m
+#07 Receive 1 message: [0;32mPASSED[0;0m
+#08 Disconnect: [0;32mPASSED[0;0m
+#09 Check fetch completion, expect NATS_OK: [0;32mPASSED[0;0m
+ALL PASSED

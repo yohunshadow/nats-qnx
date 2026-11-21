@@ -1,0 +1,17 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamPublishMuxRepliesDrain ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Add stream: [0;32mPASSED[0;0m
+#05 Get contexts: [0;32mPASSED[0;0m
+#06 Block pub ack handlers: [0;32mPASSED[0;0m
+#07 Wait to be blocked: [0;32mPASSED[0;0m
+#08 Publish more: [0;32mPASSED[0;0m
+#09 Wait to be queued and have handlers sleep: [0;32mPASSED[0;0m
+#10 Drain conn drains JS dispatchers: [0;32mPASSED[0;0m
+#11 Check all were dispatched: [0;32mPASSED[0;0m
+#12 Check that dispatcher threads have exited: [0;32mPASSED[0;0m
+ALL PASSED

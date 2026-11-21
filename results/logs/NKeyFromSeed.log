@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== NKeyFromSeed ==
+[0;0m#01 Invalid arg 1: [0;32mPASSED[0;0m
+#02 Invalid arg 2: [0;32mPASSED[0;0m
+#03 Clone: [0;32mPASSED[0;0m
+#04 NKeyFromSeed erase JWT: [0;32mPASSED[0;0m
+#05 UserCreds erase NKeyFromSeed: [0;32mPASSED[0;0m
+#06 NKeyFromSeed works ok: [0;32mPASSED[0;0m
+ALL PASSED

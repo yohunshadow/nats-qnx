@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ClientSyncAutoUnsub ==
+[0;0m#01 Get correct error: [0;32mPASSED[0;0m
+#02 Received no more than max: [0;32mPASSED[0;0m
+#03 IsValid should be false: [0;32mPASSED[0;0m
+#04 Subscribe and publish 100 msgs: [0;32mPASSED[0;0m
+#05 Auto-unsub with 10, should close the sub right away: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,40 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== DrainConn ==
+[0;0m#01 Drain with invalid NULL: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Drain with no sub/pub ok: [0;32mPASSED[0;0m
+#04 Closed CB invoked: [0;32mPASSED[0;0m
+#05 No async error reported: [0;32mPASSED[0;0m
+#06 Connect: [0;32mPASSED[0;0m
+#07 Create listener for responses on bar: [0;32mPASSED[0;0m
+#08 Create slow consumer for responder: [0;32mPASSED[0;0m
+#09 Send messages: [0;32mPASSED[0;0m
+#10 Drain connection: [0;32mPASSED[0;0m
+#11 Check IsDraining: [0;32mPASSED[0;0m
+#12 Second drain ok: [0;32mPASSED[0;0m
+#13 Cannot create new subs: [0;32mPASSED[0;0m
+#14 Publish should be ok: [0;32mPASSED[0;0m
+#15 Closed CB should be invoked: [0;32mPASSED[0;0m
+#16 Drain took as expected: [0;32mPASSED[0;0m
+#17 Received all messages: [0;32mPASSED[0;0m
+#18 All responses received: [0;32mPASSED[0;0m
+#19 Check sub drain status: [0;32mPASSED[0;0m
+#20 Check IsDraining: [0;32mPASSED[0;0m
+#21 Drain after closed should fail: [0;32mPASSED[0;0m
+#22 Connect and subscribe: [0;32mPASSED[0;0m
+#23 Publish: [0;32mPASSED[0;0m
+#24 Drain timeout: [0;32mPASSED[0;0m
+#25 Wait for subscription to drain: [0;32mPASSED[0;0m
+#26 Check sub drain status: [0;32mPASSED[0;0m
+#27 Connect and create sub: [0;32mPASSED[0;0m
+#28 Send messages: [0;32mPASSED[0;0m
+#29 Drain: [0;32mPASSED[0;0m
+#30 Drain sub directly should fail: [0;32mPASSED[0;0m
+#31 Disconnect: [0;32mPASSED[0;0m
+#32 Drain while disconnected fails: [0;32mPASSED[0;0m
+#33 Release cb: [0;32mPASSED[0;0m
+#34 Wait for completion: [0;32mPASSED[0;0m
+#35 Check drain status: [0;32mPASSED[0;0m
+ALL PASSED

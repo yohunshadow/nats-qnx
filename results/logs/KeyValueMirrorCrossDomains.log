@@ -1,0 +1,39 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== KeyValueMirrorCrossDomains ==
+[0;0m#01 Start hub: [0;32mPASSED[0;0m
+#02 Start leaf: [0;32mPASSED[0;0m
+#03 Connect to leaf: [0;32mPASSED[0;0m
+#04 Get context: [0;32mPASSED[0;0m
+#05 Connect to hub and check connectivity through leaf: [0;32mPASSED[0;0m
+#06 Get context: [0;32mPASSED[0;0m
+#07 Create KV value: [0;32mPASSED[0;0m
+#08 Put keys: [0;32mPASSED[0;0m
+#09 Create KV: [0;32mPASSED[0;0m
+#10 Check config not changed: [0;32mPASSED[0;0m
+#11 Get stream info: [0;32mPASSED[0;0m
+#12 Check mirror direct: [0;32mPASSED[0;0m
+#13 Check mirror syncs: [0;32mPASSED[0;0m
+#14 Leaf KV: [0;32mPASSED[0;0m
+#15 Put key: [0;32mPASSED[0;0m
+#16 Get key: [0;32mPASSED[0;0m
+#17 Get context for HUB: [0;32mPASSED[0;0m
+#18 Get KV: [0;32mPASSED[0;0m
+#19 Put key: [0;32mPASSED[0;0m
+#20 Get key: [0;32mPASSED[0;0m
+#21 Shutdown hub: [0;32mPASSED[0;0m
+#22 Get key: [0;32mPASSED[0;0m
+#23 Create watcher (name): [0;32mPASSED[0;0m
+#24 Check watcher: [0;32mPASSED[0;0m
+#25 No more: [0;32mPASSED[0;0m
+#26 Create watcher (all): [0;32mPASSED[0;0m
+#27 Check watcher: [0;32mPASSED[0;0m
+#28 No more: [0;32mPASSED[0;0m
+#29 Restart hub: [0;32mPASSED[0;0m
+#30 Connect to hub and check connectivity through leaf: [0;32mPASSED[0;0m
+#31 Delete keys: [0;32mPASSED[0;0m
+#32 Check mirror syncs: [0;32mPASSED[0;0m
+#33 Purge deletes: [0;32mPASSED[0;0m
+#34 Check stream: [0;32mPASSED[0;0m
+ALL PASSED

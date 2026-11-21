@@ -1,0 +1,16 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ForcedReconnect ==
+[0;0m#01 Start server, connect, subscribe: [0;32mPASSED[0;0m
+#02 Send a message to foo: [0;32mPASSED[0;0m
+#03 Receive the message: [0;32mPASSED[0;0m
+#04 Forced reconnect: [0;32mPASSED[0;0m
+#05 Waiting for reconnect: [0;32mPASSED[0;0m
+#06 Send a message to foo: [0;32mPASSED[0;0m
+#07 Receive the message: [0;32mPASSED[0;0m
+#08 Reconnect again with allowReconnect false, the call succeeds: [0;32mPASSED[0;0m
+#09 But the connection is closed: [0;32mPASSED[0;0m
+#10 Reconect on a close connection errors: [0;32mPASSED[0;0m
+#11 Reconect on a NULL connection errors: [0;32mPASSED[0;0m
+ALL PASSED

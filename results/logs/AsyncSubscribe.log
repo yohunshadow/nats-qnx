@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AsyncSubscribe ==
+[0;0m#01 Test async subscriber: [0;32mPASSED[0;0m
+#02 Get connection (bad args): [0;32mPASSED[0;0m
+#03 Get connection: [0;32mPASSED[0;0m
+#04 Unsubscribe: [0;32mPASSED[0;0m
+#05 Sub invalid: [0;32mPASSED[0;0m
+#06 Get connection still OK: [0;32mPASSED[0;0m
+ALL PASSED

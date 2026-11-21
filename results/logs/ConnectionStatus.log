@@ -1,0 +1,7 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ConnectionStatus ==
+[0;0m#01 Test connection status should be CONNECTED: [0;32mPASSED[0;0m
+#02 Test connection status should be CLOSED: [0;32mPASSED[0;0m
+ALL PASSED

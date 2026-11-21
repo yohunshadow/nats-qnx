@@ -1,0 +1,38 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== InvalidSubsArgs ==
+[0;0m#01 Test async subscriber, invalid connection: [0;32mPASSED[0;0m
+#02 Test async subscriber, invalid subject: [0;32mPASSED[0;0m
+#03 Test async subscriber, invalid subject (empty string): [0;32mPASSED[0;0m
+#04 Test async subscriber, invalid cb: [0;32mPASSED[0;0m
+#05 Test async queue subscriber, invalid connection: [0;32mPASSED[0;0m
+#06 Test async subscriber timeout, invalid connection: [0;32mPASSED[0;0m
+#07 Test async subscriber timeout, invalid subject: [0;32mPASSED[0;0m
+#08 Test async subscriber timeout, invalid subject (empty string): [0;32mPASSED[0;0m
+#09 Test async subscriber timeout, invalid cb: [0;32mPASSED[0;0m
+#10 Test async subscriber timeout, invalid timeout (<0): [0;32mPASSED[0;0m
+#11 Test async subscriber timeout, invalid timeout (0): [0;32mPASSED[0;0m
+#12 Test async queue subscriber timeout, invalid connection: [0;32mPASSED[0;0m
+#13 Test async queue subscriber, invalid subject: [0;32mPASSED[0;0m
+#14 Test async queue subscriber, invalid subject (empty string): [0;32mPASSED[0;0m
+#15 Test async queue subscriber, invalid group name: [0;32mPASSED[0;0m
+#16 Test async queue subscriber, invalid group name (empty): [0;32mPASSED[0;0m
+#17 Test async queue subscriber, invalid cb: [0;32mPASSED[0;0m
+#18 Test async queue subscriber timeout, invalid connection: [0;32mPASSED[0;0m
+#19 Test async queue subscriber timeout, invalid subject: [0;32mPASSED[0;0m
+#20 Test async queue subscriber timeout, invalid subject (empty string): [0;32mPASSED[0;0m
+#21 Test async queue subscriber timeout, invalid group name: [0;32mPASSED[0;0m
+#22 Test async queue subscriber timeout, invalid group name (empty): [0;32mPASSED[0;0m
+#23 Test async queue subscriber timeout, invalid cb: [0;32mPASSED[0;0m
+#24 Test async queue subscriber timeout, invalid timeout (<0): [0;32mPASSED[0;0m
+#25 Test async queue subscriber timeout, invalid timeout (0): [0;32mPASSED[0;0m
+#26 Test sync subscriber, invalid connection: [0;32mPASSED[0;0m
+#27 Test sync subscriber, invalid subject: [0;32mPASSED[0;0m
+#28 Test sync subscriber, invalid subject (empty string): [0;32mPASSED[0;0m
+#29 Test sync queue subscriber, invalid connection: [0;32mPASSED[0;0m
+#30 Test sync queue subscriber, invalid subject: [0;32mPASSED[0;0m
+#31 Test sync queue subscriber, invalid subject (empty string): [0;32mPASSED[0;0m
+#32 Test sync queue subscriber, invalid group name: [0;32mPASSED[0;0m
+#33 Test sync queue subscriber, invalid group name (empty): [0;32mPASSED[0;0m
+ALL PASSED

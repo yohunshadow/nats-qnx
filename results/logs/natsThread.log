@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsThread ==
+[0;0m#01 Create threads array: [0;32mPASSED[0;0m
+#02 Create thread: [0;32mPASSED[0;0m
+#03 Check if thread current from other thread: [0;32mPASSED[0;0m
+#04 Joining thread: [0;32mPASSED[0;0m
+#05 Control updated: [0;32mPASSED[0;0m
+#06 Check thread current works from current thread: [0;32mPASSED[0;0m
+#07 Destroy thread: [0;32mPASSED[0;0m
+#08 Creating multiple threads: [0;32mPASSED[0;0m
+#09 Waiting all done: [0;32mPASSED[0;0m
+#10 Checking sum: [0;32mPASSED[0;0m
+ALL PASSED

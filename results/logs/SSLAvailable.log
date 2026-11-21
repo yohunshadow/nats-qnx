@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLAvailable ==
+[0;0m#01 Start server: [0;32mPASSED[0;0m
+#02 Create options: [0;32mPASSED[0;0m
+#03 Connect with TLS: [0;32mPASSED[0;0m
+#04 Connection without: [0;32mPASSED[0;0m
+ALL PASSED

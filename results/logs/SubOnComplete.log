@@ -1,0 +1,12 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SubOnComplete ==
+[0;0m#01 Invalid arg: [0;32mPASSED[0;0m
+#02 Connect + sub: [0;32mPASSED[0;0m
+#03 Invalid sub (NULL): [0;32mPASSED[0;0m
+#04 Invalid sub (sync): [0;32mPASSED[0;0m
+#05 SetOnCompleteCB ok: [0;32mPASSED[0;0m
+#06 SetOnCompleteCB to NULL ok: [0;32mPASSED[0;0m
+#07 OnComplete invoked after last message: [0;32mPASSED[0;0m
+ALL PASSED

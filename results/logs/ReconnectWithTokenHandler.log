@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ReconnectWithTokenHandler ==
+[0;0m#01 Connect should succeed: [0;32mPASSED[0;0m
+Error 11 - Authorization Violation on connection [6]
+#02 Reconnect callback should be triggered: [0;32mPASSED[0;0m
+#03 Connection should not be closed: [0;32mPASSED[0;0m
+#04 Should have connected to third server: [0;32mPASSED[0;0m
+#05 ConnectedURL and ServerID OKs during reconnect process: [0;32mPASSED[0;0m
+ALL PASSED

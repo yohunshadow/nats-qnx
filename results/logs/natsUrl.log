@@ -1,0 +1,46 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsUrl ==
+[0;0m#01 'ws://localhost:4222' is refused:[0;32mPASSED[0;0m
+#02 'WSS://localhost:4222' is refused:[0;32mPASSED[0;0m
+#03 'ws:1234' is host 'ws' with the nats scheme:[0;32mPASSED[0;0m
+#04 'wss:1234' is host 'wss' with the nats scheme:[0;32mPASSED[0;0m
+#05 'TLS://localhost:4222' has the tls scheme:[0;32mPASSED[0;0m
+#06 NULL: [0;32mPASSED[0;0m
+#07 EMPTY: [0;32mPASSED[0;0m
+#08 'localhost:':[0;32mPASSED[0;0m
+#09 'localhost:4223':[0;32mPASSED[0;0m
+#10 'tcp://localhost:4222':[0;32mPASSED[0;0m
+#11 'tcp://localhost':[0;32mPASSED[0;0m
+#12 'localhost':[0;32mPASSED[0;0m
+#13 'tcp://[::1]:4222':[0;32mPASSED[0;0m
+#14 'tcp://[::1]:':[0;32mPASSED[0;0m
+#15 'tcp://[::1]':[0;32mPASSED[0;0m
+#16 'tcp://':[0;32mPASSED[0;0m
+#17 'tcp://:':[0;32mPASSED[0;0m
+#18 'tcp://ivan:localhost:4222':[0;32mPASSED[0;0m
+#19 'tcp://ivan:pwd:localhost:4222':[0;32mPASSED[0;0m
+#20 'tcp://ivan@localhost:4222':[0;32mPASSED[0;0m
+#21 'tcp://ivan:pwd@localhost:4222':[0;32mPASSED[0;0m
+#22 'tcp://ivan:pwd@localhost':[0;32mPASSED[0;0m
+#23 'tcp://@localhost:4222':[0;32mPASSED[0;0m
+#24 'tcp://@@localhost:4222':[0;32mPASSED[0;0m
+#25 'tcp://a:b:c@localhost:4222':[0;32mPASSED[0;0m
+#26 'tcp://::a:b:c@localhost:4222':[0;32mPASSED[0;0m
+#27 'tcp://a:b@[::1]:4222':[0;32mPASSED[0;0m
+#28 'tcp://a@[::1]:4222':[0;32mPASSED[0;0m
+#29 'tcp://a:b@[::1]:4222':[0;32mPASSED[0;0m
+#30 'tcp://a:b@[::1]':[0;32mPASSED[0;0m
+#31 ' tcp://localhost:4222':[0;32mPASSED[0;0m
+#32 'tcp://localhost:4222 ':[0;32mPASSED[0;0m
+#33 ' tcp://localhost:4222 ':[0;32mPASSED[0;0m
+#34 'nats://localhost:4222/subject':[0;32mPASSED[0;0m
+#35 'tcp://%4C%65v%00ignored:p%77d%00ignoredalso@localhost':[0;32mPASSED[0;0m
+#36 'tcp://%4C%65v:p%77d@localhost':[0;32mPASSED[0;0m
+#37 'tcp://%4c%65v:p%@localhost':[0;32mPASSED[0;0m
+#38 'tcp://%4H%65v:p%@localhost':[0;32mPASSED[0;0m
+#39 'tcp://localhost: 4222':[0;32mPASSED[0;0m
+#40 'tcp://localhost:a4222':[0;32mPASSED[0;0m
+#41 'tcp://localhost:2147483648':[0;32mPASSED[0;0m
+ALL PASSED

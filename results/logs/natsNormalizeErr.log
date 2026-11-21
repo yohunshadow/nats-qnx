@@ -1,0 +1,12 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsNormalizeErr ==
+[0;0m#01 Check typical -ERR: [0;32mPASSED[0;0m
+#02 Check -ERR without quotes: [0;32mPASSED[0;0m
+#03 Check -ERR with spaces: [0;32mPASSED[0;0m
+#04 Check -ERR with spaces and without quotes: [0;32mPASSED[0;0m
+#05 Check -ERR with quote on the left: [0;32mPASSED[0;0m
+#06 Check -ERR with quote on right: [0;32mPASSED[0;0m
+#07 Check -ERR with spaces and single quote: [0;32mPASSED[0;0m
+ALL PASSED

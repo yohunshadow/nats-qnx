@@ -1,0 +1,18 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribePullAsync_Unpin ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create the test stream: [0;32mPASSED[0;0m
+#05 Create the test consumer configured with 'pinned_client': [0;32mPASSED[0;0m
+#06 Publish 100 messages: [0;32mPASSED[0;0m
+#07 Initialize shared options: [0;32mPASSED[0;0m
+#08 Create pull subscription that will get pinned: [0;32mPASSED[0;0m
+#09 Create a second pull subscription that will not get pinned: [0;32mPASSED[0;0m
+#10 Ensure that the pinned sub received some, and the unpinned none: [0;32mPASSED[0;0m
+#11 Unpin the pinned sub: [0;32mPASSED[0;0m
+#12 Publish more messages in case we already drained everything: [0;32mPASSED[0;0m
+#13 Ensure that pinning changed, and all messages are delivered: [0;32mPASSED[0;0m
+ALL PASSED

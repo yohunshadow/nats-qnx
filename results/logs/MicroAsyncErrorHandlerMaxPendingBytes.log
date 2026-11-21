@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== MicroAsyncErrorHandlerMaxPendingBytes ==
+[0;0m#01 Connect to NATS: [0;32mPASSED[0;0m
+#02 Test microservice is running: [0;32mPASSED[0;0m
+#03 Add test endpoint: [0;32mPASSED[0;0m
+#04 Cause an error by sending too many messages: Error 20 - Slow Consumer, messages dropped on connection [6] on "async_test"
+[0;32mPASSED[0;0m
+#05 Wait for async err callback: [0;32mPASSED[0;0m
+#06 Destroy microservice test: [0;32mPASSED[0;0m
+#07 Wait for 1 microservices to stop: Error 20 - [0;32mPASSED[0;0m
+#08 Destroy the test connection: Slow Consumer, messages dropped on conne[0;32mPASSED[0;0m
+ction [6] on "async_test"
+ALL PASSED

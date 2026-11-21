@@ -1,0 +1,35 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ObjectStore_StoreMgtLinks ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create root store: [0;32mPASSED[0;0m
+#05 Add some data: [0;32mPASSED[0;0m
+#06 AddLink (bad args): [0;32mPASSED[0;0m
+#07 AddLink (bad name): [0;32mPASSED[0;0m
+#08 Link to individual object: [0;32mPASSED[0;0m
+#09 Link to a link: [0;32mPASSED[0;0m
+#10 Create dir store: [0;32mPASSED[0;0m
+#11 Add data: [0;32mPASSED[0;0m
+#12 Add link dbl: [0;32mPASSED[0;0m
+#13 AddBucket (bad args): [0;32mPASSED[0;0m
+#14 Add whole store as a link: [0;32mPASSED[0;0m
+#15 Cant get bucket: [0;32mPASSED[0;0m
+#16 Link parts correct: [0;32mPASSED[0;0m
+#17 Get a linked object, same bucket: [0;32mPASSED[0;0m
+#18 Get a linked object, cross bucket: [0;32mPASSED[0;0m
+#19 Get infoB: [0;32mPASSED[0;0m
+#20 Get infoLA: [0;32mPASSED[0;0m
+#21 AddLink LA to B: [0;32mPASSED[0;0m
+#22 Get info bucket link: [0;32mPASSED[0;0m
+#23 Change a bucket link: [0;32mPASSED[0;0m
+#24 AddLink error (already an object): [0;32mPASSED[0;0m
+#25 AddLink error (empty info name): [0;32mPASSED[0;0m
+#26 AddLink error (link to link): [0;32mPASSED[0;0m
+#27 Delete object A: [0;32mPASSED[0;0m
+#28 Init options (bad args): [0;32mPASSED[0;0m
+#29 Get A as deleted: [0;32mPASSED[0;0m
+#30 AddLink error (to deleted): [0;32mPASSED[0;0m
+ALL PASSED

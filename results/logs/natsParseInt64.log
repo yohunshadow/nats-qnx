@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsParseInt64 ==
+[0;0m#01 Parse with non numeric: [0;32mPASSED[0;0m
+#02 Parse with NULL buffer: [0;32mPASSED[0;0m
+#03 Parse with 0 buffer size: [0;32mPASSED[0;0m
+#04 Parse with '0': [0;32mPASSED[0;0m
+#05 Parse with '1': [0;32mPASSED[0;0m
+#06 Parse with '12': [0;32mPASSED[0;0m
+#07 Parse with '-12': [0;32mPASSED[0;0m
+#08 Parse with trailing spaces: [0;32mPASSED[0;0m
+#09 Parse with leading spaces: [0;32mPASSED[0;0m
+#10 Parse with 'INT64_MAX': [0;32mPASSED[0;0m
+#11 Parse with overflow(1): [0;32mPASSED[0;0m
+#12 Parse with overflow(2): [0;32mPASSED[0;0m
+#13 Parse with '12345': [0;32mPASSED[0;0m
+#14 Parse with '123.45': [0;32mPASSED[0;0m
+ALL PASSED

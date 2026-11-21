@@ -1,0 +1,8 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLSkipServerVerification ==
+[0;0m#01 Check that connect fails due to server verification: [0;32mPASSED[0;0m
+#02 Check that connect succeeds with server verification disabled: [0;32mPASSED[0;0m
+#03 Check reconnects OK: [0;32mPASSED[0;0m
+ALL PASSED

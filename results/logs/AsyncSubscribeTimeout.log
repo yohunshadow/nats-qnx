@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AsyncSubscribeTimeout ==
+[0;0m#01 Test async subscriber timeout: [0;32mPASSED[0;0m
+#02 Test async queue subscriber timeout: [0;32mPASSED[0;0m
+#03 Test async subscriber timeout (lib msg delivery): [0;32mPASSED[0;0m
+#04 Test async queue subscriber timeout (lib msg delivery): [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,20 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamOrderedConsumerWithErrors ==
+[0;0m#01 Start JS server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Send chunks: [0;32mPASSED[0;0m
+#06 Wait for complete: [0;32mPASSED[0;0m
+#07 Create ordered sub: [0;32mPASSED[0;0m
+#08 Delete asset: [0;32mPASSED[0;0m
+#09 Check we get error: [0;32mPASSED[0;0m
+#10 Create stream: [0;32mPASSED[0;0m
+#11 Send chunks: [0;32mPASSED[0;0m
+#12 Wait for complete: [0;32mPASSED[0;0m
+#13 Create ordered sub: [0;32mPASSED[0;0m
+#14 Delete asset: [0;32mPASSED[0;0m
+#15 Check we get error: [0;32mPASSED[0;0m
+ALL PASSED

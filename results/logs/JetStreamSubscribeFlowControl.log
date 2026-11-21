@@ -1,0 +1,24 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribeFlowControl ==
+[0;0m#01 Start server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Populate: [0;32mPASSED[0;0m
+#06 Wait complete: [0;32mPASSED[0;0m
+#07 Create sub to check for FC: [0;32mPASSED[0;0m
+#08 FC requires HB: [0;32mPASSED[0;0m
+#09 Subscribe async: [0;32mPASSED[0;0m
+#10 Check msg received: [0;32mPASSED[0;0m
+#11 Check FC responses were sent: [0;32mPASSED[0;0m
+#12 Create sub to check for FC: [0;32mPASSED[0;0m
+#13 Subscribe sync: [0;32mPASSED[0;0m
+#14 Check msg received: [0;32mPASSED[0;0m
+#15 Check FC responses were sent: [0;32mPASSED[0;0m
+#16 Create sub to check for FC: [0;32mPASSED[0;0m
+#17 Subscribe: [0;32mPASSED[0;0m
+#18 Send hb header: [0;32mPASSED[0;0m
+#19 Check FC reply due to HB header: [0;32mPASSED[0;0m
+ALL PASSED

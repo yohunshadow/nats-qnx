@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== OpenCloseAndWait ==
+[0;0m#01 Close to prepare for test: [0;32mPASSED[0;0m
+#02 Env variables effect: [0;32mPASSED[0;0m
+#03 Open/Close in loop: [0;32mPASSED[0;0m
+#04 Check async cb count: [0;32mPASSED[0;0m
+#05 Check msgs count: [0;32mPASSED[0;0m
+#06 Close while not opened returns error: [0;32mPASSED[0;0m
+#07 Check Close from thread returns error: [0;32mPASSED[0;0m
+#08 No timeout: [0;32mPASSED[0;0m
+#09 Timeout: [0;32mPASSED[0;0m
+ALL PASSED

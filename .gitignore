@@ -1,0 +1,7 @@
+build/
+out/
+hostbin/
+results-run*/
+*.o
+*.so
+/tmp/

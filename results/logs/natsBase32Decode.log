@@ -1,0 +1,8 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsBase32Decode ==
+[0;0m#01 Decode: [0;32mPASSED[0;0m
+#02 Dest too small: [0;32mPASSED[0;0m
+#03 Invalid string: [0;32mPASSED[0;0m
+ALL PASSED

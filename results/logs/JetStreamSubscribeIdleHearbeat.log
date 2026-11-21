@@ -1,0 +1,40 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribeIdleHearbeat ==
+[0;0m#01 Start JS server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Populate: [0;32mPASSED[0;0m
+#06 Subscribe async: [0;32mPASSED[0;0m
+#07 Check msg received: [0;32mPASSED[0;0m
+#08 Check HB received: [0;32mPASSED[0;0m
+#09 Check HB is not given to app: [0;32mPASSED[0;0m
+#10 Check get mismatch (bad args): [0;32mPASSED[0;0m
+#11 Not a JS sub: [0;32mPASSED[0;0m
+#12 Check get mismatch returns not found: [0;32mPASSED[0;0m
+#13 Send new message: [0;32mPASSED[0;0m
+#14 Check seq mismatch: [0;32mPASSED[0;0m
+#15 Check that notification is sent only once: [0;32mPASSED[0;0m
+#16 Check get mismatch: [0;32mPASSED[0;0m
+#17 Check mismatch suppression cleared: [0;32mPASSED[0;0m
+#18 Skip again: [0;32mPASSED[0;0m
+#19 Check async cb invoked: [0;32mPASSED[0;0m
+#20 Check HB timer reports missed HB: [0;32mPASSED[0;0m
+#21 Subscribe sync: [0;32mPASSED[0;0m
+#22 Check msgs received: [0;32mPASSED[0;0m
+#23 Check HB received: [0;32mPASSED[0;0m
+#24 Check HB is not given to app: [0;32mPASSED[0;0m
+#25 Skip: [0;32mPASSED[0;0m
+#26 No async error: [0;32mPASSED[0;0m
+#27 NextMsg reports error: [0;32mPASSED[0;0m
+#28 NextMsg again is ok: [0;32mPASSED[0;0m
+#29 Check get mismatch: [0;32mPASSED[0;0m
+#30 Check mismatch suppression cleared: [0;32mPASSED[0;0m
+#31 Skip again: [0;32mPASSED[0;0m
+#32 NextMsg reports error: [0;32mPASSED[0;0m
+#33 Check HB timer reports missed HB: [0;32mPASSED[0;0m
+#34 Create consumer with HB: [0;32mPASSED[0;0m
+#35 Queue sub against this consumer: [0;32mPASSED[0;0m
+ALL PASSED

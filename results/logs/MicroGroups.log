@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== MicroGroups ==
+[0;0m#01 Connect to server: [0;32mPASSED[0;0m
+#02 AddEnpoint with invalid subject: [0;32mPASSED[0;0m
+#03 AddEndpoint 1 to service: [0;32mPASSED[0;0m
+#04 AddGroup g1: [0;32mPASSED[0;0m
+#05 AddEndpoint 1 to g1: [0;32mPASSED[0;0m
+#06 Add sub-Group g2: [0;32mPASSED[0;0m
+#07 AddEndpoint 1 to g2: [0;32mPASSED[0;0m
+#08 AddEndpoint 2 to g2: [0;32mPASSED[0;0m
+#09 AddEndpoint 2 to g1: [0;32mPASSED[0;0m
+#10 Verify number of endpoints 5 is 5: [0;32mPASSED[0;0m
+#11 Verify endpoint subjects: [0;32mPASSED[0;0m
+#12 Destroy microservice with-groups: [0;32mPASSED[0;0m
+#13 Wait for 1 microservices to stop: [0;32mPASSED[0;0m
+#14 Destroy the test connection: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLVerifyHostname ==
+[0;0m#01 Check that connect fails if url is IP: [0;32mPASSED[0;0m
+#02 Check that connect fails if wrong expected hostname: [0;32mPASSED[0;0m
+#03 Check that connect succeeds if hostname ok and no expected hostname set: [0;32mPASSED[0;0m
+#04 Check that connect succeeds with proper expected hostname: [0;32mPASSED[0;0m
+#05 Check reconnects OK: [0;32mPASSED[0;0m
+ALL PASSED

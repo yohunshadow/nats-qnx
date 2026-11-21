@@ -1,0 +1,19 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== HeadersAndSubPendingBytes ==
+[0;0m#01 Connect/subscribe ok: [0;32mPASSED[0;0m
+#02 Create message with header: [0;32mPASSED[0;0m
+#03 Publish and receive message: [0;32mPASSED[0;0m
+#04 Publish and receive message: [0;32mPASSED[0;0m
+#05 Publish and receive message: [0;32mPASSED[0;0m
+#06 Publish and receive message: [0;32mPASSED[0;0m
+#07 Publish and receive message: [0;32mPASSED[0;0m
+#08 Publish and receive message: [0;32mPASSED[0;0m
+#09 Publish and receive message: [0;32mPASSED[0;0m
+#10 Publish and receive message: [0;32mPASSED[0;0m
+#11 Publish and receive message: [0;32mPASSED[0;0m
+#12 Publish and receive message: [0;32mPASSED[0;0m
+#13 Check sub1's pending: [0;32mPASSED[0;0m
+#14 Check sub2's pending: [0;32mPASSED[0;0m
+ALL PASSED

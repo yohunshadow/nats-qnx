@@ -1,0 +1,12 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLHandshakeFirst ==
+[0;0m#01 Set options: [0;32mPASSED[0;0m
+#02 Check that connect fails if option not set: [0;32mPASSED[0;0m
+#03 Set TLSHandshakeFirst option error: [0;32mPASSED[0;0m
+#04 Set TLSHandshakeFirst option: [0;32mPASSED[0;0m
+#05 Set TLSHandshakeFirst option without setting secure: [0;32mPASSED[0;0m
+#06 Check that connect succeeds: [0;32mPASSED[0;0m
+#07 Check that connect fails if option is set but not in the server: [0;32mPASSED[0;0m
+ALL PASSED

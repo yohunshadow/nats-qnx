@@ -1,0 +1,13 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AsyncSubscriptionPending ==
+[0;0m#01 Call MaxPending with invalid args: NULL sub: [0;32mPASSED[0;0m
+#02 Call MaxPending with invalid args: other NULL params OK: [0;32mPASSED[0;0m
+#03 Test queued msgs old way: [0;32mPASSED[0;0m
+#04 Test new way: [0;32mPASSED[0;0m
+#05 Check max pending: [0;32mPASSED[0;0m
+#06 Check ClearMaxPending: [0;32mPASSED[0;0m
+#07 Check MaxPending on closed sub: [0;32mPASSED[0;0m
+#08 Check ClearMaxPending on closed sub: [0;32mPASSED[0;0m
+ALL PASSED

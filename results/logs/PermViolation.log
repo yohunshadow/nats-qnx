@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== PermViolation ==
+[0;0m#01 Check connection created: [0;32mPASSED[0;0m
+#02 Should get perm violation: [0;32mPASSED[0;0m
+#03 Should get perm violation: [0;32mPASSED[0;0m
+#04 Connection not closed: [0;32mPASSED[0;0m
+ALL PASSED

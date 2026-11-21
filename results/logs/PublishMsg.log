@@ -1,0 +1,24 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== PublishMsg ==
+[0;0m#01 Test simple publishMsg: [0;32mPASSED[0;0m
+#02 Create sync sub: [0;32mPASSED[0;0m
+#03 Create msg: [0;32mPASSED[0;0m
+#04 Set data: [0;32mPASSED[0;0m
+#05 Publish: [0;32mPASSED[0;0m
+#06 Destroy published msg: [0;32mPASSED[0;0m
+#07 Receive: [0;32mPASSED[0;0m
+#08 Check content: [0;32mPASSED[0;0m
+#09 Start server with max_payload: [0;32mPASSED[0;0m
+#10 Connect and subscribe: [0;32mPASSED[0;0m
+#11 Create msg: [0;32mPASSED[0;0m
+#12 Set header: [0;32mPASSED[0;0m
+#13 Headers Encoded length: [0;32mPASSED[0;0m
+#14 Set data at 40-30=10: [0;32mPASSED[0;0m
+#15 Publish ok: [0;32mPASSED[0;0m
+#16 Check received: [0;32mPASSED[0;0m
+#17 Check content: [0;32mPASSED[0;0m
+#18 Set data too long: [0;32mPASSED[0;0m
+#19 Publish fails: [0;32mPASSED[0;0m
+ALL PASSED

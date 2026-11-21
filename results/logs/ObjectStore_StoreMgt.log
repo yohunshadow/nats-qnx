@@ -1,0 +1,53 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ObjectStore_StoreMgt ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create ObjectStore: [0;32mPASSED[0;0m
+#05 GetInfo (bad args): [0;32mPASSED[0;0m
+#06 GetInfo (bad name): [0;32mPASSED[0;0m
+#07 GetInfo (not found): [0;32mPASSED[0;0m
+#08 Create subscription to check encoding: [0;32mPASSED[0;0m
+#09 GetInfo: [0;32mPASSED[0;0m
+#10 Check encoding for test: [0;32mPASSED[0;0m
+#11 Check info: [0;32mPASSED[0;0m
+#12 Create store: [0;32mPASSED[0;0m
+#13 Status (bad args): [0;32mPASSED[0;0m
+#14 Status: [0;32mPASSED[0;0m
+#15 Check meta data: [0;32mPASSED[0;0m
+#16 Destroy status: [0;32mPASSED[0;0m
+#17 Simple put with no meta: [0;32mPASSED[0;0m
+#18 Put with meta data: [0;32mPASSED[0;0m
+#19 Check info: [0;32mPASSED[0;0m
+#20 Update meta (bad args): [0;32mPASSED[0;0m
+#21 Update meta (bad name): [0;32mPASSED[0;0m
+#22 Simple meta update: [0;32mPASSED[0;0m
+#23 Check info: [0;32mPASSED[0;0m
+#24 Check header keys: [0;32mPASSED[0;0m
+#25 Check header values: [0;32mPASSED[0;0m
+#26 Check meta: [0;32mPASSED[0;0m
+#27 Update that changes name and some data: [0;32mPASSED[0;0m
+#28 Check info for A: [0;32mPASSED[0;0m
+#29 Check info for B: [0;32mPASSED[0;0m
+#30 Check header keys: [0;32mPASSED[0;0m
+#31 Check header values (color): [0;32mPASSED[0;0m
+#32 Check header values (foo): [0;32mPASSED[0;0m
+#33 Change meta name to existing object: [0;32mPASSED[0;0m
+#34 Delete (bad args): [0;32mPASSED[0;0m
+#35 Delete (bad name): [0;32mPASSED[0;0m
+#36 Delete not found: [0;32mPASSED[0;0m
+#37 Delete C object: [0;32mPASSED[0;0m
+#38 Update should be ok now: [0;32mPASSED[0;0m
+#39 Delete of deleted object ok: [0;32mPASSED[0;0m
+#40 Update meta of deleted object: [0;32mPASSED[0;0m
+#41 Update of object not found: [0;32mPASSED[0;0m
+#42 Create object store: [0;32mPASSED[0;0m
+#43 Put string: [0;32mPASSED[0;0m
+#44 Seal (bad args): [0;32mPASSED[0;0m
+#45 Seal: [0;32mPASSED[0;0m
+#46 Put should fail: [0;32mPASSED[0;0m
+#47 Delete underlying stream: [0;32mPASSED[0;0m
+#48 Seal should fail: [0;32mPASSED[0;0m
+ALL PASSED

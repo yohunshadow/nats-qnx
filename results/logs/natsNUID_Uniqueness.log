@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsNUID_Uniqueness ==
+[0;0m#01 NUIDs are non-empty: [0;32mPASSED[0;0m
+#02 NUIDs are unique: [0;32mPASSED[0;0m
+#03 NUIDs have correct length: [0;32mPASSED[0;0m
+#04 NUID buffer too small fails: [0;32mPASSED[0;0m
+ALL PASSED

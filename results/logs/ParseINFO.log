@@ -1,0 +1,8 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ParseINFO ==
+[0;0m#01 Test line 7594: [0;32mPASSED[0;0m
+#02 Test line 7599: [0;32mPASSED[0;0m
+#03 Test line 7603: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,36 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamPublish ==
+[0;0m#01 Start JS server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Stream config init: [0;32mPASSED[0;0m
+#05 Add stream: [0;32mPASSED[0;0m
+#06 Publish bad args: [0;32mPASSED[0;0m
+#07 Options init bad args: [0;32mPASSED[0;0m
+#08 Publish bad ttl option: [0;32mPASSED[0;0m
+#09 Publish data: [0;32mPASSED[0;0m
+#10 Publish data with pubAck: [0;32mPASSED[0;0m
+#11 Publish message with same msgID: [0;32mPASSED[0;0m
+#12 Publish with wrong expected stream: [0;32mPASSED[0;0m
+#13 Publish with wrong expected sequence: [0;32mPASSED[0;0m
+#14 Publish with wrong expected message ID: [0;32mPASSED[0;0m
+#15 Publish 1 msg on bar: [0;32mPASSED[0;0m
+#16 Publish with wrong expected subj sequence: [0;32mPASSED[0;0m
+#17 Publish with correct expected subj sequence: [0;32mPASSED[0;0m
+#18 Recreate stream: [0;32mPASSED[0;0m
+#19 Publish bad args: [0;32mPASSED[0;0m
+#20 Create msg: [0;32mPASSED[0;0m
+#21 Publish bad ttl option: [0;32mPASSED[0;0m
+#22 Publish data: [0;32mPASSED[0;0m
+#23 Publish data with pubAck: [0;32mPASSED[0;0m
+#24 Publish message with same msgID: [0;32mPASSED[0;0m
+#25 Publish with wrong expected stream: [0;32mPASSED[0;0m
+#26 Publish with wrong expected sequence: [0;32mPASSED[0;0m
+#27 Publish with wrong expected message ID: [0;32mPASSED[0;0m
+#28 Publish 1 msg on bar: [0;32mPASSED[0;0m
+#29 Publish with wrong expected subj sequence: [0;32mPASSED[0;0m
+#30 Publish with wrong expected last subject: [0;32mPASSED[0;0m
+#31 Publish with correct expected subj sequence: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsCreateStringFromBuffer ==
+[0;0m#01 NULL buffer: [0;32mPASSED[0;0m
+#02 Init buffer: [0;32mPASSED[0;0m
+#03 Empty buffer: [0;32mPASSED[0;0m
+#04 Append to buf: [0;32mPASSED[0;0m
+#05 Buffer containing '123': [0;32mPASSED[0;0m
+#06 Destroying the buffer does not affect the created string: [0;32mPASSED[0;0m
+ALL PASSED

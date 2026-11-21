@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsSign ==
+[0;0m#01 nats_Sign invalid param 1: [0;32mPASSED[0;0m
+#02 nats_Sign invalid param 2: [0;32mPASSED[0;0m
+#03 nats_Sign invalid param 3: [0;32mPASSED[0;0m
+#04 nats_Sign invalid param 4: [0;32mPASSED[0;0m
+#05 Sign ok: [0;32mPASSED[0;0m
+ALL PASSED

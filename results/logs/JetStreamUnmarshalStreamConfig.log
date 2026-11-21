@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamUnmarshalStreamConfig ==
+[0;0m#01 Missing fields: [0;32mPASSED[0;0m
+#02 Missing fields: [0;32mPASSED[0;0m
+#03 Missing fields: [0;32mPASSED[0;0m
+#04 Missing fields: [0;32mPASSED[0;0m
+#05 Missing fields: [0;32mPASSED[0;0m
+#06 Missing fields: [0;32mPASSED[0;0m
+#07 Missing fields: [0;32mPASSED[0;0m
+#08 Missing fields: [0;32mPASSED[0;0m
+#09 Stream config with all required: [0;32mPASSED[0;0m
+#10 Stream config with all: [0;32mPASSED[0;0m
+ALL PASSED

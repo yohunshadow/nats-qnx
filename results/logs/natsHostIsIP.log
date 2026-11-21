@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsHostIsIP ==
+[0;0m#01 Check '1.2.3.4': [0;32mPASSED[0;0m
+#02 Check '::1': [0;32mPASSED[0;0m
+#03 Check 'localhost': [0;32mPASSED[0;0m
+#04 Check 'www.host.name.com': [0;32mPASSED[0;0m
+ALL PASSED

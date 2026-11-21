@@ -1,0 +1,32 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== KeyValueCreateWithTTL ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create KV with LimitMarkerTTL: [0;32mPASSED[0;0m
+#05 CreateWithTTL rejects NULL kv: [0;32mPASSED[0;0m
+#06 UpdateWithTTL rejects NULL kv: [0;32mPASSED[0;0m
+#07 CreateStringWithTTL k=v ttl=1s: [0;32mPASSED[0;0m
+#08 Get before expiry returns the value: [0;32mPASSED[0;0m
+#09 CreateWithTTL over a live key fails, error preserved (create-if-absent): [0;32mPASSED[0;0m
+#10 Key expires server-side after its per-key TTL: [0;32mPASSED[0;0m
+#11 Re-create over the expired marker (first attempt): [0;32mPASSED[0;0m
+#12 Get the re-created value: [0;32mPASSED[0;0m
+#13 Seed a no-TTL key for UpdateWithTTL: [0;32mPASSED[0;0m
+#14 UpdateWithTTL sets a per-key TTL under a CAS predicate: [0;32mPASSED[0;0m
+#15 Updated value is present before expiry: [0;32mPASSED[0;0m
+#16 UpdateStringWithTTL writes the value under a CAS predicate: [0;32mPASSED[0;0m
+#17 String-updated value is present before expiry: [0;32mPASSED[0;0m
+#18 Key expires server-side after the update's per-key TTL: [0;32mPASSED[0;0m
+#19 Seed a key for the stale-CAS check: [0;32mPASSED[0;0m
+#20 UpdateWithTTL fails on a stale CAS revision: [0;32mPASSED[0;0m
+#21 Sub-second per-key TTL on create surfaces the server error: [0;32mPASSED[0;0m
+#22 Sub-second per-key TTL on update surfaces the server error: [0;32mPASSED[0;0m
+#23 TTL >= 1s is accepted (1500ms): [0;32mPASSED[0;0m
+#24 Purge with PurgeTTL: [0;32mPASSED[0;0m
+#25 Get after purge returns NOT_FOUND: [0;32mPASSED[0;0m
+#26 Create KV without LimitMarkerTTL (per-message TTL disabled): [0;32mPASSED[0;0m
+#27 CreateWithTTL on a TTL-disabled bucket preserves the server error: [0;32mPASSED[0;0m
+ALL PASSED

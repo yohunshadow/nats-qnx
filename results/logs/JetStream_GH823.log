@@ -1,0 +1,13 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStream_GH823 ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream for foo, bar: [0;32mPASSED[0;0m
+#05 Publish thousands of test messages: [0;32mPASSED[0;0m
+#06 Make a separate connection for subscribers: [0;32mPASSED[0;0m
+#07 Create the first async pull subscriber and start receiving: [0;32mPASSED[0;0m
+#08 Create the second async pull subscriber and start receiving: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,6 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== Inbox ==
+[0;0m#01 Inbox starts with correct prefix: [0;32mPASSED[0;0m
+ALL PASSED

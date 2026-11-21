@@ -1,0 +1,43 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== AssignSubToDispatch ==
+[0;0m#01 Check pool size not negative: [0;32mPASSED[0;0m
+#02 Check pool size not zero: [0;32mPASSED[0;0m
+#03 Reset the library's global state: [0;32mPASSED[0;0m
+#04 10 subs over 0 threads: Re-open, check settings, ensure no shared dispatchers created: [0;32mPASSED[0;0m
+#05 10 subs over 0 threads: Initial connect: [0;32mPASSED[0;0m
+#06 10 subs over 0 threads: Create 10 subscriptions: [0;32mPASSED[0;0m
+#07 10 subs over 0 threads: Check shared dispatchers assigned as expected: [0;32mPASSED[0;0m
+#08 10 subs over 0 threads: Publish 100 messages and verify received 1000 times: [0;32mPASSED[0;0m
+#09 10 subs over 0 threads: Drain the subs: [0;32mPASSED[0;0m
+#10 10 subs over 0 threads: Make sure we didn't get unexpected messages: [0;32mPASSED[0;0m
+#11 10 subs over 0 threads: cleanup before next test: [0;32mPASSED[0;0m
+#12 3 subs over 3 threads: Re-open, check settings, ensure no shared dispatchers created: [0;32mPASSED[0;0m
+#13 3 subs over 3 threads: Initial connect: [0;32mPASSED[0;0m
+#14 3 subs over 3 threads: Create 3 subscriptions: [0;32mPASSED[0;0m
+#15 3 subs over 3 threads: Check shared dispatchers assigned as expected: [0;32mPASSED[0;0m
+#16 3 subs over 3 threads: Verify that the dispatchers have been assigned: [0;32mPASSED[0;0m
+#17 3 subs over 3 threads: Publish 100 messages and verify received 300 times: [0;32mPASSED[0;0m
+#18 3 subs over 3 threads: Drain the subs: [0;32mPASSED[0;0m
+#19 3 subs over 3 threads: Make sure we didn't get unexpected messages: [0;32mPASSED[0;0m
+#20 3 subs over 3 threads: cleanup before next test: [0;32mPASSED[0;0m
+#21 23 subs over 4 threads: Re-open, check settings, ensure no shared dispatchers created: [0;32mPASSED[0;0m
+#22 23 subs over 4 threads: Initial connect: [0;32mPASSED[0;0m
+#23 23 subs over 4 threads: Create 23 subscriptions: [0;32mPASSED[0;0m
+#24 23 subs over 4 threads: Check shared dispatchers assigned as expected: [0;32mPASSED[0;0m
+#25 23 subs over 4 threads: Verify that the dispatchers have been assigned: [0;32mPASSED[0;0m
+#26 23 subs over 4 threads: Publish 100 messages and verify received 2300 times: [0;32mPASSED[0;0m
+#27 23 subs over 4 threads: Drain the subs: [0;32mPASSED[0;0m
+#28 23 subs over 4 threads: Make sure we didn't get unexpected messages: [0;32mPASSED[0;0m
+#29 23 subs over 4 threads: cleanup before next test: [0;32mPASSED[0;0m
+#30 77 subs over 50 threads: Re-open, check settings, ensure no shared dispatchers created: [0;32mPASSED[0;0m
+#31 77 subs over 50 threads: Initial connect: [0;32mPASSED[0;0m
+#32 77 subs over 50 threads: Create 77 subscriptions: [0;32mPASSED[0;0m
+#33 77 subs over 50 threads: Check shared dispatchers assigned as expected: [0;32mPASSED[0;0m
+#34 77 subs over 50 threads: Verify that the dispatchers have been assigned: [0;32mPASSED[0;0m
+#35 77 subs over 50 threads: Publish 100 messages and verify received 7700 times: [0;32mPASSED[0;0m
+#36 77 subs over 50 threads: Drain the subs: [0;32mPASSED[0;0m
+#37 77 subs over 50 threads: Make sure we didn't get unexpected messages: [0;32mPASSED[0;0m
+#38 77 subs over 50 threads: cleanup before next test: [0;32mPASSED[0;0m
+ALL PASSED

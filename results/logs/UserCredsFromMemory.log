@@ -1,0 +1,9 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== UserCredsFromMemory ==
+[0;0m#01 Clone: [0;32mPASSED[0;0m
+#02 invalidCreds provided: [0;32mPASSED[0;0m
+#03 jwtAndSeed string has no seed: [0;32mPASSED[0;0m
+#04 Connect with jwtAndSeed string: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,94 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsOptions ==
+[0;0m#01 Create options: [0;32mPASSED[0;0m
+#02 Test defaults: [0;32mPASSED[0;0m
+#03 Add URL: [0;32mPASSED[0;0m
+#04 Replace URL: [0;32mPASSED[0;0m
+#05 URL trimmed: [0;32mPASSED[0;0m
+#06 Remove URL: [0;32mPASSED[0;0m
+#07 Set Servers (invalid args): [0;32mPASSED[0;0m
+#08 Set Servers: [0;32mPASSED[0;0m
+#09 Replace Servers: [0;32mPASSED[0;0m
+#10 Trimmed servers: [0;32mPASSED[0;0m
+#11 Remove servers: [0;32mPASSED[0;0m
+#12 Set NoRandomize: [0;32mPASSED[0;0m
+#13 Remove NoRandomize: [0;32mPASSED[0;0m
+#14 Set Timeout (invalid args): [0;32mPASSED[0;0m
+#15 Set Timeout to zero: [0;32mPASSED[0;0m
+#16 Set Timeout: [0;32mPASSED[0;0m
+#17 Set Name: [0;32mPASSED[0;0m
+#18 Remove Name: [0;32mPASSED[0;0m
+#19 Set Verbose: [0;32mPASSED[0;0m
+#20 Remove Verbose: [0;32mPASSED[0;0m
+#21 Set NoEcho: [0;32mPASSED[0;0m
+#22 Remove NoEcho: [0;32mPASSED[0;0m
+#23 Set RetryOnFailedConnect: [0;32mPASSED[0;0m
+#24 Remove RetryOnFailedConnect: [0;32mPASSED[0;0m
+#25 Set Secure: [0;32mPASSED[0;0m
+#26 Remove Secure: [0;32mPASSED[0;0m
+#27 Set TLSHandshakeFirst: [0;32mPASSED[0;0m
+#28 Set Pedantic: [0;32mPASSED[0;0m
+#29 Remove Pedantic: [0;32mPASSED[0;0m
+#30 Set Ping Interval (negative or 0 ok): [0;32mPASSED[0;0m
+#31 Set MaxPingsOut: [0;32mPASSED[0;0m
+#32 Set IgnoreAuthErrorAbort: [0;32mPASSED[0;0m
+#33 Remove IgnoreAuthErrorAbort: [0;32mPASSED[0;0m
+#34 Set IOBufSize: [0;32mPASSED[0;0m
+#35 Set AllowReconnect: [0;32mPASSED[0;0m
+#36 Remove AllowReconnect: [0;32mPASSED[0;0m
+#37 Set MaxReconnect (negative ok): [0;32mPASSED[0;0m
+#38 Set Reconnect Wait (invalid args: [0;32mPASSED[0;0m
+#39 Set Reconnect Wait: [0;32mPASSED[0;0m
+#40 Remove Reconnect Wait: [0;32mPASSED[0;0m
+#41 Set Max Pending Msgs (invalid args: [0;32mPASSED[0;0m
+#42 Set Max Pending Msgs : [0;32mPASSED[0;0m
+#43 Set Max Pending Bytes : [0;32mPASSED[0;0m
+#44 Set Proxy Connection Handler: [0;32mPASSED[0;0m
+#45 Remove Proxy Connection Handler: [0;32mPASSED[0;0m
+#46 Set Error Handler: [0;32mPASSED[0;0m
+#47 Remove Error Handler: [0;32mPASSED[0;0m
+#48 Set ClosedCB: [0;32mPASSED[0;0m
+#49 Remove ClosedCB: [0;32mPASSED[0;0m
+#50 Set DisconnectedCB: [0;32mPASSED[0;0m
+#51 Remove DisconnectedCB: [0;32mPASSED[0;0m
+#52 Set ReconnectedCB: [0;32mPASSED[0;0m
+#53 Remove ReconnectedCB: [0;32mPASSED[0;0m
+#54 Set UserInfo: [0;32mPASSED[0;0m
+#55 Remove UserInfo: [0;32mPASSED[0;0m
+#56 Set Token: [0;32mPASSED[0;0m
+#57 Remove Token: [0;32mPASSED[0;0m
+#58 Set TokenHandler: [0;32mPASSED[0;0m
+#59 Remove TokenHandler: [0;32mPASSED[0;0m
+#60 Set write deadline: [0;32mPASSED[0;0m
+#61 Remove write deadline: [0;32mPASSED[0;0m
+#62 IP order invalid values: [0;32mPASSED[0;0m
+#63 IP order valid values: [0;32mPASSED[0;0m
+#64 Set UseOldRequestStyle: [0;32mPASSED[0;0m
+#65 Remove UseOldRequestStyle: [0;32mPASSED[0;0m
+#66 Set SendAsap: [0;32mPASSED[0;0m
+#67 Remove SendAsap: [0;32mPASSED[0;0m
+#68 Set FlusherWaitMicros (invalid args): [0;32mPASSED[0;0m
+#69 Set FlusherWaitMicros to zero: [0;32mPASSED[0;0m
+#70 Set FlusherWaitMicros: [0;32mPASSED[0;0m
+#71 Set UserCreds: [0;32mPASSED[0;0m
+#72 Remove UserCreds: [0;32mPASSED[0;0m
+#73 Set UserCredsFromFile: [0;32mPASSED[0;0m
+#74 Remove UserCredsFromFile: [0;32mPASSED[0;0m
+#75 Set UserCredsFromMemory: [0;32mPASSED[0;0m
+#76 Remove UserCredsFromMemory: [0;32mPASSED[0;0m
+#77 Set NKey: [0;32mPASSED[0;0m
+#78 Remove NKey: [0;32mPASSED[0;0m
+#79 Set NKeyFromSeed: [0;32mPASSED[0;0m
+#80 Remove NKeyFromSeed: [0;32mPASSED[0;0m
+#81 Disable no responders: [0;32mPASSED[0;0m
+#82 Enable no responders: [0;32mPASSED[0;0m
+#83 Set custom inbox prefix: [0;32mPASSED[0;0m
+#84 Clear custom inbox prefix: [0;32mPASSED[0;0m
+#85 Set ignore discovered servers: [0;32mPASSED[0;0m
+#86 Reset ignore discovered servers: [0;32mPASSED[0;0m
+#87 Cloning: [0;32mPASSED[0;0m
+#88 Destroy original does not affect clone: [0;32mPASSED[0;0m
+#89 If original has default err handler, cloned has it too: [0;32mPASSED[0;0m
+ALL PASSED

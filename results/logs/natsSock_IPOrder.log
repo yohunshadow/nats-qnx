@@ -1,0 +1,13 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsSock_IPOrder ==
+[0;0m#01 Server listen to IPv4: [0;32mPASSED[0;0m
+#02 IPv4 only: [0;32mPASSED[0;0m
+#03 IPv4+v6: [0;32mPASSED[0;0m
+#04 IPv6+v4: [0;32mPASSED[0;0m
+#05 IP any: [0;32mPASSED[0;0m
+#06 IPv6 only: [0;32mPASSED[0;0m
+#07 Server listen to IPv6: [0;32mPASSED[0;0m
+#08 IPv6 only: [0;31mFAILED[0;0m
+*** TEST FAILED ***

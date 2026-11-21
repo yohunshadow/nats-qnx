@@ -1,0 +1,26 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsTimer ==
+[0;0m#01 Setup test: [0;32mPASSED[0;0m
+#02 Create timer: [0;32mPASSED[0;0m
+#03 Stop timer: [0;32mPASSED[0;0m
+#04 Firing of timer: [0;32mPASSED[0;0m
+#05 Stop stopped timer: [0;32mPASSED[0;0m
+#06 Reset from callback: [0;32mPASSED[0;0m
+#07 Multiple Reset: [0;32mPASSED[0;0m
+#08 Check refs while in callback: [0;32mPASSED[0;0m
+#09 Stop from callback: [0;32mPASSED[0;0m
+#10 Slow callback: [0;32mPASSED[0;0m
+#11 Stopped while in callback: [0;32mPASSED[0;0m
+#12 Use very large timeout: [0;32mPASSED[0;0m
+#13 Destroy timer: [0;32mPASSED[0;0m
+#14 Add as first: [0;32mPASSED[0;0m
+#15 Add to the end: [0;32mPASSED[0;0m
+#16 Add to the end again: [0;32mPASSED[0;0m
+#17 Add as first again: [0;32mPASSED[0;0m
+#18 Insert in between: [0;32mPASSED[0;0m
+#19 Verify count: [0;32mPASSED[0;0m
+#20 Verify order: [0;32mPASSED[0;0m
+#21 Create performance: [0;31mFAILED[0;0m
+*** TEST FAILED ***

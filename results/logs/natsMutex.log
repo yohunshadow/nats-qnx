@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsMutex ==
+[0;0m#01 Create mutex: [0;32mPASSED[0;0m
+#02 Lock: [0;32mPASSED[0;0m
+#03 Recursive locking: [0;32mPASSED[0;0m
+#04 Release recursive lock: [0;32mPASSED[0;0m
+#05 Unlock: [0;32mPASSED[0;0m
+#06 Destroy: [0;32mPASSED[0;0m
+ALL PASSED

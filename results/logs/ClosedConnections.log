@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ClosedConnections ==
+[0;0m#01 Publish on closed should fail: [0;32mPASSED[0;0m
+#02 PublishMsg on closed should fail: [0;32mPASSED[0;0m
+#03 Flush on closed should fail: [0;32mPASSED[0;0m
+#04 Subscribe on closed should fail: [0;32mPASSED[0;0m
+#05 SubscribeSync on closed should fail: [0;32mPASSED[0;0m
+#06 QueueSubscribe on closed should fail: [0;32mPASSED[0;0m
+#07 QueueSubscribeSync on closed should fail: [0;32mPASSED[0;0m
+#08 Request on closed should fail: [0;32mPASSED[0;0m
+#09 NextMsg on closed should fail: [0;32mPASSED[0;0m
+#10 Unsubscribe on closed should fail: [0;32mPASSED[0;0m
+ALL PASSED

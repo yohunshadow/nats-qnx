@@ -1,0 +1,23 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamPublishSchedule ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Stream config init: [0;32mPASSED[0;0m
+#05 Add stream: [0;32mPASSED[0;0m
+#06 Create sub: [0;32mPASSED[0;0m
+#07 Disabled per-msg schedule - error: [0;32mPASSED[0;0m
+#08 Publish schedule with negative TTL - error: [0;32mPASSED[0;0m
+#09 Publish schedule with conflicting cancel: [0;32mPASSED[0;0m
+#10 Schedule publish for every second: [0;32mPASSED[0;0m
+#11 Check that the first message is received: [0;32mPASSED[0;0m
+#12 Check that a second message is received: [0;32mPASSED[0;0m
+#13 Cancel the schedule: [0;32mPASSED[0;0m
+#14 Verify messages stop: [0;32mPASSED[0;0m
+#15 Publish source message: [0;32mPASSED[0;0m
+#16 Schedule publish with Source, TimeZone, Rollup: [0;32mPASSED[0;0m
+#17 Receive message published from Source: [0;32mPASSED[0;0m
+#18 Cancel sched2: [0;32mPASSED[0;0m
+ALL PASSED

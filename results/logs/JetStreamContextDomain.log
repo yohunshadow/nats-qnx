@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamContextDomain ==
+[0;0m#01 Start JS server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Create context with domain: [0;32mPASSED[0;0m
+#04 Get account: [0;32mPASSED[0;0m
+#05 Get account with wrong domain override: [0;32mPASSED[0;0m
+#06 Create context with mix prefix/domain: [0;32mPASSED[0;0m
+#07 Get account: [0;32mPASSED[0;0m
+#08 Create context without domain: [0;32mPASSED[0;0m
+#09 Get account with domain override: [0;32mPASSED[0;0m
+#10 Get account with domain override (prefix option ignored): [0;32mPASSED[0;0m
+ALL PASSED

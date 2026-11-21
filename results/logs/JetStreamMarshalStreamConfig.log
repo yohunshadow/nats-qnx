@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamMarshalStreamConfig ==
+[0;0m#01 init bad args: [0;32mPASSED[0;0m
+#02 RePublish init err: [0;32mPASSED[0;0m
+#03 Marshal stream config: [0;32mPASSED[0;0m
+#04 Verify with unmarshal: [0;32mPASSED[0;0m
+#05 WorkQueue policy: [0;32mPASSED[0;0m
+#06 Verify with unmarshal: [0;32mPASSED[0;0m
+#07 Bad retention: [0;32mPASSED[0;0m
+#08 Bad discard: [0;32mPASSED[0;0m
+#09 Bad storage: [0;32mPASSED[0;0m
+ALL PASSED

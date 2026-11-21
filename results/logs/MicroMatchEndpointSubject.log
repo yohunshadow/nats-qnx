@@ -1,0 +1,15 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== MicroMatchEndpointSubject ==
+[0;0m#01 endpoint subject 'foo', actual subject: 'foo': [0;32mPASSED[0;0m
+#02 endpoint subject 'foo.bar.meh', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+#03 endpoint subject 'foo.bar.meh', actual subject: 'foo.bar': [0;32mPASSED[0;0m
+#04 endpoint subject 'foo.bar', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+#05 endpoint subject 'foo.*.meh', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+#06 endpoint subject '*.bar.meh', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+#07 endpoint subject 'foo.bar.*', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+#08 endpoint subject 'foo.bar.>', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+#09 endpoint subject 'foo.>', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+#10 endpoint subject 'foo.b*ar.meh', actual subject: 'foo.bar.meh': [0;32mPASSED[0;0m
+ALL PASSED

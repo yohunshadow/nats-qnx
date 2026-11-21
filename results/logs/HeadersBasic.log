@@ -1,0 +1,23 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== HeadersBasic ==
+[0;0m#01 Connect ok: [0;32mPASSED[0;0m
+#02 Headers supported: [0;32mPASSED[0;0m
+#03 Create sub: [0;32mPASSED[0;0m
+#04 Create msg with headers: [0;32mPASSED[0;0m
+#05 Add NULL header: [0;32mPASSED[0;0m
+#06 Add empty header: [0;32mPASSED[0;0m
+#07 Add whitespace header: [0;32mPASSED[0;0m
+#08 Add NULL, empty, and whitespace values under same header: [0;32mPASSED[0;0m
+#09 Publish with headers ok: [0;32mPASSED[0;0m
+#10 Receive msg: [0;32mPASSED[0;0m
+#11 Resend msg without lift: [0;32mPASSED[0;0m
+#12 Receive msg: [0;32mPASSED[0;0m
+#13 Check headers: [0;32mPASSED[0;0m
+#14 Check NULL header: [0;32mPASSED[0;0m
+#15 Check empty header: [0;32mPASSED[0;0m
+#16 Check whitespace header: [0;32mPASSED[0;0m
+#17 Check getting values from special header: [0;32mPASSED[0;0m
+#18 Value with CRLFs replaced with spaces: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,17 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ParserSplitMsg ==
+[0;0m#01 Test line 7791: [0;32mPASSED[0;0m
+#02 Test line 7796: [0;32mPASSED[0;0m
+#03 Test line 7806: [0;32mPASSED[0;0m
+#04 Test line 7816: [0;32mPASSED[0;0m
+#05 Test line 7830: [0;32mPASSED[0;0m
+#06 Test line 7842: [0;32mPASSED[0;0m
+#07 Test line 7853: [0;32mPASSED[0;0m
+#08 Test line 7861: [0;32mPASSED[0;0m
+#09 Test line 7883: [0;32mPASSED[0;0m
+#10 Test line 7899: [0;32mPASSED[0;0m
+#11 Test line 7907: [0;32mPASSED[0;0m
+#12 Test line 7918: [0;32mPASSED[0;0m
+ALL PASSED

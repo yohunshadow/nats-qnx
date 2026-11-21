@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== DrainConnReqReply ==
+[0;0m#01 Setup options: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Check respMux drained last: [0;32mPASSED[0;0m
+#04 Check conn closed: [0;32mPASSED[0;0m
+#05 Check no delay with req/reply: [0;32mPASSED[0;0m
+ALL PASSED

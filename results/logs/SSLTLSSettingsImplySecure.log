@@ -1,0 +1,17 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLTLSSettingsImplySecure ==
+[0;0m#01 LoadCATrustedCertificates enables secure: [0;32mPASSED[0;0m
+#02 LoadCATrustedCertificatesPath enables secure: [0;32mPASSED[0;0m
+#03 LoadCertificatesChain enables secure: [0;32mPASSED[0;0m
+#04 SetCiphers enables secure: [0;32mPASSED[0;0m
+#05 SetCipherSuites enables secure: [0;32mPASSED[0;0m
+#06 SetExpectedHostname enables secure: [0;32mPASSED[0;0m
+#07 SkipServerVerification enables secure: [0;32mPASSED[0;0m
+#08 SetSSLVerificationCallback enables secure: [0;32mPASSED[0;0m
+#09 Resetting settings does not enable secure: [0;32mPASSED[0;0m
+#10 Failed CA load does not enable secure: [0;32mPASSED[0;0m
+#11 Explicit SetSecure(false) before CA keeps secure off: [0;32mPASSED[0;0m
+#12 CA alone fails against non-TLS server: [0;32mPASSED[0;0m
+ALL PASSED

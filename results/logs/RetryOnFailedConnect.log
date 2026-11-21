@@ -1,0 +1,24 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== RetryOnFailedConnect ==
+[0;0m#01 Connect failed: [0;32mPASSED[0;0m
+#02 Retried: [0;32mPASSED[0;0m
+#03 Connects ok: [0;32mPASSED[0;0m
+#04 Connect does not block: [0;32mPASSED[0;0m
+#05 Request with message with headers: [0;32mPASSED[0;0m
+#06 Subscription ok: [0;32mPASSED[0;0m
+#07 Publish ok: [0;32mPASSED[0;0m
+#08 Connected: [0;32mPASSED[0;0m
+#09 No disconnected and reconnected callbacks: [0;32mPASSED[0;0m
+#10 Message received: [0;32mPASSED[0;0m
+#11 Close in custom reconnect delay: [0;32mPASSED[0;0m
+#12 Create opts: [0;32mPASSED[0;0m
+#13 Start connect: [0;32mPASSED[0;0m
+#14 Close does not take too long: [0;32mPASSED[0;0m
+#15 Start mockup server: [0;32mPASSED[0;0m
+#16 Create options: [0;32mPASSED[0;0m
+#17 Connect: [0;32mPASSED[0;0m
+#18 Start server: [0;32mPASSED[0;0m
+#19 Wait for connect: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,50 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ObjectStore_GlobalMgt ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 objStoreConfig Init (bad args): [0;32mPASSED[0;0m
+#05 Create ObjectStore - bad args: [0;32mPASSED[0;0m
+#06 Create ObjectStore - no bucket name: [0;32mPASSED[0;0m
+#07 Create ObjectStore - bad bucket name: [0;32mPASSED[0;0m
+#08 Create ObjectStore: [0;32mPASSED[0;0m
+#09 Already exists: [0;32mPASSED[0;0m
+#10 Get underlying stream info: [0;32mPASSED[0;0m
+#11 Check properties: [0;32mPASSED[0;0m
+#12 Check metadata: [0;32mPASSED[0;0m
+#13 Free object: [0;32mPASSED[0;0m
+#14 Update (bad args): [0;32mPASSED[0;0m
+#15 Update - no bucket name: [0;32mPASSED[0;0m
+#16 Update - bad bucket name: [0;32mPASSED[0;0m
+#17 Update - not found: [0;32mPASSED[0;0m
+#18 Update: [0;32mPASSED[0;0m
+#19 Get underlying stream info: [0;32mPASSED[0;0m
+#20 Check properties: [0;32mPASSED[0;0m
+#21 Lookup with bad args: [0;32mPASSED[0;0m
+#22 Lookup bad bucket name: [0;32mPASSED[0;0m
+#23 Lookup not existing bucket: [0;32mPASSED[0;0m
+#24 Lookup works: [0;32mPASSED[0;0m
+#25 Delete object store bad args: [0;32mPASSED[0;0m
+#26 Delete object store bad name: [0;32mPASSED[0;0m
+#27 Delete object store not found: [0;32mPASSED[0;0m
+#28 Delete object store: [0;32mPASSED[0;0m
+#29 Check if stream exists: [0;32mPASSED[0;0m
+#30 Check it is gone (bind should fail): [0;32mPASSED[0;0m
+#31 Get names (none found): [0;32mPASSED[0;0m
+#32 Get statuses (none found): [0;32mPASSED[0;0m
+#33 Create several stores: [0;32mPASSED[0;0m
+#34 Add stream that will match subject filter: [0;32mPASSED[0;0m
+#35 Get names (bad arg): [0;32mPASSED[0;0m
+#36 Get names: [0;32mPASSED[0;0m
+#37 Check names: [0;32mPASSED[0;0m
+#38 Destroy list: [0;32mPASSED[0;0m
+#39 Get statuses (bad arg): [0;32mPASSED[0;0m
+#40 Get statuses: [0;32mPASSED[0;0m
+#41 Check status: [0;32mPASSED[0;0m
+#42 Destroy list: [0;32mPASSED[0;0m
+#43 Delete object stores: [0;32mPASSED[0;0m
+#44 Get names with stream matching filter: [0;32mPASSED[0;0m
+#45 Get statuses with stream matching filter: [0;32mPASSED[0;0m
+ALL PASSED

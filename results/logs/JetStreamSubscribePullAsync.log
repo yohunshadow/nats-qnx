@@ -1,0 +1,36 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamSubscribePullAsync ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Create stream: [0;32mPASSED[0;0m
+#05 Create pull sub async (invalid args): [0;32mPASSED[0;0m
+#06 AckNone ok: [0;32mPASSED[0;0m
+#07 AckAll ok: [0;32mPASSED[0;0m
+#08 Create push consumer: [0;32mPASSED[0;0m
+#09 Try create pull sub from push consumer: [0;32mPASSED[0;0m
+#10 Create pull bound failure: [0;32mPASSED[0;0m
+#11 js_PullAsyncSubscribe for real, manual ack: [0;32mPASSED[0;0m
+#12 Can't call NextMsg: [0;32mPASSED[0;0m
+#13 Can't call Fetch: [0;32mPASSED[0;0m
+#14 No messages yet, timeout in 80ms: [0;32mPASSED[0;0m
+#15 Send a message: [0;32mPASSED[0;0m
+#16 Arrives in under 40ms: [0;32mPASSED[0;0m
+#17 No more messages yet, timeout in 80ms: [0;32mPASSED[0;0m
+#18 Wait another so.Config.AckWait+100 = 400ms and see that the message is re-delivered, ACK it: [0;32mPASSED[0;0m
+#19 Wait another so.Config.AckWait+100 = 400ms and see that the message is not re-delivered: [0;32mPASSED[0;0m
+#20 Receive msg with header and no data comes through: [0;32mPASSED[0;0m
+#21 single fetch NOWAIT, partially fulfilled: [0;32mPASSED[0;0m
+#22 multi-fetch NOWAIT, partially fulfilled: [0;32mPASSED[0;0m
+#23 fetch NOWAIT can get a NATS_NOT_FOUND immediately: [0;32mPASSED[0;0m
+#24 fetch NOWAIT can get a NATS_NOT_FOUND on Nth request: [0;32mPASSED[0;0m
+#25 single fetch NOWAIT, fulfilled msgs NATS_MAX_DELIVERED_MSGS: [0;32mPASSED[0;0m
+#26 multi-fetch NOWAIT, fulfilled msgs NATS_MAX_DELIVERED_MSGS: [0;32mPASSED[0;0m
+#27 single fetch, fulfilled msgs NATS_MAX_DELIVERED_MSGS: [0;32mPASSED[0;0m
+#28 multi-fetch WAIT, fulfilled msgs NATS_MAX_DELIVERED_MSGS: [0;32mPASSED[0;0m
+#29 MaxBytes: [0;32mPASSED[0;0m
+#30 Fetch with expiration is fulfilled NATS_MAX_DELIVERED_MSGS: [0;32mPASSED[0;0m
+#31 Fetch with a short expiration is partially fulfilled NATS_TIMEOUT: [0;32mPASSED[0;0m
+ALL PASSED

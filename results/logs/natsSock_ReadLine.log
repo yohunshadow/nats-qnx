@@ -1,0 +1,13 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsSock_ReadLine ==
+[0;0m#01 Connect: [0;32mPASSED[0;0m
+#02 Set deadline: [0;32mPASSED[0;0m
+#03 Read PING: [0;32mPASSED[0;0m
+#04 Read PONG: [0;32mPASSED[0;0m
+#05 Read +OK: [0;32mPASSED[0;0m
+#06 Line too long: [0;32mPASSED[0;0m
+#07 Drain: [0;32mPASSED[0;0m
+#08 Line too long (split): [0;32mPASSED[0;0m
+ALL PASSED

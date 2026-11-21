@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== GetClientID ==
+[0;0m#01 Create nc1: [0;32mPASSED[0;0m
+#02 GetClientID for nc1: [0;32mPASSED[0;0m
+#03 Wait for discovered callback: [0;32mPASSED[0;0m
+#04 Check CID same: [0;32mPASSED[0;0m
+#05 Connect to server 2: [0;32mPASSED[0;0m
+#06 Stop server 1: [0;32mPASSED[0;0m
+#07 Wait for nc1 to reconnect: [0;32mPASSED[0;0m
+#08 Check CID is different: [0;32mPASSED[0;0m
+#09 CID not supported: [0;32mPASSED[0;0m
+ALL PASSED

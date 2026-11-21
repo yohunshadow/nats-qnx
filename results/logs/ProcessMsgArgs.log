@@ -1,0 +1,24 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== ProcessMsgArgs ==
+[0;0m#01 Parsing MSG with too many arguments: [0;32mPASSED[0;0m
+#02 Parsing MSG with not enough arguments: [0;32mPASSED[0;0m
+#03 Parsing MSG with bad sid: [0;32mPASSED[0;0m
+#04 Parsing MSG with bad size: [0;32mPASSED[0;0m
+#05 Parsing MSG with bad size (with reply): [0;32mPASSED[0;0m
+#06 Parsing MSG with extra space before sid: [0;32mPASSED[0;0m
+#07 Parsing MSG with extra space before size: [0;32mPASSED[0;0m
+#08 Parsing MSG with extra space before sid: [0;32mPASSED[0;0m
+#09 Parsing MSG with extra space before reply: [0;32mPASSED[0;0m
+#10 Parsing MSG with extra space before size: [0;32mPASSED[0;0m
+#11 Parsing MSG with extra space everywhere: [0;32mPASSED[0;0m
+#12 Parsing HMSG: [0;32mPASSED[0;0m
+#13 Parsing HMSG not enough args: [0;32mPASSED[0;0m
+#14 Parsing HMSG too many args: [0;32mPASSED[0;0m
+#15 Parsing HMSG with bad sid: [0;32mPASSED[0;0m
+#16 Parsing HMSG with bad header size: [0;32mPASSED[0;0m
+#17 Parsing HMSG with bad header size (with reply): [0;32mPASSED[0;0m
+#18 Parsing HMSG with bad header size (out of range): [0;32mPASSED[0;0m
+#19 Parsing HMSG with bad header size (out of range with reply): [0;32mPASSED[0;0m
+ALL PASSED

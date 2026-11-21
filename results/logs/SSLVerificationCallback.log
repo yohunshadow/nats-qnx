@@ -1,0 +1,23 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLVerificationCallback ==
+[0;0m#01 Check that connect fails due to server verification: [0;32mPASSED[0;0m
+#02 Check that connect succeeds with validation callback:
+#03 preverify_ok: 0
+#04 cert: subject: /C=US/ST=California/O=Synadia/OU=nats.io/CN=localhost, issuer: /C=US/ST=California/O=Synadia/OU=nats.io/CN=Certificate Authority 2025-08-20, notBefore: 2025-08-20 18:42:01, notAfter: 2035-08-18 18:42:01
+#05 chain level: 1
+#06 cert: subject: /C=US/ST=California/O=Synadia/OU=nats.io/CN=localhost, issuer: /C=US/ST=California/O=Synadia/OU=nats.io/CN=Certificate Authority 2025-08-20, notBefore: 2025-08-20 18:42:01, notAfter: 2035-08-18 18:42:01
+#07 verfiy result: 1
+#08 preverify_ok: 0
+#09 cert: subject: /C=US/ST=California/O=Synadia/OU=nats.io/CN=localhost, issuer: /C=US/ST=California/O=Synadia/OU=nats.io/CN=Certificate Authority 2025-08-20, notBefore: 2025-08-20 18:42:01, notAfter: 2035-08-18 18:42:01
+#10 chain level: 1
+#11 cert: subject: /C=US/ST=California/O=Synadia/OU=nats.io/CN=localhost, issuer: /C=US/ST=California/O=Synadia/OU=nats.io/CN=Certificate Authority 2025-08-20, notBefore: 2025-08-20 18:42:01, notAfter: 2035-08-18 18:42:01
+#12 verfiy result: 1
+#13 preverify_ok: 1
+#14 cert: subject: /C=US/ST=California/O=Synadia/OU=nats.io/CN=localhost, issuer: /C=US/ST=California/O=Synadia/OU=nats.io/CN=Certificate Authority 2025-08-20, notBefore: 2025-08-20 18:42:01, notAfter: 2035-08-18 18:42:01
+#15 chain level: 1
+#16 cert: subject: /C=US/ST=California/O=Synadia/OU=nats.io/CN=localhost, issuer: /C=US/ST=California/O=Synadia/OU=nats.io/CN=Certificate Authority 2025-08-20, notBefore: 2025-08-20 18:42:01, notAfter: 2035-08-18 18:42:01
+#17 verfiy result: 1
+[0;32mPASSED[0;0m
+ALL PASSED

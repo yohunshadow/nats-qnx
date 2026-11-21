@@ -1,0 +1,11 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== natsMsgsFilter ==
+[0;0m#01 Connect ok: [0;32mPASSED[0;0m
+#02 Create sub: [0;32mPASSED[0;0m
+#03 Add no-op filter: [0;32mPASSED[0;0m
+#04 Add alter-msg filter: [0;32mPASSED[0;0m
+#05 Add drop-msg filter: [0;32mPASSED[0;0m
+#06 Filter is removed from previous filter: [0;32mPASSED[0;0m
+ALL PASSED

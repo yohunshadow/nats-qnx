@@ -1,0 +1,10 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== NoFlusherIfSendAsap ==
+[0;0m#01 Connect/subscribe ok: [0;32mPASSED[0;0m
+#02 Send ok: [0;32mPASSED[0;0m
+#03 Flusher does not exist: [0;32mPASSED[0;0m
+#04 Send ok: [0;32mPASSED[0;0m
+#05 Flusher does not exist: [0;32mPASSED[0;0m
+ALL PASSED

@@ -1,0 +1,28 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== JetStreamConsumerReset ==
+[0;0m#01 Start JS Server: [0;32mPASSED[0;0m
+#02 Connect: [0;32mPASSED[0;0m
+#03 Get context: [0;32mPASSED[0;0m
+#04 Reset consumer (bad args): [0;32mPASSED[0;0m
+#05 Reset consumer, stream name missing: [0;32mPASSED[0;0m
+#06 Reset consumer, stream name invalid: [0;32mPASSED[0;0m
+#07 Reset consumer, consumer name missing: [0;32mPASSED[0;0m
+#08 Reset consumer, consumer name invalid: [0;32mPASSED[0;0m
+#09 Create stream s1: [0;32mPASSED[0;0m
+#10 Add consumer c1 (DeliverAll): [0;32mPASSED[0;0m
+#11 Publish 5 messages to s1: [0;32mPASSED[0;0m
+#12 Fetch 3 and ack: [0;32mPASSED[0;0m
+#13 Reset consumer (no seq): [0;32mPASSED[0;0m
+#14 Create stream s2: [0;32mPASSED[0;0m
+#15 Add consumer c2 (DeliverAll): [0;32mPASSED[0;0m
+#16 Publish 5 messages to s2: [0;32mPASSED[0;0m
+#17 Reset consumer with seq 3: [0;32mPASSED[0;0m
+#18 Next delivered message has stream seq >= 3: [0;32mPASSED[0;0m
+#19 Create the test stream: [0;32mPASSED[0;0m
+#20 Add consumer starting at seq 3: [0;32mPASSED[0;0m
+#21 Publish 5 messages: [0;32mPASSED[0;0m
+#22 Reset consumer to seq 3 (at boundary): [0;32mPASSED[0;0m
+#23 Reset consumer to seq 4 (above boundary): [0;32mPASSED[0;0m
+ALL PASSED

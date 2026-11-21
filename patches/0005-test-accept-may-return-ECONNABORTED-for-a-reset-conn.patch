@@ -1,0 +1,38 @@
+From 5ce4269f39e20f596b466da9d3bbd110d78573b8 Mon Sep 17 00:00:00 2001
+From: nats-qnx <nats-qnx@localhost>
+Date: Sat, 21 Nov 2026 03:33:42 +0700
+Subject: [PATCH] test: accept() may return ECONNABORTED for a reset connection
+
+_dialsServerAdvertisedInInfo() checks whether the client dialed the
+second mock server by calling accept() after the client is gone. The
+client socket uses SO_LINGER {1, 0}, so its close() sends a RST.
+
+Linux still returns such a connection from accept(). BSD-derived stacks,
+including QNX 8.0's io-sock, drop it from the listen queue and accept()
+fails with ECONNABORTED ("Software caused connection abort"). Treat that
+as "dialed" as well. Fixes SSLNoServersFromPlaintextInfo on QNX.
+---
+ test/test.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/test/test.c b/test/test.c
+index ef7df47..6b11e9b 100644
+--- a/test/test.c
++++ b/test/test.c
+@@ -24448,6 +24448,16 @@ _dialsServerAdvertisedInInfo(bool secure, const char *info, bool *dialed)
+         *dialed = true;
+         natsSock_Close(fd);
+     }
++#if !defined(_WIN32)
++    // The client closes with SO_LINGER{1,0}, i.e. it resets the connection.
++    // Linux still hands a reset connection out of the accept queue, but
++    // BSD-derived stacks (QNX io-sock, FreeBSD) report ECONNABORTED instead.
++    // Either way the client did dial B.
++    else if ((s == NATS_OK) && (errno == ECONNABORTED))
++    {
++        *dialed = true;
++    }
++#endif
+ 
+     _destroyDefaultThreadArgs(&arg);
+     natsSock_Close(sockA);

@@ -1,0 +1,14 @@
+Test using server executable: /data/nats/bin/nats-server-remote
+Test server version: nats-server: v2.15.3
+[0;34m
+== SSLURLSchemeAutoEnable ==
+[0;0m#01 tls:// URL requires TLS (fails with non-TLS server): [0;32mPASSED[0;0m
+#02 TLS:// (uppercase) requires TLS (fails with non-TLS server): [0;32mPASSED[0;0m
+#03 SetSecure(false) before tls:// URL fails with non-TLS server: [0;32mPASSED[0;0m
+#04 SetSecure(false) with mixed URLs skips tls:// and connects to nats://: [0;32mPASSED[0;0m
+#05 tls:// URL connects to TLS server: [0;32mPASSED[0;0m
+#06 SetSecure(false) before tls:// URL still uses TLS (verification fails): [0;32mPASSED[0;0m
+#07 SetSecure(false) after tls:// URL still uses TLS (verification fails): [0;32mPASSED[0;0m
+#08 SetServers with tls:// URL: [0;32mPASSED[0;0m
+#09 SetServers with mixed tls:// and nats:// URLs enables TLS: [0;32mPASSED[0;0m
+ALL PASSED
